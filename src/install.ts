@@ -10,6 +10,7 @@ import { copyChecked, exists, inside, readJson, safeRelative, treeDigest, writeJ
 import { git } from './git.ts';
 import { readSkill } from './discovery.ts';
 import { validatePackage } from './validate.ts';
+import { ensurePackage } from './bundles.ts';
 import type { AgentId, Catalog, MarketConfig, PackageRecord } from './types.ts';
 
 const exec = promisify(execFile);
@@ -66,6 +67,7 @@ export async function installSkills(root: string, packageId: string, options: In
   const target = inside(targetRoot, path.posix.join(skillsDirectory, skillName));
   await checkDestination(targetRoot, target);
   const source = inside(root, pkg.genericSkillPath);
+  await ensurePackage(root, pkg);
   await validatePackage(pkg, inside(root, pkg.packagePath));
   const sourceHash = await treeDigest(source);
   if (await exists(target) && !options.force) {
@@ -89,7 +91,10 @@ export async function installSkills(root: string, packageId: string, options: In
     await mkdir(path.dirname(target), { recursive: true });
     prepared = target + '.new-' + randomUUID();
     await copyChecked(stagedSkill, prepared, stagedSkill);
-    await writeJson(path.join(prepared, receiptFile), { installer: config.name, repository: config.repository, packageId: pkg.id, sha: pkg.sha, distributionVersion: pkg.distributionVersion, installedHash: sourceHash } satisfies Receipt);
+    // A Skills-only installation must not be rediscovered as an entire native plugin.
+    for (const generated of ['.codex-plugin', '.claude-plugin', '.cursor-plugin', 'package.json', 'dsh']) await rm(path.join(prepared, generated), { recursive: true, force: true });
+    const installedHash = await treeDigest(prepared);
+    await writeJson(path.join(prepared, receiptFile), { installer: config.name, repository: config.repository, packageId: pkg.id, sha: pkg.sha, distributionVersion: pkg.distributionVersion, installedHash } satisfies Receipt);
     if (await exists(target)) { backup = target + '.backup-' + randomUUID(); await rename(target, backup); }
     try { await rename(prepared, target); prepared = undefined; }
     catch (error) { if (backup) { await rename(backup, target); backup = undefined; } throw error; }

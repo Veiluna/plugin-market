@@ -31,14 +31,14 @@ export async function publishDsh(root: string, config: MarketConfig, packages: P
     await git(['-c', 'core.hooksPath=' + hooks, 'worktree', 'add', '--quiet', '--detach', worktree, base], root);
     attached = true;
     for (const entry of await readdir(worktree)) if (entry !== '.git') await rm(path.join(worktree, entry), { recursive: true, force: true });
-    const eligible = packages.filter(pkg => pkg.compatibility.dsh.level !== 'unsupported');
+    const eligible = packages;
     for (const pkg of eligible) await copyChecked(locate(pkg), path.join(worktree, pkg.packagePath), locate(pkg));
-    await writeText(path.join(worktree, '.gitattributes'), 'packages/** -text\n');
+    await writeText(path.join(worktree, '.gitattributes'), 'p/** -text\n');
     await writeJson(path.join(worktree, 'distribution.json'), { version: 1, marketplace: config.repository, packages: eligible.map(pkg => ({ id: pkg.id, path: pkg.packagePath, version: pkg.distributionVersion, upstreamCommit: pkg.sha, artifactHash: pkg.artifactHash })) });
     await writeText(path.join(worktree, 'README.md'), '# Scientific Agent Market — DSH bundles\n\nGenerated distribution branch. Source, licenses and PROVENANCE.json accompany every bundle.\nVersion history remains reachable through ordinary Git commits. Do not force-push this branch.\n');
     await git(['add', '--force', '--all'], worktree);
     // Do not publish a tree whose Git attributes silently changed locked resource bytes.
-    const entries = (await git(['ls-files', '--stage', '-z', '--', 'packages'], worktree)).split('\0').filter(Boolean);
+    const entries = (await git(['ls-files', '--stage', '-z', '--', 'p'], worktree)).split('\0').filter(Boolean);
     for (const entry of entries) {
       const separator = entry.indexOf('\t');
       const expected = entry.slice(0, separator).split(' ')[1];

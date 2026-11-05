@@ -9,177 +9,177 @@
   "plugins": [
     {
       "name": "academic-toolkit-office-academic-skill",
-      "source": "./packages/5a7021f9ae98",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/5a7021f9",
       "description": "中文学术写作、Office 文档与科研计算技能。"
     },
     {
       "name": "academic-toolkit-research-writing-skill",
-      "source": "./packages/b7e491f5bd3c",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/b7e491f5",
       "description": "中文学术写作、Office 文档与科研计算技能。"
     },
     {
       "name": "academic-toolkit-scientific-toolkit-skill",
-      "source": "./packages/77c7c375f76a",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/77c7c375",
       "description": "中文学术写作、Office 文档与科研计算技能。"
     },
     {
       "name": "ai-research-skills-agent-native-research-artifact",
-      "source": "./packages/791e9b297962",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/791e9b29",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / agent-native-research-artifact"
     },
     {
       "name": "ai-research-skills-agents",
-      "source": "./packages/eccb854e29f0",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/eccb854e",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / agents"
     },
     {
       "name": "ai-research-skills-autoresearch",
-      "source": "./packages/a038ad068dc4",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/a038ad06",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / autoresearch"
     },
     {
       "name": "ai-research-skills-data-processing",
-      "source": "./packages/1d05c33bb152",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/1d05c33b",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / data-processing"
     },
     {
       "name": "ai-research-skills-distributed-training",
-      "source": "./packages/d28028453caa",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/d2802845",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / distributed-training（上游有 2 项可选参考缺失，详见目录）"
     },
     {
       "name": "ai-research-skills-emerging-techniques",
-      "source": "./packages/d96b441d7085",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/d96b441d",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / emerging-techniques"
     },
     {
       "name": "ai-research-skills-evaluation",
-      "source": "./packages/f54a3e76b013",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/f54a3e76",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / evaluation"
     },
     {
       "name": "ai-research-skills-fine-tuning",
-      "source": "./packages/e1c8a10cfc00",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/e1c8a10c",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / fine-tuning"
     },
     {
       "name": "ai-research-skills-ideation",
-      "source": "./packages/efc4e7807d61",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/efc4e780",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / ideation"
     },
     {
       "name": "ai-research-skills-inference-serving",
-      "source": "./packages/66d22b71ebbd",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/66d22b71",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / inference-serving"
     },
     {
       "name": "ai-research-skills-infrastructure",
-      "source": "./packages/b2be6e126a7f",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/b2be6e12",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / infrastructure"
     },
     {
       "name": "ai-research-skills-mechanistic-interpretability",
-      "source": "./packages/31c92cc4b190",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/31c92cc4",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / mechanistic-interpretability"
     },
     {
       "name": "ai-research-skills-ml-paper-writing",
-      "source": "./packages/3a65eb625299",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/3a65eb62",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / ml-paper-writing"
     },
     {
       "name": "ai-research-skills-mlops",
-      "source": "./packages/edcd2beceb3e",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/edcd2bec",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / mlops"
     },
     {
       "name": "ai-research-skills-model-architecture",
-      "source": "./packages/c8ae269959ec",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/c8ae2699",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / model-architecture（上游有 3 项可选参考缺失，详见目录）"
     },
     {
       "name": "ai-research-skills-multimodal",
-      "source": "./packages/3c167ea73c5a",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/3c167ea7",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / multimodal"
     },
     {
       "name": "ai-research-skills-observability",
-      "source": "./packages/cd59eb0eb505",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/cd59eb0e",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / observability"
     },
     {
       "name": "ai-research-skills-optimization",
-      "source": "./packages/8c342ec85936",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/8c342ec8",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / optimization（上游有 2 项可选参考缺失，详见目录）"
     },
     {
       "name": "ai-research-skills-post-training",
-      "source": "./packages/8414261ff6d3",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/8414261f",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / post-training（上游有 1 项可选参考缺失，详见目录）"
     },
     {
       "name": "ai-research-skills-prompt-engineering",
-      "source": "./packages/7103cff965e9",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/7103cff9",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / prompt-engineering"
     },
     {
       "name": "ai-research-skills-rag",
-      "source": "./packages/9adf057a4b24",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/9adf057a",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / rag"
     },
     {
       "name": "ai-research-skills-safety-alignment",
-      "source": "./packages/2d1f809196c5",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/2d1f8091",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / safety-alignment（上游有 9 项可选参考缺失，详见目录）"
     },
     {
       "name": "ai-research-skills-tokenization",
-      "source": "./packages/6318a9b9bd52",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/6318a9b9",
       "description": "按上游分类插件组织的 AI 研究与工程技能。 / tokenization"
     },
     {
       "name": "aris",
-      "source": "./packages/984b00ea54e7",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/984b00ea",
       "description": "ARIS 文献、实验、论文写作与跨模型评审套件。"
     },
     {
       "name": "ars-claude",
-      "source": "./packages/c0a5016e27d8",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/c0a5016e",
       "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。"
     },
     {
       "name": "latex-arxiv",
-      "source": "./packages/506547a850c5",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/506547a8",
       "description": "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。"
     },
     {
       "name": "literature-downloader",
-      "source": "./packages/adc452eb4985",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/adc452eb",
       "description": "中文文献检索、候选筛选、合法全文获取与下载报告。"
     },
     {
       "name": "live-session-fetcher-literature-live-session-pipeline",
-      "source": "./packages/c60b391b1073",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/c60b391b",
       "description": "复用已获授权的本地浏览器会话，串行获取学术全文。"
     },
     {
       "name": "live-session-fetcher-sciencedirect-live-session-fetcher",
-      "source": "./packages/b7f9eb62d954",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/b7f9eb62",
       "description": "复用已获授权的本地浏览器会话，串行获取学术全文。"
     },
     {
       "name": "nature-skills",
-      "source": "./packages/801a4087e68a",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/801a4087",
       "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。"
     },
     {
       "name": "research-paper-writing",
-      "source": "./packages/bd3aad02f248",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/bd3aad02",
       "description": "论文各章节写作、论证检查和投稿前自查。"
     },
     {
       "name": "scientific-agent-skills",
-      "source": "./packages/8d81cc53e451",
+      "source": "https://github.com/Veiluna/plugin-market/tree/f480aa1c961cad6daf4422a0bfe482a7857a80f8/p/8d81cc53",
       "description": "生物、化学、医学、数据分析与科学写作技能库。"
     }
   ]

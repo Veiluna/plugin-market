@@ -17,13 +17,13 @@ resources 声明共享脚本、资源与说明。技能根和许可证自动包�
 ## 校验与提交
 
 ```sh
-npm run sync -- --source <source-id>
+npm run sync -- --source <source-id> --publish-dsh
 npm run check
 git add sources.json
-git add --force packages catalog dsh docs/CATALOG.md .agents/plugins/marketplace.json .claude-plugin/marketplace.json .cursor-plugin/marketplace.json
+git add catalog dsh docs/CATALOG.md .agents/plugins/marketplace.json .claude-plugin/marketplace.json .cursor-plugin/marketplace.json
 ```
 
-把配置、锁文件、目录与必要封装一起提交 PR。嵌入的上游 .gitignore 可能忽略实际需要的资源，因此生成文件暂存使用 --force。不要提交 .cache、凭证或运行结果。
+把配置、锁文件及索引一起提交 PR。维护者使用 --publish-dsh 先发行完整资源，再提交引用它的索引。p/ 与 .cache/ 是可恢复缓存，不提交到默认分支；发行器自行保留所有必要资源。不要提交凭证或运行结果。
 
 可选参考文档原本缺失时，由维护者逐条审查，在 resourceExceptions 中记录精确 references/*.md 路径与原因。例外只对不存在的可选文档生效；文件恢复后自动正常分发。脚本缺失、无效元数据、许可证问题不能绕过。
 
@@ -35,4 +35,4 @@ Actions 先运行自身测试，再同步来源。同步只读取上游指令，
 
 DSH 包先进入 dist-dsh 的普通历史提交，索引随后引用该提交。发行分支不能 force-push。fork 后先修改 market.config.json 的 repository 与 publisher；发布器拒绝不匹配的 origin。
 
-默认分支若受保护，按项目策略为生成产物的机器人提交设置受限例外，或接入项目自己的自动合并流程。回退时恢复上一有效锁文件及 packages 快照并运行 npm run validate；DSH 历史版本继续引用原来的提交。
+默认分支若受保护，按项目策略为生成产物的机器人提交设置受限例外，或接入项目自己的自动合并流程。回退时恢复上一有效锁文件和索引并运行 npm run validate；DSH 历史版本继续引用原来的提交。

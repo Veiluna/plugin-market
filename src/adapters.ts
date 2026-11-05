@@ -50,12 +50,13 @@ export function buildArtifacts(config: MarketConfig, catalog: Catalog, lock: Cat
       if (pkg.compatibility[agent].level === 'unsupported') continue;
       const native = pkg.compatibility[agent].level === 'native' ? pkg.native[agent] : undefined;
       const name = entryName(pkg, agent);
-      if (agent === 'codex') codex.push({ name, source: native ? remoteSource(pkg, native.root, agent) : { source: 'local', path: './' + pkg.packagePath }, policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Research' });
+      const bundled = pkg.distribution ? { source: 'git-subdir', url: 'https://github.com/' + pkg.distribution.repository + '.git', path: pkg.distribution.path, sha: pkg.distribution.commit } : undefined;
+      if (agent === 'codex') codex.push({ name, source: native ? remoteSource(pkg, native.root, agent) : bundled || { source: 'local', path: './' + pkg.packagePath }, policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Research' });
       else if (agent === 'claude-code') {
-        const entry: JsonObject = { name, source: native ? remoteSource(pkg, native.root, agent) : './' + pkg.packagePath, description: pkg.description, license: pkg.license };
+        const entry: JsonObject = { name, source: native ? remoteSource(pkg, native.root, agent) : bundled || './' + pkg.packagePath, description: pkg.description, license: pkg.license };
         if (native?.entry) for (const key of ['skills', 'agents', 'commands', 'hooks', 'mcpServers', 'strict', 'version', 'keywords']) if (native.entry[key] !== undefined) entry[key] = native.entry[key];
         claude.push(entry);
-      } else cursor.push({ name, source: './' + pkg.packagePath, description: pkg.description });
+      } else cursor.push({ name, source: pkg.distribution ? 'https://github.com/' + pkg.distribution.repository + '/tree/' + pkg.distribution.commit + '/' + pkg.packagePath : './' + pkg.packagePath, description: pkg.description });
     }
   }
   const dsh = buildDshIndex(config, catalog.packages, previousDsh, dshCommit);

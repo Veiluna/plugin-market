@@ -1,6 +1,7 @@
 node_modules/
 .cache/
 .sync-stage/
+p/
 coverage/
 *.log
 .DS_Store

@@ -1,5 +1,5 @@
 * text=auto eol=lf
-packages/** -text
+p/** -text
 *.png binary
 *.jpg binary
 *.jpeg binary

@@ -9,7 +9,8 @@ src/types.ts 定义 SourceDefinition、PackageDefinition、PackageRecord、Agent
 - sources.json 是维护者编辑的声明。
 - catalog/lock.json 保留来源分支、提交、定义摘要及最后通过的包。
 - catalog/catalog.json 公开兼容范围、验证层级、环境限制、已知问题与来源。
-- packages/<12 位摘要>/ 保存必要封装，内部入口目录固定为 s，避免在 Windows 路径中重复长包名；公开包 ID 与 -suite 技能名称保持不变。位置由 packagePath、genericSkillPath 和 genericSkillName 指定，原资源位于入口的 upstream/ 下。
+- 默认分支只发布索引与锁。p/<8 位摘要>/ 中的封装发布到 dist-dsh 的固定提交，不随市场添加检出；本地 p/ 是忽略的恢复缓存。包根目录是独立的 -suite 入口，原资源位于 upstream/ 下，公开包 ID 与技能名保持不变。
+- 每个包的 distribution 记录发行仓库、提交和目录；Codex／Claude 使用 git-subdir，Cursor 使用固定提交的目录 URL。
 - .agents、.claude-plugin、.cursor-plugin 包含各自原生清单。
 - dsh/index.json 只引用已发行 bundle；pending.json 是构建队列，不能作为 DSH 索引导入。
 
@@ -26,5 +27,7 @@ native 输出引用锁定的上游原生来源，skills-only 只暴露技能。�
 ## 可追溯性
 
 PackageRecord 记录源提交、上游版本、分发版本、内容摘要、完整封装 artifactHash。哈希不依赖 Windows／POSIX 文件模式差异。PROVENANCE.json、入口内 UPSTREAM.json 和原许可证随包分发。
+
+src/bundles.ts 按已存在的发行提交恢复完整包，校验摘要后才原子写入缓存。禁止归档链接或越界路径。通用 Skills 安装移除本市场生成的平台注册元数据，保留全部上游资源，避免被误识别成完整插件。
 
 resources 与技能根组成资源边界。内部符号链接发行时复制成真实文件；绝对路径、逃逸或循环链接、无效元数据、新缺失资源阻止该来源更新。上游代码缓存是可丢弃的工作副本，不用于保存用户修改。

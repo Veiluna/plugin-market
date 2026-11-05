@@ -63,6 +63,7 @@ export interface PackageRecord extends PackageDefinition {
   packagePath: string;
   genericSkillPath: string;
   genericSkillName?: string;
+  distribution?: { repository: string; commit: string; path: string };
   cloud: CloudSupport;
   operatingSystems: string[];
   requirements: string[];

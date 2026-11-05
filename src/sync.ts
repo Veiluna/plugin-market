@@ -9,6 +9,7 @@ import { digest, exists, inside, json, readJson, replaceDirectory, writeJson, wr
 import { checkoutSource, resolveRemoteHead } from './git.ts';
 import { ADAPTER_VERSION, buildPackage } from './package.ts';
 import { publishDsh } from './publish.ts';
+import { ensurePackage } from './bundles.ts';
 import { validateArtifacts, validateEntryNames, validatePackage } from './validate.ts';
 import type { PackageLocator } from './validate.ts';
 import type { Catalog, CatalogLock, Checkout, LockedSource, MarketConfig, PackageRecord, SourceDefinition, SyncReport } from './types.ts';
@@ -28,6 +29,7 @@ export async function sync(root: string, options: SyncOptions = {}): Promise<Syn
   if (options.sourceIds?.some(id => !sources.some(source => source.id === id))) throw new Error('Unknown selected source');
   const lockPath = path.join(root, 'catalog/lock.json');
   const previous: CatalogLock = await exists(lockPath) ? await readJson(lockPath) : { version: 1, sources: {} };
+  for (const source of Object.values(previous.sources)) for (const pkg of source.packages) await ensurePackage(root, pkg);
   const lock: CatalogLock = { version: 1, sources: {} };
   const report: SyncReport = { changed: [], unchanged: [], failed: [] };
   const stage = path.join(root, '.sync-stage', randomUUID());
@@ -82,6 +84,7 @@ export async function sync(root: string, options: SyncOptions = {}): Promise<Syn
     if (options.publishDsh) {
       options.onProgress?.('Publishing DSH bundles before the index');
       const commit = await (options.publish || publishDsh)(root, config, catalog.packages, locate);
+      for (const pkg of catalog.packages) pkg.distribution = { repository: config.repository, commit, path: pkg.packagePath };
       artifacts = buildArtifacts(config, catalog, lock, previousDsh, commit);
       await validateArtifacts(artifacts, catalog.packages, locate);
     }

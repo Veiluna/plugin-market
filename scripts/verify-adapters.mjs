@@ -8,11 +8,13 @@ import { probeDshBundle } from '../src/dsh.ts';
 import { marketInstallTarget, parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 import { buildDshIndex } from '../src/adapters.ts';
 import { checkoutSource, git } from '../src/git.ts';
+import { ensurePackage } from '../src/bundles.ts';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = async file => JSON.parse(await readFile(file, 'utf8'));
 const config = await read(path.join(root, 'market.config.json'));
 const catalog = await read(path.join(root, 'catalog/catalog.json'));
+for (const pkg of catalog.packages) await ensurePackage(root, pkg);
 const schemaSource = { id: 'cursor-spec', repository: 'cursor/plugins', description: 'Official Cursor schemas', license: 'MIT', discovery: { kind: 'skills', packages: [{ name: 'schemas', roots: ['schemas'] }] }, resources: ['schemas', 'scripts'], requirements: [], cloud: 'supported' };
 const cursor = await checkoutSource(root, schemaSource);
 const ajv = new Ajv({ allErrors: true }); addFormats(ajv);
@@ -21,7 +23,8 @@ const validatePlugin = ajv.compile(await read(path.join(cursor.directory, 'schem
 const marketplace = await read(path.join(root, '.cursor-plugin/marketplace.json'));
 assert.ok(validateMarket(marketplace), JSON.stringify(validateMarket.errors));
 for (const entry of marketplace.plugins) {
-  const manifest = await read(path.join(root, entry.source, '.cursor-plugin/plugin.json'));
+  const pkg = catalog.packages.find(pkg => pkg.id === entry.name);
+  const manifest = await read(path.join(root, pkg.packagePath, '.cursor-plugin/plugin.json'));
   assert.ok(validatePlugin(manifest), entry.name + ': ' + JSON.stringify(validatePlugin.errors));
   assert.equal(manifest.name, entry.name);
 }
@@ -40,7 +43,7 @@ for (const pkg of catalog.packages.filter(pkg => pkg.compatibility.dsh.level !==
 const candidateCommit = (await git(['rev-parse', 'HEAD'], root)).trim();
 const candidate = buildDshIndex(config, catalog.packages, undefined, candidateCommit).index;
 const parsed = parseMarketIndex(candidate, 'https://raw.githubusercontent.com/' + config.repository + '/HEAD/dsh/index.json');
-for (const plugin of parsed.plugins) assert.match(marketInstallTarget(plugin.name, plugin.versions[0]).spec, /^git\+https:\/\/github\.com\/.+#[a-f0-9]{40}&path:\/packages\//);
+for (const plugin of parsed.plugins) assert.match(marketInstallTarget(plugin.name, plugin.versions[0]).spec, /^git\+https:\/\/github\.com\/.+#[a-f0-9]{40}&path:\/(?:p|packages)\//);
 const sdk = await read(path.join(root, 'node_modules/@deepseek-ai/dsh-plugin-market-index/package.json'));
 const report = { cursor: { officialSchemasCommit: cursor.sha, marketplaceValidated: true, pluginsValidated: marketplace.plugins.length, guiTested: false }, dsh: { sdkVersion: sdk.version, indexSchemaValidated: true, bundlesLoaded: bundles, originalSkillsLoaded: skillsLoaded, warnings, fullApplicationTested: false }, modelRequests: 0 };
 await mkdir(path.join(root, '.cache/verification'), { recursive: true });

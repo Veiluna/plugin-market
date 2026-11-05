@@ -4,6 +4,7 @@ import path from 'node:path';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { buildDshIndex } from '../src/adapters.ts';
+import { ensurePackage } from '../src/bundles.ts';
 import { loadConfig } from '../src/config.ts';
 import { discoverPackages, readSkill } from '../src/discovery.ts';
 import { copyChecked, exists, filesUnder, readJson, treeDigest, writeJson, writeText } from '../src/fs.ts';
@@ -215,6 +216,7 @@ test('cloud install copies full resource closure and protects local modification
   const target = path.join(f.root, '.cache/cloud-project'); await mkdir(target, { recursive: true });
   const result = await installSkills(f.root, 'source-0', { agent: 'codex', target, cloud: true, runner: copyRunner });
   assert.equal((await lstat(result.target)).isSymbolicLink(), false);
+  assert.equal(await exists(path.join(result.target, '.codex-plugin')), false);
   assert.equal(await readFile(path.join(result.target, 'upstream/shared/guide.md'), 'utf8'), '# Shared resource\nOriginal content.\n');
   assert.equal((await readSkill(target, '.agents/skills/source-0-suite')).name, 'source-0-suite');
   await assert.rejects(installSkills(f.root, 'source-0', { agent: 'codex', target, runner: copyRunner }), /Target exists/);
@@ -306,6 +308,43 @@ test('DSH indexes only reference published commits and retain immutable old vers
   validateDsh(second);
   second.plugins[0].versions[1].source.commit = 'main';
   assert.throws(() => validateDsh(second), /pinned/);
+});
+
+test('published marketplaces point to immutable bundles instead of local resource directories', async t => {
+  const f = await fixture(); t.after(() => rm(f.root, { recursive: true, force: true }));
+  const publication = sha(90);
+  await sync(f.root, { checkout: f.checkout, publishDsh: true, publish: async () => publication });
+  const catalog = await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'));
+  const pkg = catalog.packages[0];
+  assert.equal(pkg.distribution?.commit, publication);
+  const codex = await readJson<{ plugins: { source: { source: string; sha: string; path: string } }[] }>(path.join(f.root, '.agents/plugins/marketplace.json'));
+  assert.equal(codex.plugins[0].source.source, 'git-subdir');
+  assert.equal(codex.plugins[0].source.sha, publication);
+  assert.equal(codex.plugins[0].source.path, pkg.packagePath);
+  const cursor = await readJson<{ plugins: { source: string }[] }>(path.join(f.root, '.cursor-plugin/marketplace.json'));
+  assert.equal(cursor.plugins[0].source, 'https://github.com/test/market/tree/' + publication + '/' + pkg.packagePath);
+  await validateRepository(f.root);
+});
+
+test('an absent bundle is extracted from its Git commit and checked before becoming available', async t => {
+  const f = await fixture(); t.after(() => rm(f.root, { recursive: true, force: true }));
+  await sync(f.root, { checkout: f.checkout });
+  const pkg = (await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'))).packages[0];
+  await git(['init', '--quiet'], f.root);
+  await git(['add', '--force', '--', pkg.packagePath], f.root);
+  await git(['-c', 'user.name=Test', '-c', 'user.email=test@example.test', '-c', 'commit.gpgsign=false', 'commit', '--quiet', '-m', 'Bundle fixture'], f.root);
+  const commit = (await git(['rev-parse', 'HEAD'], f.root)).trim();
+  const cache = path.join(f.root, '.cache/bundle-repository'); await mkdir(cache, { recursive: true });
+  await git(['init', '--bare', '--quiet'], cache);
+  await git(['fetch', '--quiet', f.root, commit], cache);
+  pkg.distribution = { repository: 'test/market', commit, path: pkg.packagePath };
+  await rm(path.join(f.root, pkg.packagePath), { recursive: true });
+  await ensurePackage(f.root, pkg);
+  assert.equal(await treeDigest(path.join(f.root, pkg.packagePath)), pkg.artifactHash);
+  assert.equal(await readFile(path.join(f.root, pkg.genericSkillPath, 'upstream/shared/guide.md'), 'utf8'), '# Shared resource\nOriginal content.\n');
+  await rm(path.join(f.root, pkg.packagePath), { recursive: true });
+  await assert.rejects(ensurePackage(f.root, { ...pkg, artifactHash: '0'.repeat(64) }), /does not match the lock/);
+  assert.equal(await exists(path.join(f.root, pkg.packagePath)), false);
 });
 
 test('DSH publication writes a separate branch commit and keeps old package trees reachable', async t => {

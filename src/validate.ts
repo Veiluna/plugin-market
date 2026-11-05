@@ -6,6 +6,7 @@ import { readSkill } from './discovery.ts';
 import { AGENTS, exists, inside, object, readJson, safeRelative, treeDigest } from './fs.ts';
 import { loadConfig } from './config.ts';
 import { probeDshBundle } from './dsh.ts';
+import { ensurePackage } from './bundles.ts';
 import type { Catalog, CatalogLock, JsonObject, PackageRecord } from './types.ts';
 
 export type PackageLocator = (pkg: PackageRecord) => string;
@@ -79,11 +80,17 @@ export async function validateArtifacts(artifacts: Record<string, unknown>, pack
       const pkg = expected.find(pkg => entryName(pkg, agent) === entry.name);
       if (!pkg) throw new Error('Unknown marketplace plugin: ' + String(entry.name));
       if (typeof entry.source === 'string') {
-        if (safeRelative(entry.source) !== pkg.packagePath) throw new Error('Incorrect local plugin path');
+        const expected = pkg.distribution ? 'https://github.com/' + pkg.distribution.repository + '/tree/' + pkg.distribution.commit + '/' + pkg.distribution.path : './' + pkg.packagePath;
+        if (entry.source !== expected) throw new Error('Incorrect plugin URL or path');
       } else {
         const source = object(entry.source, 'source');
         if (source.source === 'local') { if (safeRelative(String(source.path)) !== pkg.packagePath) throw new Error('Incorrect local plugin path'); }
-        else if (!/^[a-f0-9]{40}$/.test(String(source.sha))) throw new Error('Unpinned remote plugin source');
+        else {
+          const native = pkg.compatibility[agent].level === 'native';
+          const commit = native ? pkg.sha : pkg.distribution?.commit;
+          if (!/^[a-f0-9]{40}$/.test(String(source.sha)) || source.sha !== commit) throw new Error('Unpinned or incorrect remote plugin source');
+          if (!native && (source.source !== 'git-subdir' || source.url !== 'https://github.com/' + pkg.distribution?.repository + '.git' || source.path !== pkg.packagePath)) throw new Error('Incorrect distribution source');
+        }
       }
     }
   }
@@ -96,6 +103,7 @@ export async function validateRepository(root: string): Promise<{ sources: numbe
   if (catalog.version !== 1 || lock.version !== 1 || catalog.name !== config.name) throw new Error('Invalid catalog or lock format');
   if (catalog.sources.length !== sources.length || !sources.every(source => catalog.sources.some(item => item.id === source.id))) throw new Error('Catalog does not cover configured sources');
   const locked = Object.values(lock.sources).flatMap(source => source.packages);
+  for (const pkg of locked) await ensurePackage(root, pkg);
   if (JSON.stringify(locked.sort((a, b) => a.id.localeCompare(b.id, 'en'))) !== JSON.stringify([...catalog.packages].sort((a, b) => a.id.localeCompare(b.id, 'en')))) throw new Error('Catalog differs from locked packages');
   const artifacts: Record<string, unknown> = {};
   for (const file of ['.agents/plugins/marketplace.json', '.claude-plugin/marketplace.json', '.cursor-plugin/marketplace.json', 'dsh/index.json']) artifacts[file] = await readJson(inside(root, file));

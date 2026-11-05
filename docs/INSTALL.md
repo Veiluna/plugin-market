@@ -2,7 +2,7 @@
 
 完整原生插件从对应市场安装。install-skills 只安装 Skills 套件，不注册 hooks、MCP、命令或子代理；条件、许可证及外部依赖见 [目录](CATALOG.md)。
 
-先运行 npm ci --ignore-scripts，再运行 npm run market -- list --agent <agent>。内置 codex、claude-code、cursor、dsh、universal，用 show <package-id> 查看条件。
+原生市场在客户端直接添加。下方通用 Skills 与维护命令需要 Node.js 24、Git，以及在本仓库中运行 npm ci --ignore-scripts。内置 codex、claude-code、cursor、dsh、universal，用 show <package-id> 查看条件。
 
 ## Codex
 
@@ -13,44 +13,15 @@ codex plugin add scientific-agent-skills@scientific-agent-market
 codex plugin marketplace upgrade scientific-agent-market
 ```
 
-语法依据本次可用的 Codex CLI 帮助。客户端也可在插件来源中选择本市场。本地仓库可使用 codex plugin marketplace add /absolute/path/to/plugin-market。
+桌面客户端只需添加 Veiluna/plugin-market。以上是 CLI 的添加、浏览、安装与更新示例，不要求桌面用户依次执行。
 
-### Windows 出现 Filename too long
+### Windows 与一步添加
 
-Codex 通过 GitHub 仓库添加市场时，会先克隆到用户目录下较深的临时路径；加上上游资源目录后，可能超过 Windows 的传统路径长度限制。市场封装已缩短存储路径，ARS-Codex 上游仍包含深层资源。
+在 Codex 桌面客户端的“添加市场”中输入 `Veiluna/plugin-market` 即可。默认分支只包含市场索引、来源锁与维护代码；完整插件资源保存在 `dist-dsh` 发行分支。客户端在安装所选插件时读取锁定提交和子目录。
 
-**保持长路径支持关闭：使用短目录中的本地市场。** 在 PowerShell 中运行：
+此前把全部资源放在默认分支，导致未选择的 ARS-Codex 深层文件也会在添加市场时被检出。现在这些文件不参与市场添加。用户无需开启 Git 长路径、手动克隆、修改配置或指定特殊分支。
 
-```powershell
-git clone https://github.com/Veiluna/plugin-market.git "$env:USERPROFILE\pm"
-codex plugin marketplace add "$env:USERPROFILE\pm"
-```
-
-例如用户 A 的本地来源是 C:\Users\A\pm。Codex 直接读取本地市场，不把整个市场再克隆到 .staging。请选择尚不存在的目标目录；已经克隆成功的目录可直接用于第二条命令。添加后重启桌面客户端，使用 scientific-agent-market 中的插件；不要再以 Veiluna/plugin-market 作为远程来源重新添加。
-
-如果只有桌面客户端、没有 codex 命令，可在客户端打开 C:\Users\A\.codex\config.toml，为该市场配置本地来源。已有同名段落时替换其内容，避免重复表名：
-
-```toml
-[marketplaces.scientific-agent-market]
-source_type = "local"
-source = 'C:\Users\A\pm'
-```
-
-保存后完全退出并重启 Codex。此方式不改 Git 长路径配置或系统注册表。更新本地市场使用：
-
-```powershell
-git -C "$env:USERPROFILE\pm" pull --ff-only
-```
-
-上述步骤解决市场仓库因深层暂存目录导致的检出失败。各插件的上游原生运行条件仍见目录。Windows CI 在 core.longpaths=false 下实际克隆、注册本地来源，并安装写作、Office 与科研工具三个封装检查完整资源。
-
-若希望继续通过 GitHub 仓库来源添加，也可以自行选择开启当前用户的 Git 长路径支持：
-
-```powershell
-git config --global core.longpaths true
-```
-
-这种方式通常无需管理员权限，但不是使用本地短目录入口的前提。不必在报错中的临时 .staging 目录运行 git restore。
+Windows 验证使用官方 Codex CLI、关闭的 `core.longpaths`，直接以仓库名字添加市场，再安装写作、Office 与科研工具封装并校验完整资源。此检查不代替各复杂上游工作流的运行验证。
 
 ## Claude Code
 

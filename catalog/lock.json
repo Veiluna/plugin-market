@@ -5,7 +5,7 @@
       "repository": "K-Dense-AI/scientific-agent-skills",
       "branch": "main",
       "sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "definitionDigest": "304e51909181bcb7fb811dcb1ddc194f2d8ce56f4da08268eac51f6d2f89f35c",
+      "definitionDigest": "6a4f08291608e02ee4e2fe7365f2508567f32c4f0a943fade8fa0bc12bc52a7c",
       "packages": [
         {
           "id": "scientific-agent-skills",
@@ -2734,12 +2734,12 @@
           "repository": "K-Dense-AI/scientific-agent-skills",
           "license": "MIT",
           "sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-          "digest": "60f74e028cdf54b4e94dfb00063ed04bd7014720de28fbea1fe603900606382e",
-          "artifactHash": "396959344c355a178dd426b37ddb56a2da5467161ab2a2dc0ef9dd246a8e2e1f",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/8d81cc53e451",
+          "digest": "985856cd516f5c2f681baa19d5929a460541b67b67592dfb04acd972e3bf61ed",
+          "artifactHash": "aa16032cdd476ab06256d34ad2639ea44940e0474fee86879d716e915f9b089f",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/8d81cc53",
           "genericSkillName": "scientific-agent-skills-suite",
-          "genericSkillPath": "packages/8d81cc53e451/s",
+          "genericSkillPath": "p/8d81cc53",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -2780,7 +2780,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/8d81cc53"
+          }
         }
       ]
     },
@@ -2788,7 +2793,7 @@
       "repository": "Yuan1z0825/nature-skills",
       "branch": "main",
       "sha": "d774add241c65e89ed17a4da573b472b0972fd42",
-      "definitionDigest": "77f50aca2e3b60139177373cf42412ab8a6b7ab8e2baf237a6f50e92887c587a",
+      "definitionDigest": "ae27341dc0e45d2aef79257367b1172b8dfdc3f18d130d034809ae4f5a3507e2",
       "packages": [
         {
           "id": "nature-skills",
@@ -3089,12 +3094,12 @@
           "repository": "Yuan1z0825/nature-skills",
           "license": "Apache-2.0",
           "sha": "d774add241c65e89ed17a4da573b472b0972fd42",
-          "digest": "3d06d2b997f10ee976bda0393dca23af54264da948b80f946186ce1f21ae1a52",
-          "artifactHash": "46f78f9a7890663d2646f673b338926bb7761df42f6ab96af266b1e823b2d456",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/801a4087e68a",
+          "digest": "cc4382d24f3cd3dc79c5c076040c04334f0b184c898e51d617611f9554a8dd59",
+          "artifactHash": "5658a6a3445770aaf7fe7f95f58b6fa885481d7d868c52a5746a383adb519110",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/801a4087",
           "genericSkillName": "nature-skills-suite",
-          "genericSkillPath": "packages/801a4087e68a/s",
+          "genericSkillPath": "p/801a4087",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -3136,7 +3141,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/801a4087"
+          }
         }
       ]
     },
@@ -3144,7 +3154,7 @@
       "repository": "Imbad0202/academic-research-skills",
       "branch": "main",
       "sha": "530659d983c2f4aa584ba3f2df224df08d90b264",
-      "definitionDigest": "4d1a87123a2449883b0e6eb29e78db2eed680a6c3bcab8abc16286c20331c5f4",
+      "definitionDigest": "118bc9d3585eb057f6b2033a64a650ca8bf5e65d607d0a58824898048ef9eb76",
       "packages": [
         {
           "id": "ars-claude",
@@ -3248,12 +3258,12 @@
           "family": "academic-research-skills",
           "license": "CC-BY-NC-4.0",
           "sha": "530659d983c2f4aa584ba3f2df224df08d90b264",
-          "digest": "5a55c5cc5343aca2e19e2ec765adb2e60d62f3b2257941c33bd5dbf4193f8451",
-          "artifactHash": "d004a950fe6c069ed1292690dedbc40830d38eea02d37d5e6c8a6fcb1407433f",
-          "distributionVersion": "0.1.6",
-          "packagePath": "packages/c0a5016e27d8",
+          "digest": "2bceb028c0b6779c7857b1e29bfb22179ea0376f1fdaa5c7b4765488a78058f7",
+          "artifactHash": "07b5b3fbccb13f85ba880a749b0be608a3f5b8e3601422cbf5913a24fa3b1f51",
+          "distributionVersion": "0.1.7",
+          "packagePath": "p/c0a5016e",
           "genericSkillName": "ars-claude-suite",
-          "genericSkillPath": "packages/c0a5016e27d8/s",
+          "genericSkillPath": "p/c0a5016e",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -3312,7 +3322,12 @@
             "commands",
             "hooks"
           ],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/c0a5016e"
+          }
         }
       ]
     },
@@ -3320,7 +3335,7 @@
       "repository": "leo-lilinxiao/codex-autoresearch",
       "branch": "main",
       "sha": "0f54c571707487f59486ba7c50d405edfc746c19",
-      "definitionDigest": "69b0be07ddc1591d569737466ec09d2f8dc2533bbae555f0ec9359aa0e5c5f8c",
+      "definitionDigest": "fcbdc999ff32b72f489ea741585f314c35f3db72831f9aece0ee88b56b7844a8",
       "packages": [
         {
           "id": "codex-autoresearch",
@@ -3340,12 +3355,12 @@
           "repository": "leo-lilinxiao/codex-autoresearch",
           "license": "MIT",
           "sha": "0f54c571707487f59486ba7c50d405edfc746c19",
-          "digest": "ca3f14588c8f1b7855796e7e67c969eb50e333c18fc9094cb6247a49235b8ee3",
-          "artifactHash": "04014d8e36fdd32664228d7d8ad585d3a22649665ab87f9032e731a9a21ad810",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/8eb5d1309520",
+          "digest": "62ae2f2402a46a4a8c8beb269e122209ec054b677fcbf1926e7a5459b60c6771",
+          "artifactHash": "2c460ab3a937907ddc388d6a6b183187dff905d42c5a6461da22295fa17de19a",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/8eb5d130",
           "genericSkillName": "codex-autoresearch-suite",
-          "genericSkillPath": "packages/8eb5d1309520/s",
+          "genericSkillPath": "p/8eb5d130",
           "cloud": "unsupported",
           "operatingSystems": [
             "unspecified"
@@ -3394,7 +3409,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/8eb5d130"
+          }
         }
       ]
     },
@@ -3402,7 +3422,7 @@
       "repository": "zLanqing/codex-claude-academic-skills",
       "branch": "main",
       "sha": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
-      "definitionDigest": "56e760173f0944c32aa914b4a0c46364c0276d4de6a0a3a4869d76f69dc131c9",
+      "definitionDigest": "c648c93dab7f51bdf21b5bf5dbd1b4dfc8c7e4b2df4f2fbeb745871e87a79211",
       "packages": [
         {
           "id": "academic-toolkit-research-writing-skill",
@@ -3422,12 +3442,12 @@
           "repository": "zLanqing/codex-claude-academic-skills",
           "license": "MIT",
           "sha": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
-          "digest": "2f822afaff9cceccde64264c6179688d1acb6c66e6dbf6b1fba18565ae8372a0",
-          "artifactHash": "9626dfe45600d4ea076d441340aa37b8c7a588a33ee1ba506af1001ca2009a9e",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/b7e491f5bd3c",
+          "digest": "6642182e5d0d0b56d696811d652eec970952e80e5523afeb64d195a73c181897",
+          "artifactHash": "5ddbac4fc974db35bb618f093474caf6b6b33b2f3cc77e0648e96b3412c1bc19",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/b7e491f5",
           "genericSkillName": "academic-toolkit-research-writing-skill-suite",
-          "genericSkillPath": "packages/b7e491f5bd3c/s",
+          "genericSkillPath": "p/b7e491f5",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -3468,7 +3488,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/b7e491f5"
+          }
         },
         {
           "id": "academic-toolkit-office-academic-skill",
@@ -3488,12 +3513,12 @@
           "repository": "zLanqing/codex-claude-academic-skills",
           "license": "MIT",
           "sha": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
-          "digest": "590fcb06a964336b702c4ad6e3fb7d67e98f4870aaa0886cfb2fc8bb0fb97395",
-          "artifactHash": "2baad338bd620690a4a62b03af95fe2a873d9666ab70a2b363aa611bd656a8b8",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/5a7021f9ae98",
+          "digest": "a6e744a6348384015dc01d01822ff9bc7b789819fa3989e0f3d84c2ff0a80ad2",
+          "artifactHash": "5c50a09d1b0bc7476c5a5ac29902f099169a659f021445ca810e92e88813063c",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/5a7021f9",
           "genericSkillName": "academic-toolkit-office-academic-skill-suite",
-          "genericSkillPath": "packages/5a7021f9ae98/s",
+          "genericSkillPath": "p/5a7021f9",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -3534,7 +3559,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/5a7021f9"
+          }
         },
         {
           "id": "academic-toolkit-scientific-toolkit-skill",
@@ -3554,12 +3584,12 @@
           "repository": "zLanqing/codex-claude-academic-skills",
           "license": "MIT",
           "sha": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
-          "digest": "77f4b6176e13292982830134bc52ea090a17c7c0b7d5eec174d4485878acbdf6",
-          "artifactHash": "32cc07737960ad76d6e841036e0aa3be2c1d549a1e016254fd7ec220138a4e9d",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/77c7c375f76a",
+          "digest": "a2dc9188fbf5f350069fa1d4087491949df7a835e03ce1450b1c3e1f6e80822a",
+          "artifactHash": "3e778ad2b8fc6e603e511256cec991cafbc8ceb4a6946426baa1ca43f9ad0555",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/77c7c375",
           "genericSkillName": "academic-toolkit-scientific-toolkit-skill-suite",
-          "genericSkillPath": "packages/77c7c375f76a/s",
+          "genericSkillPath": "p/77c7c375",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -3600,7 +3630,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/77c7c375"
+          }
         }
       ]
     },
@@ -3608,7 +3643,7 @@
       "repository": "Imbad0202/academic-research-skills-codex",
       "branch": "main",
       "sha": "a1556557887f345aac99bdc6027e008e91fef236",
-      "definitionDigest": "312e87da606f7c8cc1b88d6303b61c57322abbbf7e790b067324524e149af08f",
+      "definitionDigest": "84ad957890729a4f43e6e67ba3d1ffdfe18aec3c6a31674fe192b5bacc47e6c8",
       "packages": [
         {
           "id": "ars-codex-ars-codex",
@@ -3701,12 +3736,12 @@
           "family": "academic-research-skills",
           "license": "CC-BY-NC-4.0",
           "sha": "a1556557887f345aac99bdc6027e008e91fef236",
-          "digest": "125279dc2a3fc1fd502e95f7c42a1d77ebd6150239a84dd3037d3a4df7decc2c",
-          "artifactHash": "a0ea4cb30d3678ad9dc6daa0b5c54b838711dc5d6588c42784a4866adc229547",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/2a720294c19a",
+          "digest": "bf334e9a16eb2b91da7d0aaaf07cdc97753c280a6eb8413408eb59fda538b520",
+          "artifactHash": "34725c29b6a0d1cbebebc3db9df140b8157aae338f1628b4e69d1693b638bbcd",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/2a720294",
           "genericSkillName": "ars-codex-ars-codex-suite",
-          "genericSkillPath": "packages/2a720294c19a/s",
+          "genericSkillPath": "p/2a720294",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -3755,7 +3790,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/2a720294"
+          }
         }
       ]
     },
@@ -3763,7 +3803,7 @@
       "repository": "Given-Dream/sciencedirect-live-session-fetcher",
       "branch": "main",
       "sha": "0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
-      "definitionDigest": "6c4fb3afdd44f0ccb409b2464bf4c8073decb15f7e7ad2ebe00d7f8aeee576ba",
+      "definitionDigest": "6007affc80528da48a0518cff951181d404506c817d143a840a50c6629e0b2c9",
       "packages": [
         {
           "id": "live-session-fetcher-sciencedirect-live-session-fetcher",
@@ -3783,12 +3823,12 @@
           "repository": "Given-Dream/sciencedirect-live-session-fetcher",
           "license": "MIT",
           "sha": "0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
-          "digest": "8026247a0e4d21e20b82728d9128cdd7a8e7568ae5a2c034b0308ddf49076936",
-          "artifactHash": "8d2dbc6357cdf42e2394e6fa6eab70034eab435cb8d101177050723d7b449555",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/b7f9eb62d954",
+          "digest": "c6deaf0eea5b072413c0baa8ded52fdb668837880d4ac8d7ae7dc6d9b7f36937",
+          "artifactHash": "956c0ebafd36b103367cad4b32ba2b697465352d2e28c7a43f7f9f25be4421b5",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/b7f9eb62",
           "genericSkillName": "live-session-fetcher-sciencedirect-live-session-6f7e3f670d",
-          "genericSkillPath": "packages/b7f9eb62d954/s",
+          "genericSkillPath": "p/b7f9eb62",
           "cloud": "unsupported",
           "operatingSystems": [
             "windows",
@@ -3832,7 +3872,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/b7f9eb62"
+          }
         },
         {
           "id": "live-session-fetcher-literature-live-session-pipeline",
@@ -3852,12 +3897,12 @@
           "repository": "Given-Dream/sciencedirect-live-session-fetcher",
           "license": "MIT",
           "sha": "0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
-          "digest": "996fdb9ac0598e5728171cbea901789804dcea9bf11a6818f457f4ebc76fb3df",
-          "artifactHash": "c61ac801495ede4ff4b22cbf54af7770c571e2b6566b058105969b80a2e6105b",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/c60b391b1073",
+          "digest": "0fb7e98db5112189fad3576f4c463a7ac585a826dde2f11a83e27cdfdd0b08da",
+          "artifactHash": "f9d0a20fe0a8d4565ef34f98017b7845672f8058393f91b38838986ab15314ed",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/c60b391b",
           "genericSkillName": "live-session-fetcher-literature-live-session-pi-9bd57e1e6b",
-          "genericSkillPath": "packages/c60b391b1073/s",
+          "genericSkillPath": "p/c60b391b",
           "cloud": "unsupported",
           "operatingSystems": [
             "windows",
@@ -3901,7 +3946,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/c60b391b"
+          }
         }
       ]
     },
@@ -3909,7 +3959,7 @@
       "repository": "Lucaswangzcx/literature-downloader-skill",
       "branch": "main",
       "sha": "0e8f306fc5205fc90657fbd916a952fa9c9d773a",
-      "definitionDigest": "076dc43b35d2279a9b9308fc43e41730516be840933d8ba0408e13280c733a7c",
+      "definitionDigest": "28e23800373270b66cb155d3e11bbdb8b702fa63916c73e8f21dcd7bb1ad49ba",
       "packages": [
         {
           "id": "literature-downloader",
@@ -3929,12 +3979,12 @@
           "repository": "Lucaswangzcx/literature-downloader-skill",
           "license": "MIT",
           "sha": "0e8f306fc5205fc90657fbd916a952fa9c9d773a",
-          "digest": "dc21b0e9371b8496d2b35ac7c479e55e55a88dd7d8060da5bf029408ddd5b7a8",
-          "artifactHash": "86437af4069032f59a26dce6841118bcf481b255c4063c8850b017cbb67f4e0e",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/adc452eb4985",
+          "digest": "dd2199cf2877dce4e96fdce5d5a4f3582507700c5bcbd50d0ebf60af6a68c1cc",
+          "artifactHash": "3d676c8c64b2bf12de75eab4f812224f52f56580ebb1f843a9cd59310825f853",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/adc452eb",
           "genericSkillName": "literature-downloader-suite",
-          "genericSkillPath": "packages/adc452eb4985/s",
+          "genericSkillPath": "p/adc452eb",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -3975,7 +4025,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/adc452eb"
+          }
         }
       ]
     },
@@ -3983,7 +4038,7 @@
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "branch": "main",
       "sha": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
-      "definitionDigest": "b879307407afb4314881e986d92c591671ffcc4dac813e9eea910ca9137fb9e3",
+      "definitionDigest": "8bb2c4c1394998e365b1ce421a34365d3d00bfd8740bede3bfa471b86baa7a0b",
       "packages": [
         {
           "id": "aris",
@@ -5359,12 +5414,12 @@
           "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
           "license": "MIT",
           "sha": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
-          "digest": "470d9cfba28b15ff0a3e130c7e0a1557fb8087d0c3e046eb986a31d4fe23c2f6",
-          "artifactHash": "d6f505e99b31478906be58e442195d0988200660914fe49342cba08fc2d5c197",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/984b00ea54e7",
+          "digest": "b46d7d887ecc3d1ceddf0c232109d01f4c912520f3e4721a06f6f73b41d2c3ab",
+          "artifactHash": "4435b5becf370343dd6187ca2dae8c6f5aad1a56f639fe757113ab6fed6dfe7b",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/984b00ea",
           "genericSkillName": "aris-suite",
-          "genericSkillPath": "packages/984b00ea54e7/s",
+          "genericSkillPath": "p/984b00ea",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -5418,7 +5473,12 @@
             "agents",
             "commands"
           ],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/984b00ea"
+          }
         }
       ]
     },
@@ -5426,7 +5486,7 @@
       "repository": "Orchestra-Research/AI-Research-SKILLs",
       "branch": "main",
       "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "definitionDigest": "12f9b2779fd88325b9c8b645f0e69db8b785d3f02fde5a9015900af42d41b481",
+      "definitionDigest": "1f53a43ca052015271907877108eb5c752efec3e56429239e30ae526080e6c4a",
       "packages": [
         {
           "id": "ai-research-skills-model-architecture",
@@ -5511,12 +5571,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "42866ff4bfbc0842bada5e9879c48adb3bc96c2af3ee050fc33f17444c789993",
-          "artifactHash": "c13b67085dbde0ae16aa15e6f177f2c9a400fa5d5b09c65a91bbf4c83821de77",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/c8ae269959ec",
+          "digest": "4fa6cfbc34b7233aac2a9c11e46a31253be5d6d011a467838e8caede0794ce6a",
+          "artifactHash": "15bc55b43db1505580312e7c1b10b825b1ae7525fb3c21c0e554ae8e06e6f5e1",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/c8ae2699",
           "genericSkillName": "ai-research-skills-model-architecture-suite",
-          "genericSkillPath": "packages/c8ae269959ec/s",
+          "genericSkillPath": "p/c8ae2699",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -5588,7 +5648,12 @@
             "01-model-architecture/mamba/references/mamba2-details.md — 初始收录审查：上游 Advanced topics 引用的可选架构扩展文档未提供。",
             "01-model-architecture/mamba/references/performance.md — 初始收录审查：上游 Advanced topics 引用的可选性能扩展文档未提供。",
             "01-model-architecture/mamba/references/selective-ssm.md — 初始收录审查：上游 Advanced topics 引用的可选数学扩展文档未提供。"
-          ]
+          ],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/c8ae2699"
+          }
         },
         {
           "id": "ai-research-skills-tokenization",
@@ -5640,12 +5705,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "285aeaf8cf6b342146af016d78268f180d08e6d804e4a354db58cbff68e81436",
-          "artifactHash": "6fd53dc79662a72e0267ce96ea16458ac157616f73d38b9d9eded74b2ed60b03",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/6318a9b9bd52",
+          "digest": "41c85e1d9764c4a2fb73f10fc5e518d873da6f41dfcce6afacee9ae1b499cac7",
+          "artifactHash": "9f7a8aed0f50340aeff390bd871efbbdab795170ba9c0c87705fc3ff61bce3a7",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/6318a9b9",
           "genericSkillName": "ai-research-skills-tokenization-suite",
-          "genericSkillPath": "packages/6318a9b9bd52/s",
+          "genericSkillPath": "p/6318a9b9",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -5686,7 +5751,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/6318a9b9"
+          }
         },
         {
           "id": "ai-research-skills-fine-tuning",
@@ -5760,12 +5830,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "531f5c3dca29c029b17b78848b4acb8cef83144afa5f361c0db108b5098459c4",
-          "artifactHash": "e3c19763fdb390cfc21b0d0d24d69fbf81850c4e837fae74d4d9dab1f158a4ae",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/e1c8a10cfc00",
+          "digest": "1e42301576aea019c224027052056514b1079f0c515698f02eb1c06d4112cd21",
+          "artifactHash": "9c6ae76aaad81c41b21f8da4dfa32c68a77932cb93d08cf39e597420df601e19",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/e1c8a10c",
           "genericSkillName": "ai-research-skills-fine-tuning-suite",
-          "genericSkillPath": "packages/e1c8a10cfc00/s",
+          "genericSkillPath": "p/e1c8a10c",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -5806,7 +5876,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/e1c8a10c"
+          }
         },
         {
           "id": "ai-research-skills-mechanistic-interpretability",
@@ -5880,12 +5955,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "c6ff9ac605bc7e51fcbf218a967c9dc7bc06fb2a73a2a3453b063fee047fc454",
-          "artifactHash": "c5e4ed2269f38a2c32e0b0bec954d005ffd38293e776837843d45ac4712f0b49",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/31c92cc4b190",
+          "digest": "c607e055d75bcd56615fe8e2fa2deb65163a593b68e3dfc1bcf231854d06e18e",
+          "artifactHash": "77a4aefd941622159660289234128b599cbc32d7ea1cd4b643737f6b83e171d8",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/31c92cc4",
           "genericSkillName": "ai-research-skills-mechanistic-interpretability-suite",
-          "genericSkillPath": "packages/31c92cc4b190/s",
+          "genericSkillPath": "p/31c92cc4",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -5926,7 +6001,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/31c92cc4"
+          }
         },
         {
           "id": "ai-research-skills-data-processing",
@@ -5978,12 +6058,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "bf7d06a52c37f0846668ff211ae546d875e1266d484a062306a7e1f57fc917e2",
-          "artifactHash": "d5a09de767f51ff7d3766f4403f72dff372735c61950401c36a642269c727303",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/1d05c33bb152",
+          "digest": "628bff65b8ea368d3aca2266b7df63c1c3b4258f43912bece9b634637da081e2",
+          "artifactHash": "072d147bec339f174ebab41292a6ddcba747ffcddcb64b5ff9be02174ed7ab65",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/1d05c33b",
           "genericSkillName": "ai-research-skills-data-processing-suite",
-          "genericSkillPath": "packages/1d05c33bb152/s",
+          "genericSkillPath": "p/1d05c33b",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -6024,7 +6104,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/1d05c33b"
+          }
         },
         {
           "id": "ai-research-skills-post-training",
@@ -6142,12 +6227,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "427c56dc00670a981c0e87da5485ebed2bad6618e9b938b15286ee5878a09669",
-          "artifactHash": "afc199bbb7ff636710bee024f1bf181d42d85acc74f55ed8996fb78474fc9fda",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/8414261ff6d3",
+          "digest": "c1edcd0905ba71043086ebcb504fb2c24f34f98e51d7f16f8b8706cc0be52ac9",
+          "artifactHash": "36e43d49876e4b836b4a5cdd1a83841a4477493f0a8904f9fb62903149e7cd57",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/8414261f",
           "genericSkillName": "ai-research-skills-post-training-suite",
-          "genericSkillPath": "packages/8414261ff6d3/s",
+          "genericSkillPath": "p/8414261f",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -6217,7 +6302,12 @@
           ],
           "knownIssues": [
             "06-post-training/verl/references/multi-turn.md — 初始收录审查：上游 Advanced Topics 引用的可选多轮扩展文档未提供。"
-          ]
+          ],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/8414261f"
+          }
         },
         {
           "id": "ai-research-skills-safety-alignment",
@@ -6291,12 +6381,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "5f84b0ad4b544e50f832c7c9a907cf0ab2d51c2b6efd5902f92c6b1cf6b36779",
-          "artifactHash": "50fc479ca4a01944af1153dbf74c324c5dd60b2a8b0d9ee48cb6b34e85515129",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/2d1f809196c5",
+          "digest": "9b37d4fdea489f779f7b0ee177168f7d4ce25137ff4e5bf4c20458497acb2ca0",
+          "artifactHash": "020e70e2a308d9309d56e18e88517a120f8e34053d785d4bae997229686a299f",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/2d1f8091",
           "genericSkillName": "ai-research-skills-safety-alignment-suite",
-          "genericSkillPath": "packages/2d1f809196c5/s",
+          "genericSkillPath": "p/2d1f8091",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -6374,7 +6464,12 @@
             "07-safety-alignment/nemo-guardrails/references/colang-guide.md — 初始收录审查：上游 Advanced topics 引用的可选 DSL 扩展文档未提供。",
             "07-safety-alignment/nemo-guardrails/references/integrations.md — 初始收录审查：上游 Advanced topics 引用的可选集成扩展文档未提供。",
             "07-safety-alignment/nemo-guardrails/references/performance.md — 初始收录审查：上游 Advanced topics 引用的可选性能扩展文档未提供。"
-          ]
+          ],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/2d1f8091"
+          }
         },
         {
           "id": "ai-research-skills-distributed-training",
@@ -6470,12 +6565,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "157570f83bd63f985800061edd52389a7cfd4228bcf39d06bdb48098cb9efd7d",
-          "artifactHash": "1a155cd09d1286de637ae199fa657df95c7243549f9b60032b70b89a077cc3cd",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/d28028453caa",
+          "digest": "f5b1561d9b706be73c08f630e47abe21e6b4f93769103b222279781cb1711a0d",
+          "artifactHash": "5a921abe9c63f0793efdcb88f6cc89bb31de6f5d75f01ec6e566aa5d5a0acb8c",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/d2802845",
           "genericSkillName": "ai-research-skills-distributed-training-suite",
-          "genericSkillPath": "packages/d28028453caa/s",
+          "genericSkillPath": "p/d2802845",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -6546,7 +6641,12 @@
           "knownIssues": [
             "08-distributed-training/ray-train/references/custom-loops.md — 初始收录审查：上游 Advanced topics 引用的可选训练扩展文档未提供。",
             "08-distributed-training/ray-train/references/hyperparameter-tuning.md — 初始收录审查：上游 Advanced topics 引用的可选调参扩展文档未提供。"
-          ]
+          ],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/d2802845"
+          }
         },
         {
           "id": "ai-research-skills-infrastructure",
@@ -6609,12 +6709,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "56fae8f32ef16b164fe357c8a99d69cf37c890fed0fba963dd91b8c83c9d0806",
-          "artifactHash": "5286ad6d242dafbb0a61299a365783b359207b0a1ffaad34d1043255936e6b51",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/b2be6e126a7f",
+          "digest": "0a70f69454932082602fc6e88187c0e4b580a13bd9ed5e281752f2653bcd0177",
+          "artifactHash": "aa132b21407212927d0631d0c39ddd123fc88b99d4b1286598f4769e7cd46074",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/b2be6e12",
           "genericSkillName": "ai-research-skills-infrastructure-suite",
-          "genericSkillPath": "packages/b2be6e126a7f/s",
+          "genericSkillPath": "p/b2be6e12",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -6655,7 +6755,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/b2be6e12"
+          }
         },
         {
           "id": "ai-research-skills-optimization",
@@ -6762,12 +6867,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "9bd8db60e75f70aa59df3668bd0fc9eb46193967ddb13da202c38dcd0bd464da",
-          "artifactHash": "f906ba9ba518a4e3a3b17cc93a5252d850118d4c34b105bffba0e36e7c046221",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/8c342ec85936",
+          "digest": "53fc9e300828d68e5f1cb9681dea112367c8afd67999498fd9dc9190bf5d0e50",
+          "artifactHash": "4eff62625283f02f8fd6a51a6d6ce83e419e28e617ee637215f89d612e050429",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/8c342ec8",
           "genericSkillName": "ai-research-skills-optimization-suite",
-          "genericSkillPath": "packages/8c342ec85936/s",
+          "genericSkillPath": "p/8c342ec8",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -6838,7 +6943,12 @@
           "knownIssues": [
             "10-optimization/flash-attention/references/advanced-features.md — 初始收录审查：上游 Advanced topics 引用的可选高级功能文档未提供。",
             "10-optimization/flash-attention/references/algorithm.md — 初始收录审查：上游 Advanced topics 引用的可选算法扩展文档未提供。"
-          ]
+          ],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/8c342ec8"
+          }
         },
         {
           "id": "ai-research-skills-evaluation",
@@ -6901,12 +7011,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "a012bf8b3b2420ddc41f5800d91eb5e3c21605b93141894b8e07f9bf92b6c089",
-          "artifactHash": "c22bfcc31d43d7a7d224518e2484b97a89c3069165846a00131e1de84d4f2b16",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/f54a3e76b013",
+          "digest": "f363c053dec98b0e0d81052322f01848c198b4b1dd3d41bee73ab7f5cf903993",
+          "artifactHash": "aaa4c84a35969b3a10bd048c70dde5a76bc14c5f6cbd7cc4b8e3cf7920e4bba4",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/f54a3e76",
           "genericSkillName": "ai-research-skills-evaluation-suite",
-          "genericSkillPath": "packages/f54a3e76b013/s",
+          "genericSkillPath": "p/f54a3e76",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -6947,7 +7057,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/f54a3e76"
+          }
         },
         {
           "id": "ai-research-skills-inference-serving",
@@ -7021,12 +7136,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "a1eda54afabe0dd7c21051d18cd29b61844c3ed14d74a29713ec4a8496f5c032",
-          "artifactHash": "9b86f6b6c52cac7ddbdd4b22ec96cc3fa51e9b809fb219c0169e57e66e149814",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/66d22b71ebbd",
+          "digest": "d9637912ccb8dbcb16b8cd718ac79f96098058ceca8a7039115fc3267dc9eb11",
+          "artifactHash": "18527628fa9b1e93c726cc0f6fea57b204c80255cc15d31848436749a6947430",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/66d22b71",
           "genericSkillName": "ai-research-skills-inference-serving-suite",
-          "genericSkillPath": "packages/66d22b71ebbd/s",
+          "genericSkillPath": "p/66d22b71",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7067,7 +7182,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/66d22b71"
+          }
         },
         {
           "id": "ai-research-skills-mlops",
@@ -7130,12 +7250,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "9b5ad2ce9d42cbfe40a5d5849e44a961aa2be5460913d620a9d9bbbb72c8ca5b",
-          "artifactHash": "325cfdfc183d32c5871fbd37bbaeb330d0c27d4415108fbe77e3ea5b81e98c3f",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/edcd2beceb3e",
+          "digest": "b20b64d5d9bc765584e55ea628c716efc58b496dd5cd50671650a4dcdd7b0dff",
+          "artifactHash": "8e460c5e329ecce6fedd654a1656b1dae7eba65f00b962627c66835dd348fbd1",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/edcd2bec",
           "genericSkillName": "ai-research-skills-mlops-suite",
-          "genericSkillPath": "packages/edcd2beceb3e/s",
+          "genericSkillPath": "p/edcd2bec",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7176,7 +7296,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/edcd2bec"
+          }
         },
         {
           "id": "ai-research-skills-agents",
@@ -7250,12 +7375,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "383a548649069c72f039da2429bf2b5fb9bc42a9f0c9b0833212f48f0b8aa97f",
-          "artifactHash": "b07350605beb6ae8ac886a676baf6e21510080d2facaeaf59dfc544ec9f8f94b",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/eccb854e29f0",
+          "digest": "927f23f81d941014e0368d098ed3aab99d7044b6724bfb0825a75598f1cc3183",
+          "artifactHash": "210f4c2b9f99ba3a6a42dbaff92a6bcb650b2726ace41edc4fa9ab9e3335adff",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/eccb854e",
           "genericSkillName": "ai-research-skills-agents-suite",
-          "genericSkillPath": "packages/eccb854e29f0/s",
+          "genericSkillPath": "p/eccb854e",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7296,7 +7421,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/eccb854e"
+          }
         },
         {
           "id": "ai-research-skills-rag",
@@ -7381,12 +7511,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "fcfe6f64a90715f7d7069dddc77890c971cd6530a93a8b0041ad087a13ef20bc",
-          "artifactHash": "51808b3e2c9bed2650f0eda4704e6f43b47f5fce90be414de4ee86389a774767",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/9adf057a4b24",
+          "digest": "068b9aadf35131e23341760922cc64d32dfdb82516957067932133960fea40ff",
+          "artifactHash": "e8774f867fd817b3c6a36ccde715656e6c7cebc72ccc14595019bf9dcafe8dda",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/9adf057a",
           "genericSkillName": "ai-research-skills-rag-suite",
-          "genericSkillPath": "packages/9adf057a4b24/s",
+          "genericSkillPath": "p/9adf057a",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7427,7 +7557,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/9adf057a"
+          }
         },
         {
           "id": "ai-research-skills-prompt-engineering",
@@ -7501,12 +7636,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "4c1eb217fa3e183b9d9766c5b1c1ffca20160c812ca3f843a4724d745aaf20d4",
-          "artifactHash": "c2f3da3c1e04aaddc13f038ab927bab3a53c0ac325c91dac9395700e35e71025",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/7103cff965e9",
+          "digest": "ef8e98bdb247f2676348f0cbfa99e70973462be892a6064a88d98d130d7acb9f",
+          "artifactHash": "fd6849223fc295a317a9c31f2c34ebb41f921db64418540786284b28a75a43bf",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/7103cff9",
           "genericSkillName": "ai-research-skills-prompt-engineering-suite",
-          "genericSkillPath": "packages/7103cff965e9/s",
+          "genericSkillPath": "p/7103cff9",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7547,7 +7682,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/7103cff9"
+          }
         },
         {
           "id": "ai-research-skills-observability",
@@ -7599,12 +7739,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "5aedf8513e56dbb17f0d7e16b4a4a86fb403070f570c6313c4acc4dba4d2586c",
-          "artifactHash": "bae0e80ad933bfff6b5cd730508e3e313ff56790debaca408eb26698fa27f0c1",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/cd59eb0eb505",
+          "digest": "5462e5c30626208b0a5de1b31688b9c9d0887cc31ce07735d72ae5baceced337",
+          "artifactHash": "4375b84914c12099959e6f4871a1ffc2f42ddec0b093c01bf399df1bae167f7e",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/cd59eb0e",
           "genericSkillName": "ai-research-skills-observability-suite",
-          "genericSkillPath": "packages/cd59eb0eb505/s",
+          "genericSkillPath": "p/cd59eb0e",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7645,7 +7785,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/cd59eb0e"
+          }
         },
         {
           "id": "ai-research-skills-multimodal",
@@ -7785,12 +7930,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "86eabcb1a3138723153b137fb70799b25f37688dc7fc02d6587559734eaa4064",
-          "artifactHash": "9ac58fdacf8028879f0ddc785e8f992f6fe8d2d11461402e07f67763a825cc8d",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/3c167ea73c5a",
+          "digest": "2441e2bfda04a70291971573244780b6deee5e83c3f54688ec8ef0c11ef5e207",
+          "artifactHash": "2de340d6ef9a7fb8115fb1d82de58114fe2dcf39e82d6701fd951e8fa1d26079",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/3c167ea7",
           "genericSkillName": "ai-research-skills-multimodal-suite",
-          "genericSkillPath": "packages/3c167ea73c5a/s",
+          "genericSkillPath": "p/3c167ea7",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7831,7 +7976,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/3c167ea7"
+          }
         },
         {
           "id": "ai-research-skills-emerging-techniques",
@@ -7927,12 +8077,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "dd3f7facdb3ddc27f6e25534683f2c9bee3119a3e4ea0204868c3199115a4f2c",
-          "artifactHash": "a91973d8127e8dc3ee1351029250e646144d1522577c1b146ff4ab6b283dee57",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/d96b441d7085",
+          "digest": "289bc3193064cfe6da576e4c2d3469d99a468f94c94a9616ab42f873fbcb4a11",
+          "artifactHash": "d5398ed4378a5b7d9f639c6d9708e1a9f5530b819f0fe97f670f31d7e543ae05",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/d96b441d",
           "genericSkillName": "ai-research-skills-emerging-techniques-suite",
-          "genericSkillPath": "packages/d96b441d7085/s",
+          "genericSkillPath": "p/d96b441d",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -7973,7 +8123,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/d96b441d"
+          }
         },
         {
           "id": "ai-research-skills-autoresearch",
@@ -8014,12 +8169,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "944acfe77b80982d1f3b6dbe57fbe420b7e525af8ad4169d22e74e748320d626",
-          "artifactHash": "cb2f48197c8ccac56785ec6ee92225cc5672b567a1c8d239c5d79dbc39eb016a",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/a038ad068dc4",
+          "digest": "e116ca4a2771d17869f4225a00985e40f73707c3818c277b9f442a296e2032cb",
+          "artifactHash": "73b7986f957c06db3c764d0f59dfab269e48b26f7a3d338f31e4c7281afc8107",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/a038ad06",
           "genericSkillName": "ai-research-skills-autoresearch-suite",
-          "genericSkillPath": "packages/a038ad068dc4/s",
+          "genericSkillPath": "p/a038ad06",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -8060,7 +8215,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/a038ad06"
+          }
         },
         {
           "id": "ai-research-skills-ml-paper-writing",
@@ -8134,12 +8294,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "71e0bd47b5a34f14e62a52132148fa56a28239b0459a02dcabf30af5886f5d49",
-          "artifactHash": "f754695b50f48c82843074ed2e0f53f24eb72b2f84e04cae7449a5bd600868a5",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/3a65eb625299",
+          "digest": "caaa4b2de355b439ef034830abf6cbb1d4e0c88c0ea2c48539e84e2246f974d5",
+          "artifactHash": "00791fb36031cd415d2db9d8195bf079083e3fc5453ba251ef2be1ced93fd41e",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/3a65eb62",
           "genericSkillName": "ai-research-skills-ml-paper-writing-suite",
-          "genericSkillPath": "packages/3a65eb625299/s",
+          "genericSkillPath": "p/3a65eb62",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -8180,7 +8340,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/3a65eb62"
+          }
         },
         {
           "id": "ai-research-skills-ideation",
@@ -8232,12 +8397,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "94c127dbdf793a2f79a8c28335fc4f11ffee2aec7ba095690c25d62be86e6f5e",
-          "artifactHash": "1b8dbec957591ac390756ba37c5e44ff021fcfcfc44707cca329a0270d3a08c5",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/efc4e7807d61",
+          "digest": "71996a737059689ab799e935f926570cbfd52d7d3719d77bd08d00fda78dbee6",
+          "artifactHash": "164692919e8499f4082551217a187dd77fb126b53920d256cb14fbde3ea937d3",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/efc4e780",
           "genericSkillName": "ai-research-skills-ideation-suite",
-          "genericSkillPath": "packages/efc4e7807d61/s",
+          "genericSkillPath": "p/efc4e780",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -8278,7 +8443,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/efc4e780"
+          }
         },
         {
           "id": "ai-research-skills-agent-native-research-artifact",
@@ -8341,12 +8511,12 @@
           "repository": "Orchestra-Research/AI-Research-SKILLs",
           "license": "MIT",
           "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-          "digest": "437802de3be3259e954491275ece6e012f191151448df22f0ca61c4fcc8cb5d4",
-          "artifactHash": "967da66ca24a96e1bbad99847a8f4d2072b07dadd6c308a2ab74936ec68ab4c1",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/791e9b297962",
+          "digest": "76501374903e6a2e79aab1c280c4d03b4f6942b5842acf3e4e14e6c011255637",
+          "artifactHash": "3cd1be03f6983f47b5e0af08f085bb471a4a0a89e63028f6e0e5178c32315445",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/791e9b29",
           "genericSkillName": "ai-research-skills-agent-native-research-artifact-suite",
-          "genericSkillPath": "packages/791e9b297962/s",
+          "genericSkillPath": "p/791e9b29",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -8387,7 +8557,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/791e9b29"
+          }
         }
       ]
     },
@@ -8395,7 +8570,7 @@
       "repository": "Master-cai/Research-Paper-Writing-Skills",
       "branch": "main",
       "sha": "77e7c2c1ba06f7d71844873147665437a03aac1b",
-      "definitionDigest": "f0dedabcbdfdff439b0736a291256628f6b413c7b746e949e284eb26d1cfc3a1",
+      "definitionDigest": "cde7d0c03f3b450e285cff2fa839594501c8716bc7ffb07f06f509ba6984f888",
       "packages": [
         {
           "id": "research-paper-writing",
@@ -8415,12 +8590,12 @@
           "repository": "Master-cai/Research-Paper-Writing-Skills",
           "license": "MIT",
           "sha": "77e7c2c1ba06f7d71844873147665437a03aac1b",
-          "digest": "f5ceeba2c8f80bbfa60708a44874866e11cdacb9aa9ad36d70be2b7e8ae8ca5e",
-          "artifactHash": "732d903c927920161a24ca13d28407d6572ccbecc6d4ecb36c0cee57a0ebd87f",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/bd3aad02f248",
+          "digest": "1f4ab5535eb1757a5e93a83f2ee41a1321b5d223621577a3e3bb41f1a30b01d5",
+          "artifactHash": "9964d0ed7938977aca9c5a80459fe23ef3151bded165df3783247020a5cd6ede",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/bd3aad02",
           "genericSkillName": "research-paper-writing-suite",
-          "genericSkillPath": "packages/bd3aad02f248/s",
+          "genericSkillPath": "p/bd3aad02",
           "cloud": "supported",
           "operatingSystems": [
             "unspecified"
@@ -8459,7 +8634,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/bd3aad02"
+          }
         }
       ]
     },
@@ -8467,7 +8647,7 @@
       "repository": "appautomaton/latex-arxiv-SKILL",
       "branch": "main",
       "sha": "b5b058350796bd6c9df7725a5d2e1607a9d45b2a",
-      "definitionDigest": "36373fbd2a2987352ff2a597a565feab8ebb5e30a2ca0da368eeb194e079e481",
+      "definitionDigest": "04777d82fa90985912a31a8a77ac05fbd05b9c933449d8568b49607bb865d677",
       "packages": [
         {
           "id": "latex-arxiv",
@@ -8502,12 +8682,12 @@
           "repository": "appautomaton/latex-arxiv-SKILL",
           "license": "MIT",
           "sha": "b5b058350796bd6c9df7725a5d2e1607a9d45b2a",
-          "digest": "ed129a735059dfabb95e55ca0fb5463d590cd947a71f149f926439bf85113a4a",
-          "artifactHash": "a1ca1b8017ed5145680958b3c81ae6ae5fb0f89e0baf6ecac84e596b04043ee1",
-          "distributionVersion": "0.1.5",
-          "packagePath": "packages/506547a850c5",
+          "digest": "a246f75855776d13065535b9f3e7f54dbad855910d543441359339a5b4ae8bac",
+          "artifactHash": "e8a2c80f52e5b7544b3e1fac97f819cad42b325aece597e2f215da1f09e9e210",
+          "distributionVersion": "0.1.6",
+          "packagePath": "p/506547a8",
           "genericSkillName": "latex-arxiv-suite",
-          "genericSkillPath": "packages/506547a850c5/s",
+          "genericSkillPath": "p/506547a8",
           "cloud": "conditional",
           "operatingSystems": [
             "unspecified"
@@ -8549,7 +8729,12 @@
             }
           },
           "nativeCapabilities": [],
-          "knownIssues": []
+          "knownIssues": [],
+          "distribution": {
+            "repository": "Veiluna/plugin-market",
+            "commit": "f480aa1c961cad6daf4422a0bfe482a7857a80f8",
+            "path": "p/506547a8"
+          }
         }
       ]
     }

@@ -7,8 +7,10 @@
     {
       "name": "academic-toolkit-office-academic-skill",
       "source": {
-        "source": "local",
-        "path": "./packages/5a7021f9ae98"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/5a7021f9",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -19,8 +21,10 @@
     {
       "name": "academic-toolkit-research-writing-skill",
       "source": {
-        "source": "local",
-        "path": "./packages/b7e491f5bd3c"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/b7e491f5",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -31,8 +35,10 @@
     {
       "name": "academic-toolkit-scientific-toolkit-skill",
       "source": {
-        "source": "local",
-        "path": "./packages/77c7c375f76a"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/77c7c375",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -43,8 +49,10 @@
     {
       "name": "ai-research-skills-agent-native-research-artifact",
       "source": {
-        "source": "local",
-        "path": "./packages/791e9b297962"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/791e9b29",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -55,8 +63,10 @@
     {
       "name": "ai-research-skills-agents",
       "source": {
-        "source": "local",
-        "path": "./packages/eccb854e29f0"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/eccb854e",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -67,8 +77,10 @@
     {
       "name": "ai-research-skills-autoresearch",
       "source": {
-        "source": "local",
-        "path": "./packages/a038ad068dc4"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/a038ad06",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -79,8 +91,10 @@
     {
       "name": "ai-research-skills-data-processing",
       "source": {
-        "source": "local",
-        "path": "./packages/1d05c33bb152"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/1d05c33b",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -91,8 +105,10 @@
     {
       "name": "ai-research-skills-distributed-training",
       "source": {
-        "source": "local",
-        "path": "./packages/d28028453caa"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/d2802845",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -103,8 +119,10 @@
     {
       "name": "ai-research-skills-emerging-techniques",
       "source": {
-        "source": "local",
-        "path": "./packages/d96b441d7085"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/d96b441d",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -115,8 +133,10 @@
     {
       "name": "ai-research-skills-evaluation",
       "source": {
-        "source": "local",
-        "path": "./packages/f54a3e76b013"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/f54a3e76",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -127,8 +147,10 @@
     {
       "name": "ai-research-skills-fine-tuning",
       "source": {
-        "source": "local",
-        "path": "./packages/e1c8a10cfc00"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/e1c8a10c",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -139,8 +161,10 @@
     {
       "name": "ai-research-skills-ideation",
       "source": {
-        "source": "local",
-        "path": "./packages/efc4e7807d61"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/efc4e780",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -151,8 +175,10 @@
     {
       "name": "ai-research-skills-inference-serving",
       "source": {
-        "source": "local",
-        "path": "./packages/66d22b71ebbd"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/66d22b71",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -163,8 +189,10 @@
     {
       "name": "ai-research-skills-infrastructure",
       "source": {
-        "source": "local",
-        "path": "./packages/b2be6e126a7f"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/b2be6e12",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -175,8 +203,10 @@
     {
       "name": "ai-research-skills-mechanistic-interpretability",
       "source": {
-        "source": "local",
-        "path": "./packages/31c92cc4b190"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/31c92cc4",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -187,8 +217,10 @@
     {
       "name": "ai-research-skills-ml-paper-writing",
       "source": {
-        "source": "local",
-        "path": "./packages/3a65eb625299"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/3a65eb62",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -199,8 +231,10 @@
     {
       "name": "ai-research-skills-mlops",
       "source": {
-        "source": "local",
-        "path": "./packages/edcd2beceb3e"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/edcd2bec",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -211,8 +245,10 @@
     {
       "name": "ai-research-skills-model-architecture",
       "source": {
-        "source": "local",
-        "path": "./packages/c8ae269959ec"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/c8ae2699",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -223,8 +259,10 @@
     {
       "name": "ai-research-skills-multimodal",
       "source": {
-        "source": "local",
-        "path": "./packages/3c167ea73c5a"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/3c167ea7",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -235,8 +273,10 @@
     {
       "name": "ai-research-skills-observability",
       "source": {
-        "source": "local",
-        "path": "./packages/cd59eb0eb505"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/cd59eb0e",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -247,8 +287,10 @@
     {
       "name": "ai-research-skills-optimization",
       "source": {
-        "source": "local",
-        "path": "./packages/8c342ec85936"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/8c342ec8",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -259,8 +301,10 @@
     {
       "name": "ai-research-skills-post-training",
       "source": {
-        "source": "local",
-        "path": "./packages/8414261ff6d3"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/8414261f",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -271,8 +315,10 @@
     {
       "name": "ai-research-skills-prompt-engineering",
       "source": {
-        "source": "local",
-        "path": "./packages/7103cff965e9"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/7103cff9",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -283,8 +329,10 @@
     {
       "name": "ai-research-skills-rag",
       "source": {
-        "source": "local",
-        "path": "./packages/9adf057a4b24"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/9adf057a",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -295,8 +343,10 @@
     {
       "name": "ai-research-skills-safety-alignment",
       "source": {
-        "source": "local",
-        "path": "./packages/2d1f809196c5"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/2d1f8091",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -307,8 +357,10 @@
     {
       "name": "ai-research-skills-tokenization",
       "source": {
-        "source": "local",
-        "path": "./packages/6318a9b9bd52"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/6318a9b9",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -346,8 +398,10 @@
     {
       "name": "codex-autoresearch",
       "source": {
-        "source": "local",
-        "path": "./packages/8eb5d1309520"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/8eb5d130",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -358,8 +412,10 @@
     {
       "name": "latex-arxiv",
       "source": {
-        "source": "local",
-        "path": "./packages/506547a850c5"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/506547a8",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -370,8 +426,10 @@
     {
       "name": "literature-downloader",
       "source": {
-        "source": "local",
-        "path": "./packages/adc452eb4985"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/adc452eb",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -382,8 +440,10 @@
     {
       "name": "live-session-fetcher-literature-live-session-pipeline",
       "source": {
-        "source": "local",
-        "path": "./packages/c60b391b1073"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/c60b391b",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -394,8 +454,10 @@
     {
       "name": "live-session-fetcher-sciencedirect-live-session-fetcher",
       "source": {
-        "source": "local",
-        "path": "./packages/b7f9eb62d954"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/b7f9eb62",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -419,8 +481,10 @@
     {
       "name": "research-paper-writing",
       "source": {
-        "source": "local",
-        "path": "./packages/bd3aad02f248"
+        "source": "git-subdir",
+        "url": "https://github.com/Veiluna/plugin-market.git",
+        "path": "p/bd3aad02",
+        "sha": "f480aa1c961cad6daf4422a0bfe482a7857a80f8"
       },
       "policy": {
         "installation": "AVAILABLE",
