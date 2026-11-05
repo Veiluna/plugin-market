@@ -5,7 +5,7 @@ import { sourceFile } from './discovery.ts';
 import { DSH_ENGINE_RANGE } from './adapters.ts';
 import type { AgentId, Compatibility, MarketConfig, PackageDefinition, PackageRecord, SourceDefinition } from './types.ts';
 
-export const ADAPTER_VERSION = '4';
+export const ADAPTER_VERSION = '5';
 const capabilityPaths: Record<string, string[]> = { hooks: ['hooks/hooks.json'], agents: ['agents'], commands: ['commands'], mcp: ['.mcp.json', 'mcp.json'], apps: ['.app.json'] };
 const licenseNames = ['LICENSE', 'LICENSE.md', 'LICENSE.txt', 'COPYING'];
 
@@ -93,10 +93,12 @@ function routerText(source: SourceDefinition, definition: PackageDefinition, sha
 }
 
 export async function buildPackage(source: SourceDefinition, definition: PackageDefinition, checkout: string, sha: string, output: string, config: MarketConfig, previous?: PackageRecord): Promise<PackageRecord> {
-  const directory = path.join(output, definition.id);
+  // Keep storage paths short independently of public package and skill names.
+  const packagePath = path.posix.join('packages', digest(definition.id).slice(0, 12));
+  const directory = inside(output, packagePath);
   await rm(directory, { recursive: true, force: true });
   const genericName = slug(definition.id + '-suite');
-  const routerRelative = 'skills/' + genericName;
+  const routerRelative = 's';
   const router = path.join(directory, routerRelative);
   const upstream = path.join(router, 'upstream');
   await mkdir(upstream, { recursive: true });
@@ -104,7 +106,6 @@ export async function buildPackage(source: SourceDefinition, definition: Package
   const payloadDigest = digest(await treeDigest(upstream) + json(definition) + json(source) + sha + ADAPTER_VERSION);
   const distributionVersion = previous?.digest === payloadDigest ? previous.distributionVersion : nextVersion(previous?.distributionVersion);
   const nativeCapabilities = await capabilities(checkout, definition);
-  const packagePath = path.posix.join('packages', source.id, definition.id);
   const record: PackageRecord = {
     ...definition, repository: source.repository, ...(source.family ? { family: source.family } : {}), license: source.license,
     sha, digest: payloadDigest, artifactHash: '', distributionVersion, packagePath, genericSkillName: genericName, genericSkillPath: path.posix.join(packagePath, routerRelative),

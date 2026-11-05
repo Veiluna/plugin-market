@@ -16,6 +16,7 @@
     "check": "npm run typecheck && npm test && npm run validate",
     "verify:codex": "node scripts/verify-codex.mjs",
     "verify:claude": "node scripts/verify-claude.mjs",
+    "verify:windows": "node scripts/verify-windows-checkout.mjs",
     "verify:adapters": "node scripts/verify-adapters.mjs"
   },
   "dependencies": {

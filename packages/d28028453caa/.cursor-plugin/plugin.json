@@ -1,0 +1,19 @@
+{
+  "name": "ai-research-skills-distributed-training",
+  "version": "0.1.5",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / distributed-training",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./s/upstream/08-distributed-training/accelerate",
+    "./s/upstream/08-distributed-training/deepspeed",
+    "./s/upstream/08-distributed-training/megatron-core",
+    "./s/upstream/08-distributed-training/pytorch-fsdp2",
+    "./s/upstream/08-distributed-training/pytorch-lightning",
+    "./s/upstream/08-distributed-training/ray-train"
+  ]
+}

@@ -15,6 +15,24 @@ codex plugin marketplace upgrade scientific-agent-market
 
 语法依据本次可用的 Codex CLI 帮助。客户端也可在插件来源中选择本市场。本地仓库可使用 codex plugin marketplace add /absolute/path/to/plugin-market。
 
+### Windows 出现 Filename too long
+
+Codex 会先把市场克隆到用户目录下较深的临时路径；加上上游资源目录后，可能超过 Windows 的传统路径长度限制。市场封装已使用短存储路径，部分上游仍包含深层资源。在 PowerShell 中为当前用户启用 Git 长路径支持，然后重新添加市场：
+
+```powershell
+git config --global core.longpaths true
+git config --show-origin --get core.longpaths
+```
+
+通常不需要管理员权限。第二条用于确认生效配置值为 true。关闭并重新打开 Codex，再添加 Veiluna/plugin-market；不必在报错中的临时 .staging 目录运行 git restore。该设置用于 Git for Windows 的文件路径处理，无需首先修改系统注册表。若仍失败，可用短路径手动克隆后将本地目录作为市场来源：
+
+```powershell
+git clone -c core.longpaths=true https://github.com/Veiluna/plugin-market.git C:\pm
+codex plugin marketplace add C:\pm
+```
+
+请选用尚不存在的目标目录。若桌面客户端没有本地目录入口，可使用同版本 Codex CLI 添加该来源。
+
 ## Claude Code
 
 ```sh

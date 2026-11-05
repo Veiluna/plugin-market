@@ -1,0 +1,24 @@
+{
+  "name": "dsh-sam-ars-codex-ars-codex",
+  "version": "0.1.5",
+  "description": "ARS 的独立 Codex 原生发行版，保留自己的版本与运行适配。 / ars-codex",
+  "type": "module",
+  "license": "CC-BY-NC-4.0",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "engines": {
+    "node": ">=24",
+    "dsh": "^0.2.1-rc.5"
+  },
+  "exports": {
+    ".": "./dsh/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill-filesystem": "^0.2.1-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh/cordis.patch.yml"
+    }
+  }
+}

@@ -40,6 +40,8 @@ claude plugin install scientific-agent-skills@scientific-agent-market
 
 原生发行版与封装版可能使用不同的安装名称，以对应 marketplace.json 中的 name 为准。完整列表和 CLI 差异见 [安装说明](docs/INSTALL.md)。
 
+Windows 若报 Filename too long，先运行 git config --global core.longpaths true，再重新添加市场；具体步骤见 [Windows 安装排错](docs/INSTALL.md#windows-出现-filename-too-long)。
+
 Cursor：在 Customize 中通过 From GitHub Repository 导入本仓库；团队用户可使用 Import from Repo。仓库包含 .cursor-plugin/marketplace.json。入口取决于客户端与账户支持范围，未提供该入口时使用下方 Skills 安装。
 
 DSH：启用 Experimental plugins 中的 Custom plugin indexes，在 Discover 添加以下索引：

@@ -9,7 +9,7 @@ src/types.ts 定义 SourceDefinition、PackageDefinition、PackageRecord、Agent
 - sources.json 是维护者编辑的声明。
 - catalog/lock.json 保留来源分支、提交、定义摘要及最后通过的包。
 - catalog/catalog.json 公开兼容范围、验证层级、环境限制、已知问题与来源。
-- packages/<source>/<package>/ 保存必要封装；通用入口使用独立的 -suite 名称，位置由 genericSkillPath 和 genericSkillName 指定，原资源位于其 upstream/ 下。
+- packages/<12 位摘要>/ 保存必要封装，内部入口目录固定为 s，避免在 Windows 路径中重复长包名；公开包 ID 与 -suite 技能名称保持不变。位置由 packagePath、genericSkillPath 和 genericSkillName 指定，原资源位于入口的 upstream/ 下。
 - .agents、.claude-plugin、.cursor-plugin 包含各自原生清单。
 - dsh/index.json 只引用已发行 bundle；pending.json 是构建队列，不能作为 DSH 索引导入。
 

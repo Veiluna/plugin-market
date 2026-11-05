@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
-import { chmod, lstat, mkdir, readFile, rm, symlink } from 'node:fs/promises';
+import { chmod, lstat, mkdir, readFile, rename, rm, symlink } from 'node:fs/promises';
 import path from 'node:path';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { buildDshIndex } from '../src/adapters.ts';
 import { loadConfig } from '../src/config.ts';
 import { discoverPackages, readSkill } from '../src/discovery.ts';
-import { copyChecked, exists, readJson, treeDigest, writeJson, writeText } from '../src/fs.ts';
+import { copyChecked, exists, filesUnder, readJson, treeDigest, writeJson, writeText } from '../src/fs.ts';
 import { git, parseRemoteHead } from '../src/git.ts';
 import { installSkills } from '../src/install.ts';
 import { publishDsh } from '../src/publish.ts';
@@ -51,6 +51,45 @@ test('one successful sync generates complete, pinned native catalogs and idempot
   assert.equal(second.changed.length, 0);
   assert.equal(second.unchanged.length, 2);
   assert.equal(await treeDigest(f.root), before);
+});
+
+test('long public names do not repeat in storage paths or overflow the reported Windows staging path', async t => {
+  const f = await fixture(); t.after(() => rm(f.root, { recursive: true, force: true }));
+  const id = 'academic-toolkit-scientific-toolkit-skill';
+  f.sources[0].id = id;
+  f.sources[0].discovery = { kind: 'skills', packages: [{ name: id, roots: ['scientific-toolkit-skill'] }] };
+  const resource = 'scientific-toolkit-skill/references/scientific-skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd';
+  await writeText(path.join(f.upstream[0], 'scientific-toolkit-skill/SKILL.md'), '---\nname: scientific-toolkit\ndescription: Original toolkit\n---\nOriginal workflow.\n');
+  await writeText(path.join(f.upstream[0], resource), '<schema>Original exact resource</schema>\n');
+  await writeJson(path.join(f.root, 'sources.json'), { version: 1, sources: f.sources });
+  assert.deepEqual((await sync(f.root, { checkout: f.checkout })).failed, []);
+  const pkg = (await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'))).packages[0];
+  assert.equal(pkg.id, id);
+  assert.equal(pkg.genericSkillName, id + '-suite');
+  const prefix = 'C:/Users/A/.codex/.tmp/marketplaces/.staging/marketplace-windows-9KuE9O/checkout/';
+  for (const file of await filesUnder(path.join(f.root, pkg.packagePath))) {
+    assert.ok((prefix + pkg.packagePath + '/' + file).length < 260, file);
+  }
+  assert.equal(await readFile(path.join(f.root, pkg.genericSkillPath, 'upstream', resource), 'utf8'), '<schema>Original exact resource</schema>\n');
+  await validateRepository(f.root);
+});
+
+test('rebuilding migrates legacy bundle locations and removes only replaced package directories', async t => {
+  const f = await fixture(); t.after(() => rm(f.root, { recursive: true, force: true }));
+  await sync(f.root, { checkout: f.checkout });
+  const lock = await readJson<CatalogLock>(path.join(f.root, 'catalog/lock.json'));
+  const pkg = lock.sources['source-0'].packages[0];
+  const legacy = 'packages/source-0/legacy-package';
+  await mkdir(path.dirname(path.join(f.root, legacy)), { recursive: true });
+  await rename(path.join(f.root, pkg.packagePath), path.join(f.root, legacy));
+  pkg.genericSkillPath = legacy + '/' + path.posix.relative(pkg.packagePath, pkg.genericSkillPath);
+  pkg.packagePath = legacy;
+  await writeJson(path.join(f.root, 'catalog/lock.json'), lock);
+  await writeText(path.join(f.root, 'packages/keep-unmanaged.txt'), 'Keep unrelated files.\n');
+  assert.deepEqual((await sync(f.root, { checkout: f.checkout, rebuild: true })).failed, []);
+  assert.equal(await exists(path.join(f.root, legacy)), false);
+  assert.equal(await readFile(path.join(f.root, 'packages/keep-unmanaged.txt'), 'utf8'), 'Keep unrelated files.\n');
+  await validateRepository(f.root);
 });
 
 test('a failed source retains its last good package while another source advances', async t => {

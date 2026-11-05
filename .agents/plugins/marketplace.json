@@ -8,7 +8,7 @@
       "name": "academic-toolkit-office-academic-skill",
       "source": {
         "source": "local",
-        "path": "./packages/academic-toolkit/academic-toolkit-office-academic-skill"
+        "path": "./packages/5a7021f9ae98"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -20,7 +20,7 @@
       "name": "academic-toolkit-research-writing-skill",
       "source": {
         "source": "local",
-        "path": "./packages/academic-toolkit/academic-toolkit-research-writing-skill"
+        "path": "./packages/b7e491f5bd3c"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -32,7 +32,7 @@
       "name": "academic-toolkit-scientific-toolkit-skill",
       "source": {
         "source": "local",
-        "path": "./packages/academic-toolkit/academic-toolkit-scientific-toolkit-skill"
+        "path": "./packages/77c7c375f76a"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -44,7 +44,7 @@
       "name": "ai-research-skills-agent-native-research-artifact",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-agent-native-research-artifact"
+        "path": "./packages/791e9b297962"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -56,7 +56,7 @@
       "name": "ai-research-skills-agents",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-agents"
+        "path": "./packages/eccb854e29f0"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -68,7 +68,7 @@
       "name": "ai-research-skills-autoresearch",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-autoresearch"
+        "path": "./packages/a038ad068dc4"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -80,7 +80,7 @@
       "name": "ai-research-skills-data-processing",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-data-processing"
+        "path": "./packages/1d05c33bb152"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -92,7 +92,7 @@
       "name": "ai-research-skills-distributed-training",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-distributed-training"
+        "path": "./packages/d28028453caa"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -104,7 +104,7 @@
       "name": "ai-research-skills-emerging-techniques",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-emerging-techniques"
+        "path": "./packages/d96b441d7085"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -116,7 +116,7 @@
       "name": "ai-research-skills-evaluation",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-evaluation"
+        "path": "./packages/f54a3e76b013"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -128,7 +128,7 @@
       "name": "ai-research-skills-fine-tuning",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-fine-tuning"
+        "path": "./packages/e1c8a10cfc00"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -140,7 +140,7 @@
       "name": "ai-research-skills-ideation",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-ideation"
+        "path": "./packages/efc4e7807d61"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -152,7 +152,7 @@
       "name": "ai-research-skills-inference-serving",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-inference-serving"
+        "path": "./packages/66d22b71ebbd"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -164,7 +164,7 @@
       "name": "ai-research-skills-infrastructure",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-infrastructure"
+        "path": "./packages/b2be6e126a7f"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -176,7 +176,7 @@
       "name": "ai-research-skills-mechanistic-interpretability",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-mechanistic-interpretability"
+        "path": "./packages/31c92cc4b190"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -188,7 +188,7 @@
       "name": "ai-research-skills-ml-paper-writing",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-ml-paper-writing"
+        "path": "./packages/3a65eb625299"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -200,7 +200,7 @@
       "name": "ai-research-skills-mlops",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-mlops"
+        "path": "./packages/edcd2beceb3e"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -212,7 +212,7 @@
       "name": "ai-research-skills-model-architecture",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-model-architecture"
+        "path": "./packages/c8ae269959ec"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -224,7 +224,7 @@
       "name": "ai-research-skills-multimodal",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-multimodal"
+        "path": "./packages/3c167ea73c5a"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -236,7 +236,7 @@
       "name": "ai-research-skills-observability",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-observability"
+        "path": "./packages/cd59eb0eb505"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -248,7 +248,7 @@
       "name": "ai-research-skills-optimization",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-optimization"
+        "path": "./packages/8c342ec85936"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -260,7 +260,7 @@
       "name": "ai-research-skills-post-training",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-post-training"
+        "path": "./packages/8414261ff6d3"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -272,7 +272,7 @@
       "name": "ai-research-skills-prompt-engineering",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-prompt-engineering"
+        "path": "./packages/7103cff965e9"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -284,7 +284,7 @@
       "name": "ai-research-skills-rag",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-rag"
+        "path": "./packages/9adf057a4b24"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -296,7 +296,7 @@
       "name": "ai-research-skills-safety-alignment",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-safety-alignment"
+        "path": "./packages/2d1f809196c5"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -308,7 +308,7 @@
       "name": "ai-research-skills-tokenization",
       "source": {
         "source": "local",
-        "path": "./packages/ai-research-skills/ai-research-skills-tokenization"
+        "path": "./packages/6318a9b9bd52"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -347,7 +347,7 @@
       "name": "codex-autoresearch",
       "source": {
         "source": "local",
-        "path": "./packages/codex-autoresearch/codex-autoresearch"
+        "path": "./packages/8eb5d1309520"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -359,7 +359,7 @@
       "name": "latex-arxiv",
       "source": {
         "source": "local",
-        "path": "./packages/latex-arxiv/latex-arxiv"
+        "path": "./packages/506547a850c5"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -371,7 +371,7 @@
       "name": "literature-downloader",
       "source": {
         "source": "local",
-        "path": "./packages/literature-downloader/literature-downloader"
+        "path": "./packages/adc452eb4985"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -383,7 +383,7 @@
       "name": "live-session-fetcher-literature-live-session-pipeline",
       "source": {
         "source": "local",
-        "path": "./packages/live-session-fetcher/live-session-fetcher-literature-live-session-pipeline"
+        "path": "./packages/c60b391b1073"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -395,7 +395,7 @@
       "name": "live-session-fetcher-sciencedirect-live-session-fetcher",
       "source": {
         "source": "local",
-        "path": "./packages/live-session-fetcher/live-session-fetcher-sciencedirect-live-session-fetcher"
+        "path": "./packages/b7f9eb62d954"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -420,7 +420,7 @@
       "name": "research-paper-writing",
       "source": {
         "source": "local",
-        "path": "./packages/research-paper-writing/research-paper-writing"
+        "path": "./packages/bd3aad02f248"
       },
       "policy": {
         "installation": "AVAILABLE",

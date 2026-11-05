@@ -11,9 +11,12 @@ import type { Catalog, CatalogLock, JsonObject, PackageRecord } from './types.ts
 export type PackageLocator = (pkg: PackageRecord) => string;
 export function validateEntryNames(packages: PackageRecord[]): void {
   const ids = new Set<string>();
+  const paths = new Set<string>();
   for (const pkg of packages) {
     if (ids.has(pkg.id)) throw new Error('Duplicate package id: ' + pkg.id);
     ids.add(pkg.id);
+    if (paths.has(pkg.packagePath)) throw new Error('Duplicate package storage path: ' + pkg.packagePath);
+    paths.add(pkg.packagePath);
   }
   for (const agent of AGENTS) {
     const names = new Set<string>();
@@ -47,7 +50,7 @@ export async function validatePackage(pkg: PackageRecord, directory: string): Pr
   if (await treeDigest(directory) !== pkg.artifactHash) throw new Error('Package files differ from the locked artifact: ' + pkg.id);
   const provenance = await readJson<JsonObject>(path.join(directory, 'PROVENANCE.json'));
   if (provenance.commit !== pkg.sha || provenance.digest !== pkg.digest || provenance.distributionVersion !== pkg.distributionVersion) throw new Error('Provenance mismatch: ' + pkg.id);
-  const router = path.posix.join('skills', pkg.genericSkillName || pkg.id);
+  const router = safeRelative(path.posix.relative(pkg.packagePath, pkg.genericSkillPath));
   const entry = await readSkill(directory, router);
   if (entry.name !== (pkg.genericSkillName || pkg.id)) throw new Error('Router identity mismatch');
   for (const agent of ['codex', 'claude-code', 'cursor'] as const) {

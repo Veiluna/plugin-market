@@ -28,6 +28,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/5a7021f9ae98"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -49,6 +62,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/academic-toolkit/academic-toolkit-research-writing-skill"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/b7e491f5bd3c"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -78,6 +104,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/77c7c375f76a"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -99,6 +138,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-agent-native-research-artifact"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/791e9b297962"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -128,6 +180,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/eccb854e29f0"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -149,6 +214,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-autoresearch"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/a038ad068dc4"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -178,6 +256,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/1d05c33bb152"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -199,6 +290,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-distributed-training"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/d28028453caa"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -228,6 +332,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/d96b441d7085"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -249,6 +366,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-evaluation"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/f54a3e76b013"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -278,6 +408,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/e1c8a10cfc00"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -299,6 +442,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-ideation"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/efc4e7807d61"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -328,6 +484,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/66d22b71ebbd"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -349,6 +518,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-infrastructure"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/b2be6e126a7f"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -378,6 +560,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/31c92cc4b190"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -399,6 +594,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-ml-paper-writing"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/3a65eb625299"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -428,6 +636,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/edcd2beceb3e"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -449,6 +670,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-model-architecture"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/c8ae269959ec"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -478,6 +712,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/3c167ea73c5a"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -499,6 +746,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-observability"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/cd59eb0eb505"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -528,6 +788,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/8c342ec85936"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -549,6 +822,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-post-training"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/8414261ff6d3"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -578,6 +864,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/7103cff965e9"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -599,6 +898,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-rag"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/9adf057a4b24"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -628,6 +940,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/2d1f809196c5"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -649,6 +974,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ai-research-skills/ai-research-skills-tokenization"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/6318a9b9bd52"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -678,6 +1016,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/984b00ea54e7"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -699,6 +1050,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/ars-claude/ars-claude"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.6",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/c0a5016e27d8"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -728,6 +1092,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/506547a850c5"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -749,6 +1126,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/literature-downloader/literature-downloader"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/adc452eb4985"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -778,6 +1168,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/c60b391b1073"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -799,6 +1202,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/live-session-fetcher/live-session-fetcher-sciencedirect-live-session-fetcher"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/b7f9eb62d954"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"
@@ -828,6 +1244,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/801a4087e68a"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -853,6 +1282,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/bd3aad02f248"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -874,6 +1316,19 @@
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
             "path": "packages/scientific-agent-skills/scientific-agent-skills"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793879767,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "780bb60d5aafb53011439251808c0b0ea10bc107",
+            "path": "packages/8d81cc53e451"
           },
           "engines": {
             "dsh": "^0.2.1-rc.5"

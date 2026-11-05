@@ -1,0 +1,11 @@
+{
+  "sourceId": "codex-autoresearch",
+  "packageId": "codex-autoresearch",
+  "repository": "leo-lilinxiao/codex-autoresearch",
+  "commit": "0f54c571707487f59486ba7c50d405edfc746c19",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.5",
+  "digest": "ca3f14588c8f1b7855796e7e67c969eb50e333c18fc9094cb6247a49235b8ee3",
+  "adapterVersion": "5"
+}

@@ -49,11 +49,10 @@ export async function sync(root: string, options: SyncOptions = {}): Promise<Syn
         }
         const checkout = 'directory' in head ? head as Checkout : await checkoutSource(root, source, head);
         const definitions = await discoverPackages(source, checkout.directory);
-        const sourceStage = path.join(stage, 'packages', source.id);
         const packages: PackageRecord[] = [];
         for (const definition of definitions) {
-          const built = await buildPackage(source, definition, checkout.directory, checkout.sha, sourceStage, config, old?.packages.find(pkg => pkg.id === definition.id));
-          await validatePackage(built, path.join(sourceStage, built.id));
+          const built = await buildPackage(source, definition, checkout.directory, checkout.sha, stage, config, old?.packages.find(pkg => pkg.id === definition.id));
+          await validatePackage(built, inside(stage, built.packagePath));
           packages.push(built);
         }
         const others = sources.filter(item => item.id !== source.id).flatMap(item => (lock.sources[item.id] || previous.sources[item.id])?.packages || []);
@@ -88,8 +87,16 @@ export async function sync(root: string, options: SyncOptions = {}): Promise<Syn
     }
     if (!options.dryRun) {
       // All source builds and the complete set of indexes have passed validation before replacing any live files.
-      for (const id of staged) await replaceDirectory(path.join(stage, 'packages', id), path.join(root, 'packages', id));
-      for (const id of Object.keys(previous.sources)) if (!sources.some(source => source.id === id)) await rm(path.join(root, 'packages', id), { recursive: true, force: true });
+      for (const id of staged) {
+        const current = lock.sources[id].packages;
+        for (const pkg of current) await replaceDirectory(inside(stage, pkg.packagePath), inside(root, pkg.packagePath));
+        for (const old of previous.sources[id]?.packages || []) {
+          if (!current.some(pkg => pkg.packagePath === old.packagePath)) await rm(inside(root, old.packagePath), { recursive: true, force: true });
+        }
+      }
+      for (const [id, old] of Object.entries(previous.sources)) if (!sources.some(source => source.id === id)) {
+        for (const pkg of old.packages) await rm(inside(root, pkg.packagePath), { recursive: true, force: true });
+      }
       for (const [file, value] of Object.entries(artifacts)) {
         const destination = inside(root, file);
         const content = json(value);
