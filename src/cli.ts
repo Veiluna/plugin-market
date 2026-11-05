@@ -41,7 +41,7 @@ export async function main(argv = process.argv.slice(2), root = fileURLToPath(ne
   } else if (command === 'list' || command === 'show') {
     const catalog = await readJson<Catalog>(path.join(root, 'catalog/catalog.json'));
     if (command === 'show') {
-      const pkg = catalog.packages.find(pkg => pkg.id === id);
+      const pkg = catalog.packages.find(pkg => pkg.id === id || pkg.upstreamPackages?.some(group => group.id === id));
       if (!pkg) throw new Error('Unknown package: ' + String(id));
       console.log(JSON.stringify(pkg, null, 2));
       return;

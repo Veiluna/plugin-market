@@ -50,7 +50,7 @@ async function checkDestination(root: string, target: string): Promise<void> {
 export async function installSkills(root: string, packageId: string, options: InstallOptions): Promise<{ packageId: string; sha: string; target: string; dryRun: boolean }> {
   const { config } = await loadConfig(root);
   const catalog = await readJson<Catalog>(path.join(root, 'catalog/catalog.json'));
-  const pkg = catalog.packages.find(pkg => pkg.id === packageId);
+  const pkg = catalog.packages.find(pkg => pkg.id === packageId || pkg.upstreamPackages?.some(group => group.id === packageId));
   if (!pkg) throw new Error('Unknown package: ' + packageId);
   const adapter = adapters[options.agent];
   if (!adapter) throw new Error('Unknown agent; use universal with --skills-dir for another host');
@@ -77,7 +77,7 @@ export async function installSkills(root: string, packageId: string, options: In
     if (receipt.installer !== config.name || receipt.repository !== config.repository || receipt.packageId !== pkg.id) throw new Error('Target belongs to a different installer or package');
     if (await treeDigest(target, [receiptFile]) !== receipt.installedHash) throw new Error('Local skill files have changed; preserving them. Use --force only if replacement is intended.');
   }
-  const result = { packageId, sha: pkg.sha, target, dryRun: !!options.dryRun };
+  const result = { packageId: pkg.id, sha: pkg.sha, target, dryRun: !!options.dryRun };
   if (options.dryRun) return result;
   const stage = await mkdtemp(path.join(tmpdir(), 'scientific-market-install-'));
   let prepared: string | undefined;

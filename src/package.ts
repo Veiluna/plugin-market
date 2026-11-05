@@ -5,7 +5,7 @@ import { sourceFile } from './discovery.ts';
 import { DSH_ENGINE_RANGE } from './adapters.ts';
 import type { AgentId, Compatibility, MarketConfig, PackageDefinition, PackageRecord, SourceDefinition } from './types.ts';
 
-export const ADAPTER_VERSION = '6';
+export const ADAPTER_VERSION = '7';
 const capabilityPaths: Record<string, string[]> = { hooks: ['hooks/hooks.json'], agents: ['agents'], commands: ['commands'], mcp: ['.mcp.json', 'mcp.json'], apps: ['.app.json'] };
 const licenseNames = ['LICENSE', 'LICENSE.md', 'LICENSE.txt', 'COPYING'];
 
@@ -59,7 +59,7 @@ export async function copyPayload(checkout: string, destination: string, source:
 
 async function capabilities(checkout: string, definition: PackageDefinition): Promise<string[]> {
   const found = new Set<string>();
-  for (const native of Object.values(definition.native)) {
+  for (const native of [definition, ...definition.upstreamPackages || []].flatMap(pkg => Object.values(pkg.native))) {
     for (const [capability, files] of Object.entries(capabilityPaths)) {
       if (files.some(file => native.manifest?.[capability] !== undefined || native.manifest?.mcpServers !== undefined && capability === 'mcp')) found.add(capability);
       for (const file of files) if (await exists(inside(checkout, path.posix.join(native.root, file)))) found.add(capability);
@@ -72,7 +72,7 @@ export function compatibilityFor(source: SourceDefinition, definition: PackageDe
   return Object.fromEntries(AGENTS.map(agent => {
     const restricted = source.restrictedAgents?.[agent];
     const direct = !!definition.native[agent] && (agent === 'codex' || agent === 'claude-code');
-    return [agent, { level: restricted ? 'unsupported' : direct ? 'native' : 'skills-only', reason: restricted || (direct ? '引用上游原生插件，完整工作流仍需满足上游运行要求。' : '分发原始 Skills 与资源；封装不注册上游 hooks、MCP、命令或子代理。'), verification: 'structure-validated', missingCapabilities: restricted ? ['native-runtime'] : direct ? [] : extraCapabilities }];
+    return [agent, { level: restricted ? 'unsupported' : direct ? 'native' : 'skills-only', reason: restricted || (direct ? '引用上游原生插件，完整工作流仍需满足上游运行要求。' : '分发原始 Skills 与资源；封装不注册上游 hooks、MCP、命令或子代理。'), verification: 'structure-validated', missingCapabilities: restricted ? ['native-runtime'] : direct ? [] : [...extraCapabilities] }];
   })) as Record<AgentId, Compatibility>;
 }
 
@@ -87,7 +87,11 @@ function routerText(source: SourceDefinition, definition: PackageDefinition, sha
     'Use absolute paths to packaged helper scripts. Do not confuse the upstream resource directory with the user project or output directory.', '',
     'Source: https://github.com/' + source.repository + '/tree/' + sha, 'License: ' + source.license, '',
     '## Skills', '',
-    ...definition.skills.map(skill => '- ' + skill.name + ': [original instructions](upstream/' + (skill.path === '.' ? '' : skill.path + '/') + 'SKILL.md) — ' + skill.description.replaceAll('\n', ' ').replaceAll('|', '\\|')),
+    ...(definition.upstreamPackages?.length && definition.upstreamPackages.length > 1 ? definition.upstreamPackages : [definition]).flatMap(group => [
+      ...(definition.upstreamPackages && definition.upstreamPackages.length > 1 ? ['### ' + group.name, ''] : []),
+      ...group.skills.map(skill => '- ' + skill.name + ': [original instructions](upstream/' + (skill.path === '.' ? '' : skill.path + '/') + 'SKILL.md) — ' + skill.description.replaceAll('\n', ' ').replaceAll('|', '\\|')),
+      '',
+    ]),
     '', '## Requirements', '', ...source.requirements.map(requirement => '- ' + requirement), '',
   ].join('\n');
 }

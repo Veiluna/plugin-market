@@ -45,6 +45,7 @@ export interface PackageDefinition {
   native: Partial<Record<AgentId, NativeSource>>;
   agentSkills: Partial<Record<AgentId, SkillRecord[]>>;
   upstreamVersion?: string;
+  upstreamPackages?: PackageDefinition[];
 }
 export interface Compatibility {
   level: 'native' | 'skills-only' | 'unsupported';

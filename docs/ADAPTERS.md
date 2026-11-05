@@ -4,12 +4,15 @@ src/types.ts 定义 SourceDefinition、PackageDefinition、PackageRecord、Agent
 
 ## 数据流
 
-来源清单 → 默认分支及 SHA → 上游包与平台变体 → 资源复制与校验 → 平台清单 → 先发行 DSH 包、再发布索引。
+来源清单 → 默认分支及 SHA → 上游包与平台变体 → 每仓库一个集合 → 资源复制与校验 → 平台清单 → 先发行共享资源包、再发布索引。
 
 - sources.json 是维护者编辑的声明。
 - catalog/lock.json 保留来源分支、提交、定义摘要及最后通过的包。
 - catalog/catalog.json 公开兼容范围、验证层级、环境限制、已知问题与来源。
-- 默认分支只发布索引与锁。p/<8 位摘要>/ 中的封装发布到 dist-dsh 的固定提交，不随市场添加检出；本地 p/ 是忽略的恢复缓存。包根目录是独立的 -suite 入口，原资源位于 upstream/ 下，公开包 ID 与技能名保持不变。
+- 默认分支只发布索引与锁。p/<8 位摘要>/ 中的封装发布到 dist-dsh 的固定提交，不随市场添加检出；本地 p/ 是忽略的恢复缓存。包根目录是独立的 -suite 入口，原资源位于 upstream/ 下。
+- 每个 source.id 对应一个同 ID 的仓库集合。upstreamPackages 保留原有包边界、ID、版本与平台变体；合并各平台技能时按路径去重，不同路径的技能重名会阻止该来源升级。单一原生插件保留直接引用，多包仓库生成集合清单。
+- catalog 与平台清单沿用 sources.json 的来源顺序。Codex 的 displayName 使用完整仓库名，不兼容的来源以 NOT_AVAILABLE 展示并禁止安装；其他平台只输出适用入口。
+- 详情说明与通用套件路由按原有子分类列出技能。旧子包 ID 仅作为通用安装和 show 的兼容别名，不增加市场条目；已有旧安装由客户端管理，不自动删除。
 - 每个包的 distribution 记录发行仓库、提交和目录；Codex／Claude 使用 git-subdir，Cursor 使用固定提交的目录 URL。
 - .agents、.claude-plugin、.cursor-plugin 包含各自原生清单。
 - dsh/index.json 只引用已发行 bundle；pending.json 是构建队列，不能作为 DSH 索引导入。

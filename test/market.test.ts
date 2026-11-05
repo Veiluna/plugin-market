@@ -93,6 +93,76 @@ test('rebuilding migrates legacy bundle locations and removes only replaced pack
   await validateRepository(f.root);
 });
 
+test('one repository entry installs all skill packages while preserving their original categories and resources', async t => {
+  const f = await fixture(); t.after(() => rm(f.root, { recursive: true, force: true }));
+  f.sources[0].discovery = { kind: 'skills', packages: [{ name: 'writing', roots: ['skills/example'] }, { name: 'tools', roots: ['skills/helper'] }] };
+  await writeText(path.join(f.upstream[0], 'skills/helper/SKILL.md'), '---\nname: helper\ndescription: Additional tools\n---\nRead [shared guide](../../shared/guide.md).\n');
+  await writeJson(path.join(f.root, 'sources.json'), { version: 1, sources: f.sources });
+  assert.deepEqual((await sync(f.root, { checkout: f.checkout })).failed, []);
+  const catalog = await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'));
+  assert.equal(catalog.packages.length, 1);
+  const pkg = catalog.packages[0];
+  assert.equal(pkg.id, f.sources[0].id);
+  assert.deepEqual(pkg.upstreamPackages?.map(group => group.name), ['writing', 'tools']);
+  assert.deepEqual(pkg.skills.map(skill => skill.name), ['example-0', 'helper']);
+  assert.equal(await readFile(path.join(f.root, pkg.genericSkillPath, 'upstream/shared/guide.md'), 'utf8'), '# Shared resource\nOriginal content.\n');
+  assert.match(await readFile(path.join(f.root, pkg.genericSkillPath, 'SKILL.md'), 'utf8'), /### writing[\s\S]*### tools/);
+  const market = await readJson<{ plugins: { interface: { displayName: string; longDescription: string } }[] }>(path.join(f.root, '.agents/plugins/marketplace.json'));
+  assert.equal(market.plugins.length, 1);
+  assert.equal(market.plugins[0].interface.displayName, f.sources[0].repository);
+  assert.match(market.plugins[0].interface.longDescription, /### writing[\s\S]*### tools/);
+  const target = path.join(f.root, '.cache/group-project'); await mkdir(target, { recursive: true });
+  const installed = await installSkills(f.root, pkg.upstreamPackages![0].id, { agent: 'codex', target, runner: copyRunner });
+  assert.equal(installed.packageId, pkg.id);
+  assert.equal((await readSkill(installed.target, 'upstream/skills/helper')).name, 'helper');
+  await validateRepository(f.root);
+});
+
+test('repository grouping preserves native skill variants and freezes the last good group on internal name collisions', async t => {
+  const f = await fixture(); t.after(() => rm(f.root, { recursive: true, force: true }));
+  f.sources[0].discovery = { kind: 'marketplace', manifest: '.claude-plugin/marketplace.json' };
+  for (const name of ['one', 'two']) {
+    await writeJson(path.join(f.upstream[0], 'plugins', name, '.claude-plugin/plugin.json'), { name: 'raw-' + name, version: name === 'one' ? '1.0.0' : '2.0.0', skills: './skills' });
+    await writeText(path.join(f.upstream[0], 'plugins', name, 'skills/example/SKILL.md'), '---\nname: ' + name + '-claude\ndescription: Original ' + name + '\n---\nOriginal instructions.\n');
+  }
+  await writeJson(path.join(f.upstream[0], 'plugins/one/.codex-plugin/plugin.json'), { name: 'raw-one', skills: './codex-skills' });
+  await writeText(path.join(f.upstream[0], 'plugins/one/codex-skills/variant/SKILL.md'), '---\nname: one-codex\ndescription: Codex variant\n---\nOriginal Codex instructions.\n');
+  await writeJson(path.join(f.upstream[0], '.claude-plugin/marketplace.json'), { name: 'raw-market', plugins: ['one', 'two'].map(name => ({ name: 'raw-' + name, source: './plugins/' + name })) });
+  await writeJson(path.join(f.root, 'sources.json'), { version: 1, sources: f.sources });
+  assert.deepEqual((await sync(f.root, { checkout: f.checkout })).failed, []);
+  const before = await readJson<CatalogLock>(path.join(f.root, 'catalog/lock.json'));
+  const pkg = before.sources['source-0'].packages[0];
+  assert.deepEqual(pkg.agentSkills.codex?.map(skill => skill.name), ['one-codex', 'two-claude']);
+  assert.deepEqual(pkg.skills.map(skill => skill.name), ['one-claude', 'two-claude']);
+  assert.equal(pkg.upstreamVersion, undefined);
+  assert.deepEqual(pkg.upstreamPackages?.map(group => group.upstreamVersion), ['1.0.0', '2.0.0']);
+  const manifest = await readJson<{ skills: string[] }>(path.join(f.root, pkg.packagePath, '.codex-plugin/plugin.json'));
+  assert.ok(manifest.skills.some(skill => skill.includes('plugins/one/codex-skills')));
+  assert.equal(manifest.skills.some(skill => skill.includes('plugins/one/skills')), false);
+  await writeText(path.join(f.upstream[0], 'plugins/two/skills/example/SKILL.md'), '---\nname: one-claude\ndescription: Collision\n---\n');
+  f.heads[0] = 60;
+  const failed = await sync(f.root, { checkout: f.checkout });
+  assert.match(failed.failed[0].error, /Duplicate skill name across repository categories/);
+  assert.deepEqual(await readJson(path.join(f.root, 'catalog/lock.json')), before);
+});
+
+test('repository entries keep source order and show an incompatible source without permitting installation', async t => {
+  const f = await fixture(2); t.after(() => rm(f.root, { recursive: true, force: true }));
+  f.sources[0].id = 'z-first'; f.sources[1].id = 'a-second';
+  for (const source of f.sources) source.family = 'same-family';
+  f.sources[1].restrictedAgents = { codex: 'Claude-only fixture' };
+  await writeJson(path.join(f.root, 'sources.json'), { version: 1, sources: f.sources });
+  assert.deepEqual((await sync(f.root, { checkout: f.checkout })).failed, []);
+  const catalog = await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'));
+  assert.deepEqual(catalog.packages.map(pkg => pkg.id), ['z-first', 'a-second']);
+  const market = await readJson<{ plugins: { policy: { installation: string }; interface: { displayName: string; longDescription: string } }[] }>(path.join(f.root, '.agents/plugins/marketplace.json'));
+  assert.deepEqual(market.plugins.map(entry => entry.interface.displayName), f.sources.map(source => source.repository));
+  assert.deepEqual(market.plugins.map(entry => entry.policy.installation), ['AVAILABLE', 'NOT_AVAILABLE']);
+  assert.match(market.plugins[1].interface.longDescription, /Claude-only fixture/);
+  await assert.rejects(installSkills(f.root, 'a-second', { agent: 'codex', target: f.root, runner: copyRunner }), /Claude-only fixture/);
+  await validateRepository(f.root);
+});
+
 test('a failed source retains its last good package while another source advances', async t => {
   const f = await fixture(2); t.after(() => rm(f.root, { recursive: true, force: true }));
   await sync(f.root, { checkout: f.checkout });

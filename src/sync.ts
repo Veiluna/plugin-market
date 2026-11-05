@@ -76,7 +76,7 @@ export async function sync(root: string, options: SyncOptions = {}): Promise<Syn
         const failure = report.failed.find(item => item.id === source.id);
         return { id: source.id, repository: source.repository, ...(source.family ? { family: source.family } : {}), license: source.license, ...(locked ? { sha: locked.sha } : {}), status: locked ? 'ready' : 'unavailable', ...(failure ? { error: failure.error } : !locked ? { error: 'Not synchronized yet' } : {}) };
       }),
-      packages: Object.values(lock.sources).flatMap(source => source.packages).sort((a, b) => a.id.localeCompare(b.id, 'en')),
+      packages: sources.flatMap(source => lock.sources[source.id]?.packages || []),
     };
     const previousDsh = await exists(path.join(root, 'dsh/index.json')) ? await readJson<DshIndex>(path.join(root, 'dsh/index.json')) : undefined;
     let artifacts = buildArtifacts(config, catalog, lock, previousDsh);

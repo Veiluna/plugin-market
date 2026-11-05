@@ -21,7 +21,7 @@ codex plugin marketplace upgrade scientific-agent-market
 
 此前把全部资源放在默认分支，导致未选择的 ARS-Codex 深层文件也会在添加市场时被检出。现在这些文件不参与市场添加。用户无需开启 Git 长路径、手动克隆、修改配置或指定特殊分支。
 
-Windows 验证使用官方 Codex CLI、关闭的 `core.longpaths`，直接以仓库名字添加市场，再安装写作、Office 与科研工具封装并校验完整资源。此检查不代替各复杂上游工作流的运行验证。
+Windows 验证使用官方 Codex CLI、关闭的 `core.longpaths`，直接以仓库名字添加市场，再安装写作、学术工具、Orchestra 与会话获取四个仓库入口，校验完整资源和技能卡片。此检查不代替各复杂上游工作流的运行验证。
 
 ### 安装前为何没有原生技能卡片
 
@@ -31,19 +31,21 @@ Windows 验证使用官方 Codex CLI、关闭的 `core.longpaths`，直接以仓
 
 该行为有 [Codex 官方回归测试](https://github.com/openai/codex/blob/86ac0916597244a2e67a197822a5483924660ff1/codex-rs/app-server/tests/suite/v2/plugin_read.rs#L2290) 覆盖，本市场也使用 app-server 的实际返回值验证安装前的清单和安装后的技能卡片。
 
-### 为什么 12 个仓库显示为 36 项
+### 按最初的 12 个仓库浏览
 
-市场按上游插件边界发行，一个仓库可能包含多个插件。总计 37 个包；Claude 专用 ARS 不在 Codex 列表中，所以 Codex 显示 36 项。
+市场现在每个仓库提供一个入口，标题使用完整的 owner/repo，索引沿用最初提供的顺序。Codex 展示全部 12 个来源，详情按上游子分类列出技能；其中 11 个可安装，Claude 专用 ARS 标明不可安装，并指向独立的 ARS-Codex 发行版。
 
-| Codex 可见来源 | 市场条目 |
-| --- | ---: |
-| Orchestra AI-Research-SKILLs | 23 |
-| codex-claude-academic-skills | 3 |
-| sciencedirect-live-session-fetcher | 2 |
-| 其他 8 个适用于 Codex 的仓库 | 8 |
-| 合计 | 36 |
+| 来源 | 市场入口 | 入口内的原有分类 |
+| --- | ---: | ---: |
+| Orchestra AI-Research-SKILLs | 1 | 23 |
+| codex-claude-academic-skills | 1 | 3 |
+| sciencedirect-live-session-fetcher | 1 | 2 |
+| 其他 9 个仓库 | 9 | 各 1 |
+| 合计 | 12 | 37 |
 
-这些条目仍只来自最初的 12 个仓库，没有新增来源。ARS 与 ARS-Codex 继续保持独立发行版。
+安装一个仓库入口会注册其中全部适用技能，原始资源仍保留。Claude Code、Cursor、DSH 各列出 10 个适用入口，平台不兼容的发行版见完整目录。
+
+此前按上游子插件分别展示，因此 Codex 曾显示 36 项。已添加市场的用户刷新或更新市场即可取得新分组，无需改变添加方式。已单独安装的旧子插件保留原状；安装对应仓库入口后，可通过客户端移除不再需要的旧子插件，避免重复技能。通用 install-skills 命令仍接受旧子包 ID，并解析到新的仓库套件。
 
 ## Claude Code
 

@@ -1,7 +1,7 @@
 import { readFile, readdir, realpath, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { parseDocument } from 'yaml';
-import { exists, inside, nonempty, object, safeRelative, slug } from './fs.ts';
+import { AGENTS, exists, inside, nonempty, object, safeRelative, slug } from './fs.ts';
 import type { AgentId, JsonObject, NativeSource, PackageDefinition, SkillRecord, SourceDefinition } from './types.ts';
 
 export async function sourceFile(root: string, relative: string): Promise<string> {
@@ -137,5 +137,30 @@ export async function discoverPackages(source: SourceDefinition, checkout: strin
     if (ids.has(item.id)) throw new Error('Duplicate package id: ' + item.id);
     ids.add(item.id);
   }
-  return result;
+  return [groupRepository(source, result)];
+}
+
+function uniqueSkills(groups: SkillRecord[][]): SkillRecord[] {
+  const paths = new Map<string, SkillRecord>();
+  const names = new Map<string, string>();
+  for (const skills of groups) for (const skill of skills) {
+    const previous = names.get(skill.name);
+    if (previous && previous !== skill.path) throw new Error('Duplicate skill name across repository categories: ' + skill.name);
+    names.set(skill.name, skill.path);
+    paths.set(skill.path, skill);
+  }
+  return [...paths.values()];
+}
+
+export function groupRepository(source: SourceDefinition, packages: PackageDefinition[]): PackageDefinition {
+  if (!packages.length) throw new Error('Repository has no installable skill packages');
+  const name = source.repository.split('/')[1];
+  if (packages.length === 1) return { ...packages[0], id: source.id, name, description: source.description, upstreamPackages: packages };
+  const agentSkills = Object.fromEntries(AGENTS.map(agent => [agent, uniqueSkills(packages.map(pkg => pkg.agentSkills[agent] || pkg.skills))]));
+  const version = packages[0].upstreamVersion;
+  return {
+    id: source.id, name, sourceId: source.id, sourceRoot: '.', description: source.description,
+    skills: uniqueSkills(packages.map(pkg => pkg.skills)), agentSkills, native: {}, upstreamPackages: packages,
+    ...(version && packages.every(pkg => pkg.upstreamVersion === version) ? { upstreamVersion: version } : {}),
+  };
 }

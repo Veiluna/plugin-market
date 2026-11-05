@@ -9,8 +9,10 @@
 discovery 支持：
 
 - plugin：指定 root，读取原生 manifest，保留各 agent 的技能变体。
-- marketplace：指定上游清单，沿用本地插件划分。嵌套外部来源须作为独立来源收录。
+- marketplace：指定上游清单，保留本地插件划分作为仓库内的子分类。嵌套外部来源须作为独立来源收录。
 - skills：声明 packages；roots 指定技能目录，containers 扫描一层子目录。示例、测试、归档不作为插件发现范围。
+
+无论发现多少子插件，每个来源只生成一个仓库入口，ID 使用 source.id。原有分组保存在 upstreamPackages 中，详情列出分组与技能；来源数组的顺序就是目录及索引顺序。不要为同一仓库的子分类重复添加来源，也不要按家族合并不同仓库发行版。
 
 resources 声明共享脚本、资源与说明。技能根和许可证自动包含，工作流引用的静态资源必须存在。requirements、cloud、restrictedAgents、operatingSystems 应描述实际限制；未实测的功能不能写成已验证。
 

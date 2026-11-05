@@ -2,11 +2,11 @@
 
 为 Codex、Claude Code、DeepSeek Harness（DSH）、Cursor 和其他支持 Agent Skills 的工具，提供可追溯到上游提交的科研插件目录。
 
-市场沿用上游插件划分，优先引用原生发行版；需要封装时保留原始技能和资源布局。每小时检查上游默认分支，通过校验后更新市场。安装到电脑或云环境中的版本由用户或客户端另行更新。
+市场按最初提供的 12 个仓库组织，每个仓库一个入口，内部保留上游子分类、原始技能和资源布局。优先引用原生发行版，每小时检查上游默认分支，通过校验后更新市场。安装到电脑或云环境中的版本由用户或客户端另行更新。
 
-首批收录 12 个来源、37 个插件包、402 条主要发行版原始 Skill 记录。不同 agent 的可安装条目取决于兼容性限制。
+首批收录 12 个仓库入口，内部保留 37 个上游插件分组、402 条主要发行版原始 Skill 记录。Codex 展示全部 12 个来源，其中 11 个可安装，Claude 专用 ARS 标明不可安装；Claude Code、Cursor 和 DSH 各提供 10 个兼容仓库入口。
 
-仓库数与插件条目数不同：Orchestra 的上游市场有 23 个分类插件，学术工具仓库分为 3 项，会话获取仓库分为 2 项，因此共 37 个插件包。Codex 排除 Claude 专用 ARS 发行版后显示 36 项。
+Orchestra 的 23 个分类、学术工具仓库的 3 个分类、会话获取仓库的 2 个分类归入各自仓库详情，安装对应入口即可获得全部适用技能。ARS 与 ARS-Codex 保持独立，不合并发行版。清单和目录沿用原始仓库顺序；客户端可能采用自己的排序。
 
 **[浏览插件与兼容性目录](docs/CATALOG.md)** · [安装与云端使用](docs/INSTALL.md) · [维护与贡献](CONTRIBUTING.md) · [适配器接口](docs/ADAPTERS.md) · [验证记录](docs/VERIFICATION.md)
 
@@ -55,7 +55,7 @@ https://raw.githubusercontent.com/Veiluna/plugin-market/HEAD/dsh/index.json
 
 ### 通用 Skills 与 Codex 云端
 
-以下命令复用固定版本的 skills CLI，并复制完整套件资源。通用安装以每个上游插件为一个套件入口，明确选择后读取内部原始技能；原生市场使用相应平台的技能划分。
+以下命令复用固定版本的 skills CLI，并复制完整套件资源。通用安装以每个仓库为一个套件入口，明确选择后读取内部原始技能；原生市场注册该仓库适用于相应平台的全部技能。
 
 ```sh
 npm run market -- install-skills research-paper-writing --agent codex --target /path/to/research-project

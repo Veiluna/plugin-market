@@ -22,7 +22,7 @@ export function validateEntryNames(packages: PackageRecord[]): void {
   for (const agent of AGENTS) {
     const names = new Set<string>();
     for (const pkg of packages) {
-      if (pkg.compatibility[agent].level === 'unsupported') continue;
+      if (pkg.compatibility[agent].level === 'unsupported' && agent !== 'codex') continue;
       const name = entryName(pkg, agent);
       if (names.has(name)) throw new Error('Duplicate ' + agent + ' plugin name: ' + name);
       names.add(name);
@@ -68,17 +68,19 @@ export async function validatePackage(pkg: PackageRecord, directory: string): Pr
 }
 export async function validateArtifacts(artifacts: Record<string, unknown>, packages: PackageRecord[], locate: PackageLocator): Promise<void> {
   validateEntryNames(packages);
+  if (new Set(packages.map(pkg => pkg.sourceId)).size !== packages.length) throw new Error('Repository grouping is incomplete; each repository must have exactly one entry');
   for (const pkg of packages) await validatePackage(pkg, locate(pkg));
   for (const agent of ['codex', 'claude-code', 'cursor'] as const) {
     const file = adapters[agent].marketplacePath!;
     const manifest = object(artifacts[file], file);
     if (!manifest.name || !Array.isArray(manifest.plugins)) throw new Error('Invalid marketplace: ' + file);
-    const expected = packages.filter(pkg => pkg.compatibility[agent].level !== 'unsupported');
+    const expected = packages.filter(pkg => agent === 'codex' || pkg.compatibility[agent].level !== 'unsupported');
     if (manifest.plugins.length !== expected.length) throw new Error('Incomplete marketplace: ' + file);
     for (const item of manifest.plugins) {
       const entry = object(item, 'entry');
       const pkg = expected.find(pkg => entryName(pkg, agent) === entry.name);
       if (!pkg) throw new Error('Unknown marketplace plugin: ' + String(entry.name));
+      if (agent === 'codex' && object(entry.policy, 'policy').installation !== (pkg.compatibility.codex.level === 'unsupported' ? 'NOT_AVAILABLE' : 'AVAILABLE')) throw new Error('Incorrect repository installation policy');
       if (typeof entry.source === 'string') {
         const expected = pkg.distribution ? 'https://github.com/' + pkg.distribution.repository + '/tree/' + pkg.distribution.commit + '/' + pkg.distribution.path : './' + pkg.packagePath;
         if (entry.source !== expected) throw new Error('Incorrect plugin URL or path');

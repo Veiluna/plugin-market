@@ -11,14 +11,18 @@ export const DSH_ENGINE_RANGE = '^0.2.1-rc.5';
 
 export function codexPreview(pkg: PackageRecord): JsonObject {
   const skills = pkg.agentSkills.codex || pkg.skills;
-  const nativeInterface = pkg.native.codex?.manifest?.interface;
-  const title = nativeInterface && typeof nativeInterface === 'object' && !Array.isArray(nativeInterface) && 'displayName' in nativeInterface && typeof nativeInterface.displayName === 'string' ? nativeInterface.displayName : pkg.name;
+  const restricted = pkg.compatibility.codex.level === 'unsupported';
+  const groups = pkg.upstreamPackages && pkg.upstreamPackages.length > 1 ? pkg.upstreamPackages : [pkg];
+  const inventory = groups.flatMap(group => [
+    ...(groups.length > 1 ? ['', '### ' + group.name] : []),
+    ...(group.agentSkills.codex || group.skills).map(skill => '- ' + skill.name + '：' + skill.description.replaceAll('\n', ' ')),
+  ]);
   return {
-    displayName: title,
+    displayName: pkg.repository,
     developerName: pkg.repository.split('/')[0],
     websiteURL: 'https://github.com/' + pkg.repository,
-    shortDescription: skills.length + ' 项技能 · ' + pkg.repository,
-    longDescription: [pkg.description, '', '来源：' + pkg.repository, '包含 ' + skills.length + ' 项原始技能。', '技能卡片将在安装后显示。', '', '技能清单：', ...skills.map(skill => '- ' + skill.name + '：' + skill.description.replaceAll('\n', ' ')), '', '安装后可在技能列表中使用。', ...pkg.requirements.map(requirement => '- ' + requirement)].join('\n'),
+    shortDescription: skills.length + ' 项技能 · ' + (restricted ? 'Codex 不可安装 · ' : '') + pkg.repository,
+    longDescription: [pkg.description, '', '来源：' + pkg.repository, '包含 ' + skills.length + ' 项原始技能。', restricted ? 'Codex 不可安装：' + pkg.compatibility.codex.reason : '技能卡片将在安装后显示。', '', groups.length > 1 ? '上游子分类与技能清单：' : '技能清单：', ...inventory, '', ...(restricted ? [] : ['安装后可在技能列表中使用。']), ...pkg.requirements.map(requirement => '- ' + requirement)].join('\n'),
     category: 'Research',
   };
 }
@@ -61,11 +65,11 @@ export function buildArtifacts(config: MarketConfig, catalog: Catalog, lock: Cat
   const cursor: JsonObject[] = [];
   for (const pkg of catalog.packages) {
     for (const agent of ['codex', 'claude-code', 'cursor'] as const) {
-      if (pkg.compatibility[agent].level === 'unsupported') continue;
+      if (pkg.compatibility[agent].level === 'unsupported' && agent !== 'codex') continue;
       const native = pkg.compatibility[agent].level === 'native' ? pkg.native[agent] : undefined;
       const name = entryName(pkg, agent);
       const bundled = pkg.distribution ? { source: 'git-subdir', url: 'https://github.com/' + pkg.distribution.repository + '.git', path: pkg.distribution.path, sha: pkg.distribution.commit } : undefined;
-      if (agent === 'codex') codex.push({ name, source: native ? remoteSource(pkg, native.root, agent) : bundled || { source: 'local', path: './' + pkg.packagePath }, interface: codexPreview(pkg), policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Research' });
+      if (agent === 'codex') codex.push({ name, source: native ? remoteSource(pkg, native.root, agent) : bundled || { source: 'local', path: './' + pkg.packagePath }, interface: codexPreview(pkg), policy: { installation: pkg.compatibility.codex.level === 'unsupported' ? 'NOT_AVAILABLE' : 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Research' });
       else if (agent === 'claude-code') {
         const entry: JsonObject = { name, source: native ? remoteSource(pkg, native.root, agent) : bundled || './' + pkg.packagePath, description: pkg.description, license: pkg.license };
         if (native?.entry) for (const key of ['skills', 'agents', 'commands', 'hooks', 'mcpServers', 'strict', 'version', 'keywords']) if (native.entry[key] !== undefined) entry[key] = native.entry[key];
@@ -87,12 +91,13 @@ export function buildArtifacts(config: MarketConfig, catalog: Catalog, lock: Cat
 
 export function catalogMarkdown(catalog: Catalog, config: MarketConfig): string {
   const esc = (text: string): string => text.replaceAll('|', '\\|').replaceAll('\n', ' ');
-  const lines = ['# 科研插件目录', '', '由 sources.json 与锁定提交生成。结构校验不等于工作流功能实测；原生插件仍需上游要求的工具、登录或服务。', '', '| 插件 ID | 上游 | Skills | Codex | Claude Code | Cursor | DSH | 云端 | 授权 |', '| --- | --- | ---: | --- | --- | --- | --- | --- | --- |'];
+  const lines = ['# 科研插件目录', '', '按最初的来源仓库顺序组织，每个仓库一个入口，内部保留原有子分类与技能。结构校验不等于工作流功能实测；原生插件仍需上游要求的工具、登录或服务。', '', '| 仓库入口 ID | 上游仓库 | Skills | Codex | Claude Code | Cursor | DSH | 云端 | 授权 |', '| --- | --- | ---: | --- | --- | --- | --- | --- | --- |'];
   for (const pkg of catalog.packages) lines.push('| ' + [pkg.id, '[' + pkg.repository + '](https://github.com/' + pkg.repository + '/tree/' + pkg.sha + ')', String(pkg.skills.length), ...(['codex', 'claude-code', 'cursor', 'dsh'] as const).map(agent => pkg.compatibility[agent].level), pkg.cloud, pkg.license].map(esc).join(' | ') + ' |');
   lines.push('', '## 安装与前置条件', '');
   for (const pkg of catalog.packages) {
     lines.push('### ' + pkg.id, '', pkg.description, '', '- 上游版本：' + (pkg.upstreamVersion || '未声明') + '；分发版本：' + pkg.distributionVersion, '- 原始技能数：' + pkg.skills.length + '；通用安装提供一个保持原资源布局的套件入口。', '- 提交：' + pkg.sha, '- 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）');
     lines.push('- 通用入口名：' + (pkg.genericSkillName || pkg.id) + '；递归发现技能的客户端也可能列出原始子技能。');
+    if (pkg.upstreamPackages && pkg.upstreamPackages.length > 1) lines.push('- 原有子分类：' + pkg.upstreamPackages.length + '；统一安装此仓库入口即可获得全部适用技能。', ...pkg.upstreamPackages.map(group => '  - ' + group.name + '：' + group.skills.length + ' 项技能（原包 ID：' + group.id + '）'));
     if (pkg.family) lines.push('- 发行家族：' + pkg.family + '，各发行版独立同步。');
     for (const requirement of pkg.requirements) lines.push('- ' + requirement);
     for (const issue of pkg.knownIssues || []) lines.push('- 已知上游缺陷：' + issue);
