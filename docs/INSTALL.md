@@ -33,7 +33,7 @@ Windows 验证使用官方 Codex CLI、关闭的 `core.longpaths`，直接以仓
 
 ### 按最初的 12 个仓库浏览
 
-市场现在每个仓库提供一个入口，标题使用完整的 owner/repo，索引沿用最初提供的顺序。Codex 展示全部 12 个来源，详情按上游子分类列出技能；其中 11 个可安装，Claude 专用 ARS 标明不可安装，并指向独立的 ARS-Codex 发行版。
+市场现在每个仓库提供一个入口，标题使用完整的 owner/repo，索引沿用最初提供的顺序。Codex 索引包含全部 12 个来源，详情按上游子分类列出技能；其中 11 个可安装，Claude 专用 ARS 标明不可安装，并指向独立的 ARS-Codex 发行版。CLI/API 已验证可枚举全部 12 项；桌面端如何展示不可安装项尚未验证，不能保证其列表一定显示 12 项。
 
 | 来源 | 市场入口 | 入口内的原有分类 |
 | --- | ---: | ---: |
@@ -45,7 +45,25 @@ Windows 验证使用官方 Codex CLI、关闭的 `core.longpaths`，直接以仓
 
 安装一个仓库入口会注册其中全部适用技能，原始资源仍保留。Claude Code、Cursor、DSH 各列出 10 个适用入口，平台不兼容的发行版见完整目录。
 
-此前按上游子插件分别展示，因此 Codex 曾显示 36 项。已添加市场的用户刷新或更新市场即可取得新分组，无需改变添加方式。已单独安装的旧子插件保留原状；安装对应仓库入口后，可通过客户端移除不再需要的旧子插件，避免重复技能。通用 install-skills 命令仍接受旧子包 ID，并解析到新的仓库套件。
+此前按上游子插件分别发行，Codex 旧索引有 36 项。已添加市场的用户更新市场快照即可取得新分组，无需改变添加方式。已单独安装的旧子插件保留原状；安装对应仓库入口后，可通过客户端移除不再需要的旧子插件，避免重复技能。通用 install-skills 命令仍接受旧子包 ID，并解析到新的仓库套件。
+
+### 仍显示旧子插件或找不到 academic-research-skills
+
+GitHub 上的市场更新与客户端保存的市场快照是两次操作。Codex 对已经添加的同一 Git 来源返回 alreadyAdded，复用现有快照；再次输入 Veiluna/plugin-market 不会强制取得最新索引。请真正更新市场快照，然后重新打开市场页面：
+
+```sh
+codex plugin marketplace upgrade scientific-agent-market
+```
+
+已用独立配置复现：旧快照有 36 项，重复 add 后仍为 36 项；执行上述 upgrade 后变为 12 项。此检查不代表已经读取或修复某位用户电脑上的缓存。若更新没有生效，使用 `codex plugin marketplace list --json` 检查来源是否仍是早期的本地目录或固定旧提交；本地目录来源不会由 Git upgrade 拉取。更新市场快照也不会自动卸载已安装的旧子插件。
+
+原仓库 Imbad0202/academic-research-skills 是 Claude Code 发行版，在旧 Codex 索引中未列出；最新版以内部名称 ars-claude 收录，Codex 安装策略为 NOT_AVAILABLE。不能用它验证 Codex 的完整流水线。Codex 对应独立发行版为 Imbad0202/academic-research-skills-codex，安装名称是：
+
+```sh
+codex plugin add ars-codex@scientific-agent-market
+```
+
+Claude Code 中原版的安装名称仍为 academic-research-skills，两个发行版没有合并。完整 12 仓库列表始终可在 [目录](CATALOG.md) 中查阅。
 
 ## Claude Code
 

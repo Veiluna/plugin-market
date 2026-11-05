@@ -5,7 +5,7 @@
 ## 收录与资源
 
 - 12 个去重来源、12 个仓库入口，内部保留 37 个上游插件分组和 402 条主要发行版原始 Skill 记录。
-- Codex 展示全部 12 个来源，11 个可安装，Claude 专用 ARS 标为 NOT_AVAILABLE；Claude Code、Cursor、DSH 各提供 10 个兼容仓库入口。ARS 与 ARS-Codex 独立保留。
+- Codex 索引包含全部 12 个来源，CLI/API 可枚举，11 个可安装，Claude 专用 ARS 标为 NOT_AVAILABLE；桌面 UI 的不可安装条目展示行为尚未验证。Claude Code、Cursor、DSH 各提供 10 个兼容仓库入口。ARS 与 ARS-Codex 独立保留。
 - 目录与市场索引保持原始来源顺序；三处多插件仓库分别合并为 23、3、2 个子分类的集合，安装入口注册全部适用技能。
 - 资源摘要、原始目录关系、平台技能变体、许可证、原生组件声明均校验；ARS 根目录模式注册表随封装保留。
 - Orchestra 上游已有 17 处可选参考文档缺失，精确路径与原因公开在目录中。新缺失仍阻止来源升级。
@@ -25,6 +25,8 @@
 以上检查未发出模型 API 请求。Cursor 与 DSH 完整客户端验收仍需在安装了对应客户端的环境中完成，不能把 schema／SDK 校验当成 GUI 实测。
 
 Codex、Claude 的验证使用缓存中的独立配置目录，未修改当前用户的实际插件配置。递归发现的客户端可能同时列出原始技能与独立命名的套件入口；入口禁止自动模型调用，DSH 则只注册上游明确发布的原始技能。DSH 的普通 README 等 Markdown 被官方 provider 忽略时会产生提示，不影响技能集合。
+
+2026-11-06（北京时间）补验市场快照更新：在独立 Codex 配置中以历史提交 01288aadb185524fd51286e8c44dff923f6d47b4 构造旧 Git 快照，并让配置跟随默认分支。旧索引 36 项；再次 marketplace add 同一来源返回 alreadyAdded: true，仍为 36 项；执行 marketplace upgrade scientific-agent-market 后无错误，索引变为 12 项，ars-claude 为 NOT_AVAILABLE、ars-codex 为 AVAILABLE。此结果验证 CLI 的旧快照迁移，不能代替用户桌面客户端的缓存诊断或界面验收。
 
 ## 自动化回归
 

@@ -4,7 +4,7 @@
 
 市场按最初提供的 12 个仓库组织，每个仓库一个入口，内部保留上游子分类、原始技能和资源布局。优先引用原生发行版，每小时检查上游默认分支，通过校验后更新市场。安装到电脑或云环境中的版本由用户或客户端另行更新。
 
-首批收录 12 个仓库入口，内部保留 37 个上游插件分组、402 条主要发行版原始 Skill 记录。Codex 展示全部 12 个来源，其中 11 个可安装，Claude 专用 ARS 标明不可安装；Claude Code、Cursor 和 DSH 各提供 10 个兼容仓库入口。
+首批收录 12 个仓库入口，内部保留 37 个上游插件分组、402 条主要发行版原始 Skill 记录。Codex 索引包含全部 12 个来源，其中 11 个可安装，Claude 专用 ARS 标明不可安装；CLI/API 的条目数不代表桌面端一定展示全部条目。Claude Code、Cursor 和 DSH 各提供 10 个兼容仓库入口。
 
 Orchestra 的 23 个分类、学术工具仓库的 3 个分类、会话获取仓库的 2 个分类归入各自仓库详情，安装对应入口即可获得全部适用技能。ARS 与 ARS-Codex 保持独立，不合并发行版。清单和目录沿用原始仓库顺序；客户端可能采用自己的排序。
 
@@ -38,6 +38,8 @@ claude plugin install scientific-agent-skills@scientific-agent-market
 ```
 
 原生发行版与封装版可能使用不同的安装名称，以对应 marketplace.json 中的 name 为准。完整列表和 CLI 差异见 [安装说明](docs/INSTALL.md)。
+
+已添加的市场需要更新本地快照才能取得新分组；重复添加同一仓库会复用已有快照。仍显示旧子插件时，执行 `codex plugin marketplace upgrade scientific-agent-market`，再重新打开市场页面。详见 [旧市场快照与 ARS 名称](docs/INSTALL.md#仍显示旧子插件或找不到-academic-research-skills)。
 
 Codex 的 Git 来源在安装前不会生成原生技能卡片。本市场在安装前的详情说明中提供技能数量、来源和完整技能清单；安装后客户端会读取实际技能。此预览限制及验证依据见 [安装说明](docs/INSTALL.md#安装前为何没有原生技能卡片)。
 
