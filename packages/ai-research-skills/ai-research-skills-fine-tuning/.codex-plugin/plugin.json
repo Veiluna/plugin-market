@@ -1,0 +1,17 @@
+{
+  "name": "ai-research-skills-fine-tuning",
+  "version": "0.1.4",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / fine-tuning",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./skills/ai-research-skills-fine-tuning-suite/upstream/03-fine-tuning/axolotl",
+    "./skills/ai-research-skills-fine-tuning-suite/upstream/03-fine-tuning/llama-factory",
+    "./skills/ai-research-skills-fine-tuning-suite/upstream/03-fine-tuning/peft",
+    "./skills/ai-research-skills-fine-tuning-suite/upstream/03-fine-tuning/unsloth"
+  ]
+}

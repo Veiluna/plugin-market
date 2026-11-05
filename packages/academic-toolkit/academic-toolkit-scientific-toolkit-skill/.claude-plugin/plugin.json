@@ -1,0 +1,14 @@
+{
+  "name": "academic-toolkit-scientific-toolkit-skill",
+  "version": "0.1.4",
+  "description": "中文学术写作、Office 文档与科研计算技能。",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/zLanqing/codex-claude-academic-skills",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./skills/academic-toolkit-scientific-toolkit-skill-suite/upstream/scientific-toolkit-skill"
+  ]
+}

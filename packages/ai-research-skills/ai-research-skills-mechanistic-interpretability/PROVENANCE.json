@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-mechanistic-interpretability",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.4",
+  "digest": "2119f166f4a0dd17038855b83880eb8a02e0b76ea8f7d1cb0b52305e5e4dbf98",
+  "adapterVersion": "4"
+}

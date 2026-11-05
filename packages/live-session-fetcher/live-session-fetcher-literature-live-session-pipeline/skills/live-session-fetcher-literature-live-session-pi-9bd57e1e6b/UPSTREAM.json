@@ -1,0 +1,11 @@
+{
+  "sourceId": "live-session-fetcher",
+  "packageId": "live-session-fetcher-literature-live-session-pipeline",
+  "repository": "Given-Dream/sciencedirect-live-session-fetcher",
+  "commit": "0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.4",
+  "digest": "b8640a041a48538efe66db6f93347db8e576c820a1d9d375871bf63a72f025e8",
+  "adapterVersion": "4"
+}
