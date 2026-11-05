@@ -9,6 +9,20 @@ export const adapters: Record<AgentId, AgentAdapter> = {
 };
 export const DSH_ENGINE_RANGE = '^0.2.1-rc.5';
 
+export function codexPreview(pkg: PackageRecord): JsonObject {
+  const skills = pkg.agentSkills.codex || pkg.skills;
+  const nativeInterface = pkg.native.codex?.manifest?.interface;
+  const title = nativeInterface && typeof nativeInterface === 'object' && !Array.isArray(nativeInterface) && 'displayName' in nativeInterface && typeof nativeInterface.displayName === 'string' ? nativeInterface.displayName : pkg.name;
+  return {
+    displayName: title,
+    developerName: pkg.repository.split('/')[0],
+    websiteURL: 'https://github.com/' + pkg.repository,
+    shortDescription: skills.length + ' 项技能 · ' + pkg.repository,
+    longDescription: [pkg.description, '', '来源：' + pkg.repository, '包含 ' + skills.length + ' 项原始技能。', '技能卡片将在安装后显示。', '', '技能清单：', ...skills.map(skill => '- ' + skill.name + '：' + skill.description.replaceAll('\n', ' ')), '', '安装后可在技能列表中使用。', ...pkg.requirements.map(requirement => '- ' + requirement)].join('\n'),
+    category: 'Research',
+  };
+}
+
 export function entryName(pkg: PackageRecord, agent: AgentId): string {
   const native = pkg.native[agent];
   return pkg.compatibility[agent].level === 'native' ? String(native?.entry?.name || native?.manifest?.name || pkg.name) : pkg.id;
@@ -51,7 +65,7 @@ export function buildArtifacts(config: MarketConfig, catalog: Catalog, lock: Cat
       const native = pkg.compatibility[agent].level === 'native' ? pkg.native[agent] : undefined;
       const name = entryName(pkg, agent);
       const bundled = pkg.distribution ? { source: 'git-subdir', url: 'https://github.com/' + pkg.distribution.repository + '.git', path: pkg.distribution.path, sha: pkg.distribution.commit } : undefined;
-      if (agent === 'codex') codex.push({ name, source: native ? remoteSource(pkg, native.root, agent) : bundled || { source: 'local', path: './' + pkg.packagePath }, policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Research' });
+      if (agent === 'codex') codex.push({ name, source: native ? remoteSource(pkg, native.root, agent) : bundled || { source: 'local', path: './' + pkg.packagePath }, interface: codexPreview(pkg), policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Research' });
       else if (agent === 'claude-code') {
         const entry: JsonObject = { name, source: native ? remoteSource(pkg, native.root, agent) : bundled || './' + pkg.packagePath, description: pkg.description, license: pkg.license };
         if (native?.entry) for (const key of ['skills', 'agents', 'commands', 'hooks', 'mcpServers', 'strict', 'version', 'keywords']) if (native.entry[key] !== undefined) entry[key] = native.entry[key];

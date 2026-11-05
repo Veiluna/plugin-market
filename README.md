@@ -6,6 +6,8 @@
 
 首批收录 12 个来源、37 个插件包、402 条主要发行版原始 Skill 记录。不同 agent 的可安装条目取决于兼容性限制。
 
+仓库数与插件条目数不同：Orchestra 的上游市场有 23 个分类插件，学术工具仓库分为 3 项，会话获取仓库分为 2 项，因此共 37 个插件包。Codex 排除 Claude 专用 ARS 发行版后显示 36 项。
+
 **[浏览插件与兼容性目录](docs/CATALOG.md)** · [安装与云端使用](docs/INSTALL.md) · [维护与贡献](CONTRIBUTING.md) · [适配器接口](docs/ADAPTERS.md) · [验证记录](docs/VERIFICATION.md)
 
 ## 开始使用
@@ -36,6 +38,8 @@ claude plugin install scientific-agent-skills@scientific-agent-market
 ```
 
 原生发行版与封装版可能使用不同的安装名称，以对应 marketplace.json 中的 name 为准。完整列表和 CLI 差异见 [安装说明](docs/INSTALL.md)。
+
+Codex 的 Git 来源在安装前不会生成原生技能卡片。本市场在安装前的详情说明中提供技能数量、来源和完整技能清单；安装后客户端会读取实际技能。此预览限制及验证依据见 [安装说明](docs/INSTALL.md#安装前为何没有原生技能卡片)。
 
 Windows 的一步添加与验证边界见 [安装说明](docs/INSTALL.md#windows-与一步添加)。
 

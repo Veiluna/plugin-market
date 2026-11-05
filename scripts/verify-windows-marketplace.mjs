@@ -5,6 +5,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { exists, filesUnder, treeDigest } from '../src/fs.ts';
+import { entryName } from '../src/adapters.ts';
+import { withCodexServer } from './codex-rpc.mjs';
 
 assert.equal(process.platform, 'win32', 'Run with native Git and Codex for Windows');
 const exec = promisify(execFile);
@@ -32,6 +34,18 @@ try {
   assert.ok(manifest.plugins.every(plugin => plugin.source.source !== 'local'));
   const available = await codex(['plugin', 'list', '--available', '--marketplace', catalog.name]);
   assert.equal(available.available.length, manifest.plugins.length);
+  const serverOptions = { executable: process.execPath, args: [entry], cwd: root, env: environment };
+  await withCodexServer(serverOptions, async request => {
+    for (const item of manifest.plugins) {
+      const pkg = catalog.packages.find(pkg => entryName(pkg, 'codex') === item.name);
+      const skills = pkg.agentSkills.codex || pkg.skills;
+      const { plugin } = await request('plugin/read', { marketplacePath: path.join(market, '.agents/plugins/marketplace.json'), pluginName: item.name });
+      assert.equal(plugin.summary.installed, false);
+      assert.ok(plugin.summary.interface.shortDescription.startsWith(skills.length + ' 项技能'));
+      for (const skill of skills) assert.ok(plugin.summary.interface.longDescription.includes('- ' + skill.name + '：'));
+      assert.equal(plugin.skills.length, 0);
+    }
+  });
   const installed = [];
   for (const id of ['research-paper-writing', 'academic-toolkit-office-academic-skill', 'academic-toolkit-scientific-toolkit-skill']) {
     const result = await codex(['plugin', 'add', id + '@' + catalog.name]);
@@ -40,5 +54,14 @@ try {
     assert.ok((await readFile(path.join(result.installedPath, '.codex-plugin/plugin.json'), 'utf8')).length > 0);
     installed.push(id);
   }
-  console.log(JSON.stringify({ platform: process.platform, git: (await exec('git', ['--version'])).stdout.trim(), coreLongpaths: false, source: configuration.repository, addedByRepositoryName: true, profilePrefixLength: profile.length, marketFiles: (await filesUnder(market)).length, pluginPayloadsOnMarketAdd: 0, availableEntries: available.available.length, installedAndVerified: installed, modelRequests: 0 }));
+  await withCodexServer(serverOptions, async request => {
+    for (const id of installed) {
+      const pkg = catalog.packages.find(pkg => pkg.id === id);
+      const { plugin } = await request('plugin/read', { marketplacePath: path.join(market, '.agents/plugins/marketplace.json'), pluginName: id });
+      assert.equal(plugin.summary.installed, true);
+      const names = new Set(plugin.skills.map(skill => skill.name.split(':').at(-1)));
+      for (const skill of pkg.agentSkills.codex || pkg.skills) assert.ok(names.has(skill.name), id + ': installed skill card ' + skill.name);
+    }
+  });
+  console.log(JSON.stringify({ platform: process.platform, git: (await exec('git', ['--version'])).stdout.trim(), coreLongpaths: false, source: configuration.repository, addedByRepositoryName: true, profilePrefixLength: profile.length, marketFiles: (await filesUnder(market)).length, pluginPayloadsOnMarketAdd: 0, availableEntries: available.available.length, descriptionsPreviewedBeforeInstall: manifest.plugins.length, installedAndVerified: installed, nativeSkillCardsVerifiedAfterInstall: installed.length, modelRequests: 0 }));
 } finally { await rm(temporary, { recursive: true, force: true }); }

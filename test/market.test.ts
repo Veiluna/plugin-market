@@ -143,8 +143,10 @@ test('native variants retain host-specific skill directories and pinned upstream
   assert.equal((await sync(f.root, { checkout: f.checkout })).failed.length, 0);
   const catalog = await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'));
   assert.equal(catalog.packages[0].agentSkills.codex![0].name, 'codex-only');
-  const marketplace = await readJson<{ plugins: { source: { sha: string } }[] }>(path.join(f.root, '.agents/plugins/marketplace.json'));
+  const marketplace = await readJson<{ plugins: { source: { sha: string }; interface: { longDescription: string } }[] }>(path.join(f.root, '.agents/plugins/marketplace.json'));
   assert.equal(marketplace.plugins[0].source.sha, sha(1));
+  assert.ok(marketplace.plugins[0].interface.longDescription.includes('- codex-only：Codex variant'));
+  assert.equal(marketplace.plugins[0].interface.longDescription.includes('- example-0：'), false);
   f.heads[0] = 8;
   await sync(f.root, { checkout: f.checkout });
   const updated = await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'));
@@ -344,6 +346,19 @@ test('an absent bundle is extracted from its Git commit and checked before becom
   assert.equal(await readFile(path.join(f.root, pkg.genericSkillPath, 'upstream/shared/guide.md'), 'utf8'), '# Shared resource\nOriginal content.\n');
   await rm(path.join(f.root, pkg.packagePath), { recursive: true });
   await assert.rejects(ensurePackage(f.root, { ...pkg, artifactHash: '0'.repeat(64) }), /does not match the lock/);
+  assert.equal(await exists(path.join(f.root, pkg.packagePath)), false);
+});
+
+test('Codex preview metadata exposes source, skill count and inventory without materializing resources', async t => {
+  const f = await fixture(); t.after(() => rm(f.root, { recursive: true, force: true }));
+  await sync(f.root, { checkout: f.checkout, publishDsh: true, publish: async () => sha(91) });
+  const pkg = (await readJson<Catalog>(path.join(f.root, 'catalog/catalog.json'))).packages[0];
+  await rm(path.join(f.root, pkg.packagePath), { recursive: true });
+  const market = await readJson<{ plugins: { interface: { shortDescription: string; longDescription: string } }[] }>(path.join(f.root, '.agents/plugins/marketplace.json'));
+  const preview = market.plugins[0].interface;
+  assert.ok(preview.shortDescription.startsWith('1 项技能'));
+  assert.ok(preview.longDescription.includes('来源：test/source-0'));
+  assert.ok(preview.longDescription.includes('- example-0：A test workflow'));
   assert.equal(await exists(path.join(f.root, pkg.packagePath)), false);
 });
 

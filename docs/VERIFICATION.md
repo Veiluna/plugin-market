@@ -19,13 +19,15 @@
 | Cursor | 官方 cursor/plugins 的 JSON schemas，提交 2776ddd2355d6d6c8747d3964600f28daf62f049 | 市场及全部 35 个插件 manifest 通过官方 schema | Cursor 客户端发现、安装与模型加载 |
 | DeepSeek Harness | 官方 index 与 filesystem Skills SDK 0.2.1-rc.5 | 原生索引解析与 Git 安装目标解析；35 个 bundle 精确注册并加载全部 400 个兼容原始技能 | 完整 DSH 客户端的 Discover、安装和会话运行 |
 
+安装前预览另以真实 plugin/read 检查全部 36 个 Codex 条目：详情元数据列出 397 项适用于 Codex 的原始技能名称与说明。当前 Codex 对未安装 Git 来源返回空的原生 skills 数组；安装前使用详情说明提供技能清单，不能强制客户端创建原生技能卡片。Windows 验证还在三个插件安装后读取实际技能卡片。
+
 以上检查未发出模型 API 请求。Cursor 与 DSH 完整客户端验收仍需在安装了对应客户端的环境中完成，不能把 schema／SDK 校验当成 GUI 实测。
 
 Codex、Claude 的验证使用缓存中的独立配置目录，未修改当前用户的实际插件配置。递归发现的客户端可能同时列出原始技能与独立命名的套件入口；入口禁止自动模型调用，DSH 则只注册上游明确发布的原始技能。DSH 的普通 README 等 Markdown 被官方 provider 忽略时会产生提示，不影响技能集合。
 
 ## 自动化回归
 
-`npm run check` 执行类型检查、25 项回归测试以及真实产物校验。覆盖默认分支解析、重复同步、提交变化但上游版本不变、资源缺失、无效元数据和清单、来源不可访问、重名、许可证变化、保留旧版、摘要篡改、跨系统文件模式、完整复制、已有目录与本地改动保护、安装失败回滚、路径逃逸及 DSH 历史提交可达性。
+`npm run check` 执行类型检查、26 项回归测试以及真实产物校验。覆盖默认分支解析、重复同步、提交变化但上游版本不变、资源缺失、无效元数据和清单、来源不可访问、重名、许可证变化、保留旧版、摘要篡改、跨系统文件模式、完整复制、已有目录与本地改动保护、安装失败回滚、路径逃逸及 DSH 历史提交可达性。
 
 Windows 一步添加采用索引与资源分离。默认分支没有任何 p/ 或 packages/ 资源目录；Codex 通过 git-subdir 只检出所选插件的固定发行提交。资源在发行分支完整保留，原始路径与许可证不丢失。归档恢复和摘要不匹配另有回归检查。
 
@@ -35,6 +37,7 @@ Windows 一步添加采用索引与资源分离。默认分支没有任何 p/ �
 
 ```sh
 npm run verify:codex
+npm run verify:preview
 npm run verify:claude
 npm run verify:adapters
 ```

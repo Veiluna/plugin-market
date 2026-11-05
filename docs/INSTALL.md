@@ -23,6 +23,28 @@ codex plugin marketplace upgrade scientific-agent-market
 
 Windows 验证使用官方 Codex CLI、关闭的 `core.longpaths`，直接以仓库名字添加市场，再安装写作、Office 与科研工具封装并校验完整资源。此检查不代替各复杂上游工作流的运行验证。
 
+### 安装前为何没有原生技能卡片
+
+本市场的 Git 来源按需分发完整资源。当前 Codex 的 plugin/read 对未安装 Git 插件返回空的原生 skills 数组，并提示安装后才能查看完整详情；官方商店的远程目录可以由服务端提供技能预览。
+
+本市场在条目的 interface.shortDescription 与 longDescription 中提供来源、技能数量、逐项技能名称与说明，用户可以在安装前读取这些信息。它们属于详情说明，不能强制客户端提前创建原生技能卡片。安装后会检查实际技能发现与资源访问。
+
+该行为有 [Codex 官方回归测试](https://github.com/openai/codex/blob/86ac0916597244a2e67a197822a5483924660ff1/codex-rs/app-server/tests/suite/v2/plugin_read.rs#L2290) 覆盖，本市场也使用 app-server 的实际返回值验证安装前的清单和安装后的技能卡片。
+
+### 为什么 12 个仓库显示为 36 项
+
+市场按上游插件边界发行，一个仓库可能包含多个插件。总计 37 个包；Claude 专用 ARS 不在 Codex 列表中，所以 Codex 显示 36 项。
+
+| Codex 可见来源 | 市场条目 |
+| --- | ---: |
+| Orchestra AI-Research-SKILLs | 23 |
+| codex-claude-academic-skills | 3 |
+| sciencedirect-live-session-fetcher | 2 |
+| 其他 8 个适用于 Codex 的仓库 | 8 |
+| 合计 | 36 |
+
+这些条目仍只来自最初的 12 个仓库，没有新增来源。ARS 与 ARS-Codex 继续保持独立发行版。
+
 ## Claude Code
 
 ```sh
