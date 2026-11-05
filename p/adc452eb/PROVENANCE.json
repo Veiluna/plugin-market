@@ -1,0 +1,11 @@
+{
+  "sourceId": "literature-downloader",
+  "packageId": "literature-downloader",
+  "repository": "Lucaswangzcx/literature-downloader-skill",
+  "commit": "0e8f306fc5205fc90657fbd916a952fa9c9d773a",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.6",
+  "digest": "dd2199cf2877dce4e96fdce5d5a4f3582507700c5bcbd50d0ebf60af6a68c1cc",
+  "adapterVersion": "6"
+}

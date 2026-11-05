@@ -1,0 +1,14 @@
+{
+  "name": "codex-autoresearch",
+  "version": "0.1.6",
+  "description": "Codex 原生、以可测指标驱动的自动实验与回退工作流。",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/leo-lilinxiao/codex-autoresearch",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "././upstream/"
+  ]
+}

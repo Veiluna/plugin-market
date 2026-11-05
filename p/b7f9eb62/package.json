@@ -1,0 +1,24 @@
+{
+  "name": "dsh-sam-live-session-fetcher-sciencedirect-live-session-fetcher",
+  "version": "0.1.6",
+  "description": "复用已获授权的本地浏览器会话，串行获取学术全文。",
+  "type": "module",
+  "license": "MIT",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "engines": {
+    "node": ">=24",
+    "dsh": "^0.2.1-rc.5"
+  },
+  "exports": {
+    ".": "./dsh/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill-filesystem": "^0.2.1-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh/cordis.patch.yml"
+    }
+  }
+}

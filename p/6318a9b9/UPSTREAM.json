@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-tokenization",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.6",
+  "digest": "41c85e1d9764c4a2fb73f10fc5e518d873da6f41dfcce6afacee9ae1b499cac7",
+  "adapterVersion": "6"
+}

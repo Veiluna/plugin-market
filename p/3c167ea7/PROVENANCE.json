@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-multimodal",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.6",
+  "digest": "2441e2bfda04a70291971573244780b6deee5e83c3f54688ec8ef0c11ef5e207",
+  "adapterVersion": "6"
+}

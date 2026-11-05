@@ -1,0 +1,21 @@
+{
+  "name": "ai-research-skills-post-training",
+  "version": "0.1.6",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / post-training",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "././upstream/06-post-training/grpo-rl-training",
+    "././upstream/06-post-training/miles",
+    "././upstream/06-post-training/openrlhf",
+    "././upstream/06-post-training/simpo",
+    "././upstream/06-post-training/slime",
+    "././upstream/06-post-training/torchforge",
+    "././upstream/06-post-training/trl-fine-tuning",
+    "././upstream/06-post-training/verl"
+  ]
+}

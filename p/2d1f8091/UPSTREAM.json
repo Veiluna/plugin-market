@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-safety-alignment",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.6",
+  "digest": "9b37d4fdea489f779f7b0ee177168f7d4ce25137ff4e5bf4c20458497acb2ca0",
+  "adapterVersion": "6"
+}

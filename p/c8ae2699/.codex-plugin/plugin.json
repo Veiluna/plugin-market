@@ -1,0 +1,18 @@
+{
+  "name": "ai-research-skills-model-architecture",
+  "version": "0.1.6",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / model-architecture",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "././upstream/01-model-architecture/litgpt",
+    "././upstream/01-model-architecture/mamba",
+    "././upstream/01-model-architecture/nanogpt",
+    "././upstream/01-model-architecture/rwkv",
+    "././upstream/01-model-architecture/torchtitan"
+  ]
+}

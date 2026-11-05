@@ -1,0 +1,18 @@
+{
+  "name": "ai-research-skills-rag",
+  "version": "0.1.6",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / rag",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "././upstream/15-rag/chroma",
+    "././upstream/15-rag/faiss",
+    "././upstream/15-rag/pinecone",
+    "././upstream/15-rag/qdrant",
+    "././upstream/15-rag/sentence-transformers"
+  ]
+}
