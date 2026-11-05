@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-data-processing",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.5",
+  "digest": "bf7d06a52c37f0846668ff211ae546d875e1266d484a062306a7e1f57fc917e2",
+  "adapterVersion": "5"
+}

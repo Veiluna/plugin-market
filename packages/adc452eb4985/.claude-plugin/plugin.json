@@ -1,0 +1,14 @@
+{
+  "name": "literature-downloader",
+  "version": "0.1.5",
+  "description": "中文文献检索、候选筛选、合法全文获取与下载报告。",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Lucaswangzcx/literature-downloader-skill",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./s/upstream/"
+  ]
+}

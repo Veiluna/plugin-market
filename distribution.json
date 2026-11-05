@@ -4,248 +4,248 @@
   "packages": [
     {
       "id": "academic-toolkit-office-academic-skill",
-      "path": "packages/academic-toolkit/academic-toolkit-office-academic-skill",
-      "version": "0.1.4",
+      "path": "packages/5a7021f9ae98",
+      "version": "0.1.5",
       "upstreamCommit": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
-      "artifactHash": "e155fd4f8f9aab8231d081d190dc0d447ca664683c2a73517b33cbf77d81d8f0"
+      "artifactHash": "2baad338bd620690a4a62b03af95fe2a873d9666ab70a2b363aa611bd656a8b8"
     },
     {
       "id": "academic-toolkit-research-writing-skill",
-      "path": "packages/academic-toolkit/academic-toolkit-research-writing-skill",
-      "version": "0.1.4",
+      "path": "packages/b7e491f5bd3c",
+      "version": "0.1.5",
       "upstreamCommit": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
-      "artifactHash": "ee584677dea8172def880e22b0088efae5d2a84e1ceff93b2fbad80eeb1426be"
+      "artifactHash": "9626dfe45600d4ea076d441340aa37b8c7a588a33ee1ba506af1001ca2009a9e"
     },
     {
       "id": "academic-toolkit-scientific-toolkit-skill",
-      "path": "packages/academic-toolkit/academic-toolkit-scientific-toolkit-skill",
-      "version": "0.1.4",
+      "path": "packages/77c7c375f76a",
+      "version": "0.1.5",
       "upstreamCommit": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
-      "artifactHash": "7f6778ffe3b25bdacad6de06174bdf7a7ab2728b6d6fe8b60b29c7078b8c1dba"
+      "artifactHash": "32cc07737960ad76d6e841036e0aa3be2c1d549a1e016254fd7ec220138a4e9d"
     },
     {
       "id": "ai-research-skills-agent-native-research-artifact",
-      "path": "packages/ai-research-skills/ai-research-skills-agent-native-research-artifact",
-      "version": "0.1.4",
+      "path": "packages/791e9b297962",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "81791158d3c86404d1065910b8b4f9fd71b27b6c26d9ba291c5b09e70cf83428"
+      "artifactHash": "967da66ca24a96e1bbad99847a8f4d2072b07dadd6c308a2ab74936ec68ab4c1"
     },
     {
       "id": "ai-research-skills-agents",
-      "path": "packages/ai-research-skills/ai-research-skills-agents",
-      "version": "0.1.4",
+      "path": "packages/eccb854e29f0",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "85bfc607b328e95023053986a655c47d2f80186b4a3975b2a26c7aeb1ae531cc"
+      "artifactHash": "b07350605beb6ae8ac886a676baf6e21510080d2facaeaf59dfc544ec9f8f94b"
     },
     {
       "id": "ai-research-skills-autoresearch",
-      "path": "packages/ai-research-skills/ai-research-skills-autoresearch",
-      "version": "0.1.4",
+      "path": "packages/a038ad068dc4",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "868e95b464c0858a64b899d7089f24e97ac411b59fc03b9b6a47b19808ff9af2"
+      "artifactHash": "cb2f48197c8ccac56785ec6ee92225cc5672b567a1c8d239c5d79dbc39eb016a"
     },
     {
       "id": "ai-research-skills-data-processing",
-      "path": "packages/ai-research-skills/ai-research-skills-data-processing",
-      "version": "0.1.4",
+      "path": "packages/1d05c33bb152",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "b5ba03860772e281f28ef592256f16bdef0057e192311f6b23852cc5ee895e2e"
+      "artifactHash": "d5a09de767f51ff7d3766f4403f72dff372735c61950401c36a642269c727303"
     },
     {
       "id": "ai-research-skills-distributed-training",
-      "path": "packages/ai-research-skills/ai-research-skills-distributed-training",
-      "version": "0.1.4",
+      "path": "packages/d28028453caa",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "9e021dea6b4d8836ff2d268adc27f63a6b7d7dd2b21669dcbca7ba414b7493b0"
+      "artifactHash": "1a155cd09d1286de637ae199fa657df95c7243549f9b60032b70b89a077cc3cd"
     },
     {
       "id": "ai-research-skills-emerging-techniques",
-      "path": "packages/ai-research-skills/ai-research-skills-emerging-techniques",
-      "version": "0.1.4",
+      "path": "packages/d96b441d7085",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "ef6e480ea614fa1c5e2177aaaf9e9b4e9d116c81562640ad2e6d75f51ddd4657"
+      "artifactHash": "a91973d8127e8dc3ee1351029250e646144d1522577c1b146ff4ab6b283dee57"
     },
     {
       "id": "ai-research-skills-evaluation",
-      "path": "packages/ai-research-skills/ai-research-skills-evaluation",
-      "version": "0.1.4",
+      "path": "packages/f54a3e76b013",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "5a4040067c064a9aad0c562c3fcb6f924f4ff4db14caa19080a1e72cf3866a01"
+      "artifactHash": "c22bfcc31d43d7a7d224518e2484b97a89c3069165846a00131e1de84d4f2b16"
     },
     {
       "id": "ai-research-skills-fine-tuning",
-      "path": "packages/ai-research-skills/ai-research-skills-fine-tuning",
-      "version": "0.1.4",
+      "path": "packages/e1c8a10cfc00",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "df7f0ca8acfa0c9ecc020927f400342b36487d2b73ba222fababa40a4fd30b20"
+      "artifactHash": "e3c19763fdb390cfc21b0d0d24d69fbf81850c4e837fae74d4d9dab1f158a4ae"
     },
     {
       "id": "ai-research-skills-ideation",
-      "path": "packages/ai-research-skills/ai-research-skills-ideation",
-      "version": "0.1.4",
+      "path": "packages/efc4e7807d61",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "366665783aae442ece8ddb72b1c9724bc4fff8ddc7e6de7b7070df1574c046b7"
+      "artifactHash": "1b8dbec957591ac390756ba37c5e44ff021fcfcfc44707cca329a0270d3a08c5"
     },
     {
       "id": "ai-research-skills-inference-serving",
-      "path": "packages/ai-research-skills/ai-research-skills-inference-serving",
-      "version": "0.1.4",
+      "path": "packages/66d22b71ebbd",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "625b0df965899b1e36b1851ee423a4deba0b9fdbab5e9106bc74d9292bace84f"
+      "artifactHash": "9b86f6b6c52cac7ddbdd4b22ec96cc3fa51e9b809fb219c0169e57e66e149814"
     },
     {
       "id": "ai-research-skills-infrastructure",
-      "path": "packages/ai-research-skills/ai-research-skills-infrastructure",
-      "version": "0.1.4",
+      "path": "packages/b2be6e126a7f",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "c7b126ba6327385d141be5313b6211aea86538c6a2c6d41cc404e0f8eee12414"
+      "artifactHash": "5286ad6d242dafbb0a61299a365783b359207b0a1ffaad34d1043255936e6b51"
     },
     {
       "id": "ai-research-skills-mechanistic-interpretability",
-      "path": "packages/ai-research-skills/ai-research-skills-mechanistic-interpretability",
-      "version": "0.1.4",
+      "path": "packages/31c92cc4b190",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "0d837b6cb74f2b5f3767ab9f385040bb93c6896cd2ffca6bb59ade89b31c007e"
+      "artifactHash": "c5e4ed2269f38a2c32e0b0bec954d005ffd38293e776837843d45ac4712f0b49"
     },
     {
       "id": "ai-research-skills-ml-paper-writing",
-      "path": "packages/ai-research-skills/ai-research-skills-ml-paper-writing",
-      "version": "0.1.4",
+      "path": "packages/3a65eb625299",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "7c12ad1ef8e0beef6368abae02b20f2e5846e6c6379000082de72afe405f672c"
+      "artifactHash": "f754695b50f48c82843074ed2e0f53f24eb72b2f84e04cae7449a5bd600868a5"
     },
     {
       "id": "ai-research-skills-mlops",
-      "path": "packages/ai-research-skills/ai-research-skills-mlops",
-      "version": "0.1.4",
+      "path": "packages/edcd2beceb3e",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "202e1476cde49ec4a2def32d59da80c798b0e35a0f27d4de9b1705e1e9b21077"
+      "artifactHash": "325cfdfc183d32c5871fbd37bbaeb330d0c27d4415108fbe77e3ea5b81e98c3f"
     },
     {
       "id": "ai-research-skills-model-architecture",
-      "path": "packages/ai-research-skills/ai-research-skills-model-architecture",
-      "version": "0.1.4",
+      "path": "packages/c8ae269959ec",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "ea885435c26be9109d306c3a362809c50768046ab61af4e419650c62ef2a70aa"
+      "artifactHash": "c13b67085dbde0ae16aa15e6f177f2c9a400fa5d5b09c65a91bbf4c83821de77"
     },
     {
       "id": "ai-research-skills-multimodal",
-      "path": "packages/ai-research-skills/ai-research-skills-multimodal",
-      "version": "0.1.4",
+      "path": "packages/3c167ea73c5a",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "f9cf3bf96322ba7a3c37aea1c591d3caebf8ec7abbd31481e29144288389dd2b"
+      "artifactHash": "9ac58fdacf8028879f0ddc785e8f992f6fe8d2d11461402e07f67763a825cc8d"
     },
     {
       "id": "ai-research-skills-observability",
-      "path": "packages/ai-research-skills/ai-research-skills-observability",
-      "version": "0.1.4",
+      "path": "packages/cd59eb0eb505",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "f41875ca67a86688d9b11fd404dbe996f72413a3ccde31d2f56d375d22b0cba0"
+      "artifactHash": "bae0e80ad933bfff6b5cd730508e3e313ff56790debaca408eb26698fa27f0c1"
     },
     {
       "id": "ai-research-skills-optimization",
-      "path": "packages/ai-research-skills/ai-research-skills-optimization",
-      "version": "0.1.4",
+      "path": "packages/8c342ec85936",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "512d766e0c7ca640b409255ea4f6e35d0e17599199bb61d16325fae42745fbaa"
+      "artifactHash": "f906ba9ba518a4e3a3b17cc93a5252d850118d4c34b105bffba0e36e7c046221"
     },
     {
       "id": "ai-research-skills-post-training",
-      "path": "packages/ai-research-skills/ai-research-skills-post-training",
-      "version": "0.1.4",
+      "path": "packages/8414261ff6d3",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "ca7eaef0a168d3cec32c80e0d4a19ad8123e5fca7c3828d8ab624f51761cedff"
+      "artifactHash": "afc199bbb7ff636710bee024f1bf181d42d85acc74f55ed8996fb78474fc9fda"
     },
     {
       "id": "ai-research-skills-prompt-engineering",
-      "path": "packages/ai-research-skills/ai-research-skills-prompt-engineering",
-      "version": "0.1.4",
+      "path": "packages/7103cff965e9",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "3cce1fa4cf28a3cdca2484b6ea8f0659e4204a0945d42a5d988139ae387f73bd"
+      "artifactHash": "c2f3da3c1e04aaddc13f038ab927bab3a53c0ac325c91dac9395700e35e71025"
     },
     {
       "id": "ai-research-skills-rag",
-      "path": "packages/ai-research-skills/ai-research-skills-rag",
-      "version": "0.1.4",
+      "path": "packages/9adf057a4b24",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "f45e7f078af3ba1b9176ba7e660c1add5f1d9a9f8f93ca6d22632005cbfbe724"
+      "artifactHash": "51808b3e2c9bed2650f0eda4704e6f43b47f5fce90be414de4ee86389a774767"
     },
     {
       "id": "ai-research-skills-safety-alignment",
-      "path": "packages/ai-research-skills/ai-research-skills-safety-alignment",
-      "version": "0.1.4",
+      "path": "packages/2d1f809196c5",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "afc4f1e6e56473219c985a634ec64506487f2991113064766524c8775ee68386"
+      "artifactHash": "50fc479ca4a01944af1153dbf74c324c5dd60b2a8b0d9ee48cb6b34e85515129"
     },
     {
       "id": "ai-research-skills-tokenization",
-      "path": "packages/ai-research-skills/ai-research-skills-tokenization",
-      "version": "0.1.4",
+      "path": "packages/6318a9b9bd52",
+      "version": "0.1.5",
       "upstreamCommit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
-      "artifactHash": "fa9535a44901c5f0d5f5a89258d2337b9315b8fc816a33592d035787c2777084"
+      "artifactHash": "6fd53dc79662a72e0267ce96ea16458ac157616f73d38b9d9eded74b2ed60b03"
     },
     {
       "id": "aris",
-      "path": "packages/aris/aris",
-      "version": "0.1.4",
+      "path": "packages/984b00ea54e7",
+      "version": "0.1.5",
       "upstreamCommit": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
-      "artifactHash": "8f47d6f3d69032d760295492977356fac6890b512bc507a475b6cffd89d7eef6"
+      "artifactHash": "d6f505e99b31478906be58e442195d0988200660914fe49342cba08fc2d5c197"
     },
     {
       "id": "ars-claude",
-      "path": "packages/ars-claude/ars-claude",
-      "version": "0.1.5",
+      "path": "packages/c0a5016e27d8",
+      "version": "0.1.6",
       "upstreamCommit": "530659d983c2f4aa584ba3f2df224df08d90b264",
-      "artifactHash": "ab44a2342a153ea75b2826df638c740c1d2186ac6cc707e28fa543ba97587e50"
+      "artifactHash": "d004a950fe6c069ed1292690dedbc40830d38eea02d37d5e6c8a6fcb1407433f"
     },
     {
       "id": "latex-arxiv",
-      "path": "packages/latex-arxiv/latex-arxiv",
-      "version": "0.1.4",
+      "path": "packages/506547a850c5",
+      "version": "0.1.5",
       "upstreamCommit": "b5b058350796bd6c9df7725a5d2e1607a9d45b2a",
-      "artifactHash": "c0842ff7cf49d44c385c7cb3333190bc642f13d49525a26b12b7ad42cbf1b8f3"
+      "artifactHash": "a1ca1b8017ed5145680958b3c81ae6ae5fb0f89e0baf6ecac84e596b04043ee1"
     },
     {
       "id": "literature-downloader",
-      "path": "packages/literature-downloader/literature-downloader",
-      "version": "0.1.4",
+      "path": "packages/adc452eb4985",
+      "version": "0.1.5",
       "upstreamCommit": "0e8f306fc5205fc90657fbd916a952fa9c9d773a",
-      "artifactHash": "dc5c25fb6865e433544223650e487f808dde38160d98a24c6221a625e2e9ca90"
+      "artifactHash": "86437af4069032f59a26dce6841118bcf481b255c4063c8850b017cbb67f4e0e"
     },
     {
       "id": "live-session-fetcher-literature-live-session-pipeline",
-      "path": "packages/live-session-fetcher/live-session-fetcher-literature-live-session-pipeline",
-      "version": "0.1.4",
+      "path": "packages/c60b391b1073",
+      "version": "0.1.5",
       "upstreamCommit": "0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
-      "artifactHash": "dcb6c0c24fec66c5470fabc0df81097959a6099a2701383968230d5451bea4ba"
+      "artifactHash": "c61ac801495ede4ff4b22cbf54af7770c571e2b6566b058105969b80a2e6105b"
     },
     {
       "id": "live-session-fetcher-sciencedirect-live-session-fetcher",
-      "path": "packages/live-session-fetcher/live-session-fetcher-sciencedirect-live-session-fetcher",
-      "version": "0.1.4",
+      "path": "packages/b7f9eb62d954",
+      "version": "0.1.5",
       "upstreamCommit": "0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
-      "artifactHash": "a8f045d6287e1f2ae7237b3f24c3d56a5a024ffbdfed35c82dcb7ca1e67cfb10"
+      "artifactHash": "8d2dbc6357cdf42e2394e6fa6eab70034eab435cb8d101177050723d7b449555"
     },
     {
       "id": "nature-skills",
-      "path": "packages/nature-skills/nature-skills",
-      "version": "0.1.4",
+      "path": "packages/801a4087e68a",
+      "version": "0.1.5",
       "upstreamCommit": "d774add241c65e89ed17a4da573b472b0972fd42",
-      "artifactHash": "77b7fff966588ecfdfb41dc4517b417b82a63fbb76bd17655f02f598ca38b4c9"
+      "artifactHash": "46f78f9a7890663d2646f673b338926bb7761df42f6ab96af266b1e823b2d456"
     },
     {
       "id": "research-paper-writing",
-      "path": "packages/research-paper-writing/research-paper-writing",
-      "version": "0.1.4",
+      "path": "packages/bd3aad02f248",
+      "version": "0.1.5",
       "upstreamCommit": "77e7c2c1ba06f7d71844873147665437a03aac1b",
-      "artifactHash": "037b68269a98891849b23050ebfe5892af80f28a9267b2a9320cc96dffaf445c"
+      "artifactHash": "732d903c927920161a24ca13d28407d6572ccbecc6d4ecb36c0cee57a0ebd87f"
     },
     {
       "id": "scientific-agent-skills",
-      "path": "packages/scientific-agent-skills/scientific-agent-skills",
-      "version": "0.1.4",
+      "path": "packages/8d81cc53e451",
+      "version": "0.1.5",
       "upstreamCommit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "artifactHash": "493b40ad54122c78fbda0052e2e6a002228ca78cfe5c208df5f590fefc2f1742"
+      "artifactHash": "396959344c355a178dd426b37ddb56a2da5467161ab2a2dc0ef9dd246a8e2e1f"
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-inference-serving",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.5",
+  "digest": "a1eda54afabe0dd7c21051d18cd29b61844c3ed14d74a29713ec4a8496f5c032",
+  "adapterVersion": "5"
+}

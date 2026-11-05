@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-observability",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.5",
+  "digest": "5aedf8513e56dbb17f0d7e16b4a4a86fb403070f570c6313c4acc4dba4d2586c",
+  "adapterVersion": "5"
+}

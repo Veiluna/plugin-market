@@ -1,0 +1,16 @@
+{
+  "name": "ai-research-skills-evaluation",
+  "version": "0.1.5",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / evaluation",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./s/upstream/11-evaluation/bigcode-evaluation-harness",
+    "./s/upstream/11-evaluation/lm-evaluation-harness",
+    "./s/upstream/11-evaluation/nemo-evaluator"
+  ]
+}

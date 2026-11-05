@@ -1,0 +1,23 @@
+{
+  "name": "ai-research-skills-multimodal",
+  "version": "0.1.5",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / multimodal",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./s/upstream/18-multimodal/audiocraft",
+    "./s/upstream/18-multimodal/blip-2",
+    "./s/upstream/18-multimodal/clip",
+    "./s/upstream/18-multimodal/cosmos-policy",
+    "./s/upstream/18-multimodal/llava",
+    "./s/upstream/18-multimodal/openpi",
+    "./s/upstream/18-multimodal/openvla-oft",
+    "./s/upstream/18-multimodal/segment-anything",
+    "./s/upstream/18-multimodal/stable-diffusion",
+    "./s/upstream/18-multimodal/whisper"
+  ]
+}

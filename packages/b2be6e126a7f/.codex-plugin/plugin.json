@@ -1,0 +1,16 @@
+{
+  "name": "ai-research-skills-infrastructure",
+  "version": "0.1.5",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / infrastructure",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./s/upstream/09-infrastructure/lambda-labs",
+    "./s/upstream/09-infrastructure/modal",
+    "./s/upstream/09-infrastructure/skypilot"
+  ]
+}

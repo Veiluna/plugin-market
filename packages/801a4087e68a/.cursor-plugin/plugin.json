@@ -1,0 +1,37 @@
+{
+  "name": "nature-skills",
+  "version": "0.1.5",
+  "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Yuan1z0825/nature-skills",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "Apache-2.0",
+  "skills": [
+    "./s/upstream/skills/nature-academic-search",
+    "./s/upstream/skills/nature-citation",
+    "./s/upstream/skills/nature-data",
+    "./s/upstream/skills/nature-downloader",
+    "./s/upstream/skills/nature-experiment-log",
+    "./s/upstream/skills/nature-figure",
+    "./s/upstream/skills/nature-image2ppt",
+    "./s/upstream/skills/nature-literature-pipeline",
+    "./s/upstream/skills/nature-paper-card",
+    "./s/upstream/skills/nature-paper-to-patent",
+    "./s/upstream/skills/nature-paper-trans",
+    "./s/upstream/skills/nature-paper-xray",
+    "./s/upstream/skills/nature-paper2ppt",
+    "./s/upstream/skills/nature-paper2word",
+    "./s/upstream/skills/nature-polishing",
+    "./s/upstream/skills/nature-proposal-writer",
+    "./s/upstream/skills/nature-reader",
+    "./s/upstream/skills/nature-ref-verifier",
+    "./s/upstream/skills/nature-response",
+    "./s/upstream/skills/nature-reviewer",
+    "./s/upstream/skills/nature-shared",
+    "./s/upstream/skills/nature-social-science",
+    "./s/upstream/skills/nature-statistics",
+    "./s/upstream/skills/nature-writing"
+  ]
+}
