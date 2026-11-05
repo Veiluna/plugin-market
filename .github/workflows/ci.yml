@@ -32,8 +32,8 @@ jobs:
       matrix:
         longpaths: [false, true]
     steps:
-      - name: Keep Git for Windows long path support disabled globally
-        run: git config --global core.longpaths false
+      - name: Configure the Git long path mode for this isolated job
+        run: git config --global core.longpaths ${{ matrix.longpaths }}
       - uses: actions/checkout@v5
         with:
           persist-credentials: false

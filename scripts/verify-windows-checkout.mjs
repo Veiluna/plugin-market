@@ -33,7 +33,10 @@ try {
     const added = await codex(['plugin', 'marketplace', 'add', target]);
     assert.equal((await realpath(added.installedRoot)).toLowerCase(), (await realpath(target)).toLowerCase(), 'Local marketplaces must be read in place');
     const marketplaces = await codex(['plugin', 'marketplace', 'list']);
-    assert.equal(marketplaces.marketplaces.find(market => market.name === catalog.name)?.marketplaceSource.sourceType, 'local');
+    const registered = marketplaces.marketplaces.find(market => market.name === catalog.name);
+    assert.ok(registered, 'The local market must be listed');
+    assert.equal((await realpath(registered.root)).toLowerCase(), (await realpath(target)).toLowerCase());
+    assert.match(await readFile(path.join(profile, 'config.toml'), 'utf8'), /source_type\s*=\s*"local"/);
     const available = await codex(['plugin', 'list', '--available', '--marketplace', catalog.name]);
     const expected = JSON.parse(await readFile(path.join(target, '.agents/plugins/marketplace.json'), 'utf8')).plugins;
     assert.equal(available.available.length, expected.length);

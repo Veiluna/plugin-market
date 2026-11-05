@@ -29,7 +29,7 @@ Codex、Claude 的验证使用缓存中的独立配置目录，未修改当前�
 
 Windows 用户报告的 Codex 暂存目录触发了 Filename too long。封装已改用 packages/<12 位摘要>/s/upstream，去掉重复长包名，公开插件 ID 与技能名不变。新增回归检查该目录前缀下的长资源路径，以及旧目录迁移与资源保留。缩短路径后，ARS-Codex 仍含深层上游资源，因此直接通过 GitHub 来源添加市场时，core.longpaths=false 仍可能失败。
 
-无需开启长路径的入口是短目录中的本地市场。原生 Codex 已确认本地来源原地注册，不再次克隆进 .staging。Windows CI 将全局 core.longpaths 保持为 false，以 false 配置在短目录执行真实 clone／checkout、核对全部 37 个包摘要；再使用固定的官方 Codex CLI 0.166.0-alpha.1 注册来源、发现条目并实际安装写作、Office 与科研工具三个封装，逐个验证完整资源。独立作业仍保留显式 true 的深层目录校验。命令及无 CLI 时的桌面配置见 [安装排错](INSTALL.md#windows-出现-filename-too-long)。
+无需开启长路径的入口是短目录中的本地市场。原生 Codex 已确认本地来源原地注册，不再次克隆进 .staging。关闭长路径的 Windows 作业将全局 core.longpaths 保持为 false，以 false 配置在短目录执行真实 clone／checkout、核对全部 37 个包摘要；再使用固定的官方 Codex CLI 0.166.0-alpha.1 注册来源、发现条目并实际安装写作、Office 与科研工具三个封装，逐个验证完整资源。独立作业仍保留显式 true 的深层目录校验。命令及无 CLI 时的桌面配置见 [安装排错](INSTALL.md#windows-出现-filename-too-long)。
 
 复现可选的官方客户端／SDK 验证：
 
