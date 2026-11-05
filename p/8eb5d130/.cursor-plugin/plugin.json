@@ -1,6 +1,6 @@
 {
   "name": "codex-autoresearch",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Codex 原生、以可测指标驱动的自动实验与回退工作流。",
   "author": {
     "name": "Veiluna"

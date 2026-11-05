@@ -4,7 +4,7 @@ description: "论文各章节写作、论证检查和投稿前自查。 使用�
 disable-model-invocation: true
 ---
 
-# research-paper-writing
+# Research-Paper-Writing-Skills
 
 This is a distribution router for an upstream skill package. Use it when the user explicitly selects this suite.
 Read the relevant original SKILL.md below before doing the task. Keep its invocation policies, workflow, and attribution.
@@ -18,6 +18,7 @@ License: MIT
 ## Skills
 
 - research-paper-writing: [original instructions](upstream/research-paper-writing/SKILL.md) — Improve academic paper writing quality for ML/CV/NLP-style papers with clear section structure, paragraph flow, and reviewer-facing presentation. Use when drafting or revising Abstract, Introduction, Related Work, Method, Experiments, or Conclusion; polishing figures/tables; checking claim-support alignment; or performing self-review before submission.
+
 
 ## Requirements
 

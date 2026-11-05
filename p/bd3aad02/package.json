@@ -1,6 +1,6 @@
 {
   "name": "dsh-sam-research-paper-writing",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "论文各章节写作、论证检查和投稿前自查。",
   "type": "module",
   "license": "MIT",

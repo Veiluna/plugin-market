@@ -5,7 +5,7 @@
   "commit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
   "license": "MIT",
   "upstreamVersion": "2.72.0",
-  "distributionVersion": "0.1.6",
-  "digest": "985856cd516f5c2f681baa19d5929a460541b67b67592dfb04acd972e3bf61ed",
-  "adapterVersion": "6"
+  "distributionVersion": "0.1.7",
+  "digest": "b34c5f41c226c40c67bd9053a0b8e65768c1e4acc306db82c1cface448a1964c",
+  "adapterVersion": "7"
 }

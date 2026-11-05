@@ -1,6 +1,6 @@
 {
   "name": "dsh-sam-latex-arxiv",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。",
   "type": "module",
   "license": "MIT",

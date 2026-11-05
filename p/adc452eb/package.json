@@ -1,6 +1,6 @@
 {
   "name": "dsh-sam-literature-downloader",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "中文文献检索、候选筛选、合法全文获取与下载报告。",
   "type": "module",
   "license": "MIT",

@@ -1,4 +1,4 @@
-# research-paper-writing
+# Research-Paper-Writing-Skills
 
 论文各章节写作、论证检查和投稿前自查。
 

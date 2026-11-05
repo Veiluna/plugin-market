@@ -4,7 +4,7 @@ description: "ARIS 文献、实验、论文写作与跨模型评审套件。 使
 disable-model-invocation: true
 ---
 
-# aris
+# Auto-claude-code-research-in-sleep
 
 This is a distribution router for an upstream skill package. Use it when the user explicitly selects this suite.
 Read the relevant original SKILL.md below before doing the task. Keep its invocation policies, workflow, and attribution.
@@ -104,6 +104,7 @@ License: MIT
 - web-debug-search: [original instructions](upstream/skills/web-debug-search/SKILL.md) — Search GitHub, Stack Exchange, Chinese technical communities, official documentation, and general developer web sources for software errors, compatibility problems, API usage questions, and real-world workarounds. Use for debugging and discovery only; results are not paper-citation evidence.
 - wiki-enrich: [original instructions](upstream/skills/wiki-enrich/SKILL.md) — Fill in the per-paper TODO sections of research-wiki/papers/<slug>.md pages that literature-ingest skills leave as bare scaffolds. Use when user says 'enrich wiki', 'fill paper TODOs', 'wiki body 補完', '把 paper 摘要寫進 wiki', 'research-wiki 自動填', or after a batch ingest that left papers/ as TODO scaffolds.
 - writing-systems-papers: [original instructions](upstream/skills/writing-systems-papers/SKILL.md) — Paragraph-level structural blueprint for 10-12 page systems papers targeting OSDI, SOSP, ASPLOS, NSDI, and EuroSys. Provides page allocation, paragraph templates, and writing patterns. Use when user says "写系统论文", "systems paper structure", "OSDI paper", "SOSP paper", or wants fine-grained structural guidance for a systems conference submission.
+
 
 ## Requirements
 

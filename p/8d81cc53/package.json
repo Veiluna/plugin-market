@@ -1,6 +1,6 @@
 {
   "name": "dsh-sam-scientific-agent-skills",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "生物、化学、医学、数据分析与科学写作技能库。",
   "type": "module",
   "license": "MIT",

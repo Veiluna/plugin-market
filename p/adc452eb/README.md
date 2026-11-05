@@ -1,4 +1,4 @@
-# literature-downloader
+# literature-downloader-skill
 
 中文文献检索、候选筛选、合法全文获取与下载报告。
 

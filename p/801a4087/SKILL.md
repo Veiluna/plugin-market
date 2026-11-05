@@ -42,6 +42,7 @@ License: Apache-2.0
 - nature-statistics: [original instructions](upstream/skills/nature-statistics/SKILL.md) — Audit or improve manuscript statistical reporting, including experimental units, replication, uncertainty, tests, and figure statistics. Use for 统计审查、统计方法小节、图注统计 and reviewer concerns; compute new analyses only when requested with data.
 - nature-writing: [original instructions](upstream/skills/nature-writing/SKILL.md) — Draft or restructure scientific manuscript arguments, sections, and initial-submission materials from author-provided evidence. Use for 论文写作、章节起草、论证重构、正文压缩、首次投稿材料. Use nature-polishing for language-only edits to existing prose and nature-response for post-decision correspondence.
 
+
 ## Requirements
 
 - 共享 nature-shared 资源随套件分发

@@ -1,4 +1,4 @@
-# aris
+# Auto-claude-code-research-in-sleep
 
 ARIS 文献、实验、论文写作与跨模型评审套件。
 

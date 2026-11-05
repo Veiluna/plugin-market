@@ -1,4 +1,4 @@
-# latex-arxiv
+# latex-arxiv-SKILL
 
 保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。
 

@@ -195,6 +195,7 @@ License: MIT
 - what-if-oracle: [original instructions](upstream/skills/what-if-oracle/SKILL.md) — Supports structured what-if scenario analysis for research planning, experimental contingencies, and scientific project decisions. Explores favorable, reference, adverse, wild-card, contrarian, and second-order scenarios with explicit assumptions, evidence, and decision triggers. Use to stress-test a research plan under uncertainty; scenario narratives do not estimate causal effects or calibrated forecast probabilities.
 - zarr-python: [original instructions](upstream/skills/zarr-python/SKILL.md) — Stores and queries chunked N-D scientific arrays with Zarr-Python 3, including codecs, sharding, S3/GCS storage, and NumPy/Dask/Xarray integration. Use for array layout, bounded I/O, format migration, or scientific metadata preservation.
 
+
 ## Requirements
 
 - 按具体技能安装 Python 依赖或配置外部服务

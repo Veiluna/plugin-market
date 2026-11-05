@@ -4,7 +4,7 @@ description: "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作�
 disable-model-invocation: true
 ---
 
-# latex-arxiv
+# latex-arxiv-SKILL
 
 This is a distribution router for an upstream skill package. Use it when the user explicitly selects this suite.
 Read the relevant original SKILL.md below before doing the task. Keep its invocation policies, workflow, and attribution.
@@ -21,6 +21,7 @@ License: MIT
 - collaborating-with-claude: [original instructions](upstream/.codex/skills/collaborating-with-claude/SKILL.md) — Use the Claude Code CLI to consult Claude and delegate coding tasks for prototyping, debugging, and code review. Supports multi-turn sessions via SESSION_ID. Optimized for low-token, file/line-based handoff.
 - collaborating-with-gemini: [original instructions](upstream/.codex/skills/collaborating-with-gemini/SKILL.md) — Use the Gemini CLI to consult Gemini and delegate coding tasks for prototyping, debugging, and code review. Supports multi-turn sessions via SESSION_ID. Optimized for low-token, file/line-based handoff.
 - latex-rhythm-refiner: [original instructions](upstream/.codex/skills/latex-rhythm-refiner/SKILL.md) — Post-process LaTeX project prose to improve readability through varied sentence and paragraph lengths. Removes filler phrases and unnecessary transitions while preserving all citations and semantic meaning. Use after drafting is complete, when sections read as monotonous or blocky.
+
 
 ## Requirements
 

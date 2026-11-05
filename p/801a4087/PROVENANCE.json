@@ -5,7 +5,7 @@
   "commit": "d774add241c65e89ed17a4da573b472b0972fd42",
   "license": "Apache-2.0",
   "upstreamVersion": "0.1.0",
-  "distributionVersion": "0.1.6",
-  "digest": "cc4382d24f3cd3dc79c5c076040c04334f0b184c898e51d617611f9554a8dd59",
-  "adapterVersion": "6"
+  "distributionVersion": "0.1.7",
+  "digest": "8c7cb35a3f0853d374e90c983758f8fe7452bdfcfbb0100af452f94532917932",
+  "adapterVersion": "7"
 }
