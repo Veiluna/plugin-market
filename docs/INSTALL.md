@@ -17,21 +17,40 @@ codex plugin marketplace upgrade scientific-agent-market
 
 ### Windows 出现 Filename too long
 
-Codex 会先把市场克隆到用户目录下较深的临时路径；加上上游资源目录后，可能超过 Windows 的传统路径长度限制。市场封装已使用短存储路径，部分上游仍包含深层资源。在 PowerShell 中为当前用户启用 Git 长路径支持，然后重新添加市场：
+Codex 通过 GitHub 仓库添加市场时，会先克隆到用户目录下较深的临时路径；加上上游资源目录后，可能超过 Windows 的传统路径长度限制。市场封装已缩短存储路径，ARS-Codex 上游仍包含深层资源。
+
+**保持长路径支持关闭：使用短目录中的本地市场。** 在 PowerShell 中运行：
+
+```powershell
+git clone https://github.com/Veiluna/plugin-market.git "$env:USERPROFILE\pm"
+codex plugin marketplace add "$env:USERPROFILE\pm"
+```
+
+例如用户 A 的本地来源是 C:\Users\A\pm。Codex 直接读取本地市场，不把整个市场再克隆到 .staging。请选择尚不存在的目标目录；已经克隆成功的目录可直接用于第二条命令。添加后重启桌面客户端，使用 scientific-agent-market 中的插件；不要再以 Veiluna/plugin-market 作为远程来源重新添加。
+
+如果只有桌面客户端、没有 codex 命令，可在客户端打开 C:\Users\A\.codex\config.toml，为该市场配置本地来源。已有同名段落时替换其内容，避免重复表名：
+
+```toml
+[marketplaces.scientific-agent-market]
+source_type = "local"
+source = 'C:\Users\A\pm'
+```
+
+保存后完全退出并重启 Codex。此方式不改 Git 长路径配置或系统注册表。更新本地市场使用：
+
+```powershell
+git -C "$env:USERPROFILE\pm" pull --ff-only
+```
+
+上述步骤解决市场仓库因深层暂存目录导致的检出失败。各插件的上游原生运行条件仍见目录。Windows CI 在 core.longpaths=false 下实际克隆、注册本地来源，并安装写作、Office 与科研工具三个封装检查完整资源。
+
+若希望继续通过 GitHub 仓库来源添加，也可以自行选择开启当前用户的 Git 长路径支持：
 
 ```powershell
 git config --global core.longpaths true
-git config --show-origin --get core.longpaths
 ```
 
-通常不需要管理员权限。第二条用于确认生效配置值为 true。关闭并重新打开 Codex，再添加 Veiluna/plugin-market；不必在报错中的临时 .staging 目录运行 git restore。该设置用于 Git for Windows 的文件路径处理，无需首先修改系统注册表。若仍失败，可用短路径手动克隆后将本地目录作为市场来源：
-
-```powershell
-git clone -c core.longpaths=true https://github.com/Veiluna/plugin-market.git C:\pm
-codex plugin marketplace add C:\pm
-```
-
-请选用尚不存在的目标目录。若桌面客户端没有本地目录入口，可使用同版本 Codex CLI 添加该来源。
+这种方式通常无需管理员权限，但不是使用本地短目录入口的前提。不必在报错中的临时 .staging 目录运行 git restore。
 
 ## Claude Code
 

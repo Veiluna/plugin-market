@@ -27,14 +27,28 @@ jobs:
   windows-checkout:
     runs-on: windows-latest
     timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        longpaths: [false, true]
     steps:
-      - name: Enable Git for Windows long path support
-        run: git config --global core.longpaths true
+      - name: Keep Git for Windows long path support disabled globally
+        run: git config --global core.longpaths false
       - uses: actions/checkout@v5
         with:
           persist-credentials: false
       - uses: actions/setup-node@v5
         with:
           node-version-file: .nvmrc
-      - name: Clone into a deep Codex-style staging directory and verify resources
-        run: npm run verify:windows
+      - name: Install pinned official Codex CLI for the local marketplace test
+        if: matrix.longpaths == false
+        run: npm install --global --ignore-scripts @openai/codex@0.166.0-alpha.1
+      - name: Clone and install from a short local path without long path support
+        if: matrix.longpaths == false
+        shell: pwsh
+        run: |
+          $env:MARKET_CODEX_NODE_ENTRY = Join-Path (npm root -g) '@openai\codex\bin\codex.js'
+          npm run verify:windows
+      - name: Also retain coverage for the explicit long path option
+        if: matrix.longpaths == true
+        run: npm run verify:windows -- --longpaths
