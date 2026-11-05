@@ -1,0 +1,8 @@
+{
+  "name": "scientific-agent-market",
+  "title": "科研精选插件市场",
+  "repository": "Veiluna/plugin-market",
+  "publisher": "Veiluna",
+  "distributionBranch": "dist-dsh",
+  "skillsCliVersion": "1.7.6"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "latex-arxiv",
+  "version": "0.1.4",
+  "description": "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/appautomaton/latex-arxiv-SKILL",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./skills/latex-arxiv-suite/upstream/.codex/skills/arxiv-paper-writer",
+    "./skills/latex-arxiv-suite/upstream/.codex/skills/collaborating-with-claude",
+    "./skills/latex-arxiv-suite/upstream/.codex/skills/collaborating-with-gemini",
+    "./skills/latex-arxiv-suite/upstream/.codex/skills/latex-rhythm-refiner"
+  ]
+}

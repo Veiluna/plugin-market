@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-prompt-engineering",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.4",
+  "digest": "9a4c8e03916cebf04682b4a98111cee0ff3f23ea9b1ebacd109def75d43b1fb1",
+  "adapterVersion": "4"
+}

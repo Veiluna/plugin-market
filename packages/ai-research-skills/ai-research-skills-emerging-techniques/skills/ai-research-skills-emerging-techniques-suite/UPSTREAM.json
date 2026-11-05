@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-emerging-techniques",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.4",
+  "digest": "f4d13af061a076b4cf03acf61661cf951c0cdeac8c9f5195469c30a1f7cbb4ce",
+  "adapterVersion": "4"
+}

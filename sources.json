@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "scientific-agent-skills",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "license": "MIT",
+      "description": "生物、化学、医学、数据分析与科学写作技能库。",
+      "discovery": { "kind": "plugin", "root": "." },
+      "resources": ["skills", "scripts", "LICENSE.md", "CITATION.cff", "pyproject.toml"],
+      "requirements": ["按具体技能安装 Python 依赖或配置外部服务"],
+      "cloud": "conditional"
+    },
+    {
+      "id": "nature-skills",
+      "repository": "Yuan1z0825/nature-skills",
+      "license": "Apache-2.0",
+      "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
+      "discovery": { "kind": "plugin", "root": "." },
+      "resources": ["skills", "scripts", "docs", "LICENSE"],
+      "requirements": ["共享 nature-shared 资源随套件分发", "部分功能需要外部 API 或文档处理工具"],
+      "cloud": "conditional"
+    },
+    {
+      "id": "ars-claude",
+      "repository": "Imbad0202/academic-research-skills",
+      "family": "academic-research-skills",
+      "license": "CC-BY-NC-4.0",
+      "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
+      "discovery": { "kind": "plugin", "root": "." },
+      "resources": ["academic-paper", "academic-paper-reviewer", "academic-pipeline", "deep-research", "sr-screener", "shared", "scripts", "tools", "docs", "agents", "hooks", "commands", "MODE_REGISTRY.md", "GOVERNANCE.md", "POSITIONING.md", "QUICKSTART.md", "pyproject.toml", "requirements-pdf-content-classifier.txt", "LICENSE", "NOTICE.md", "THIRD_PARTY.md"],
+      "requirements": ["完整流水线需要 Claude Code 的原生组件与上游配置"],
+      "cloud": "conditional",
+      "restrictedAgents": { "codex": "请优先安装同家族的 ARS-Codex 发行版" }
+    },
+    {
+      "id": "codex-autoresearch",
+      "repository": "leo-lilinxiao/codex-autoresearch",
+      "license": "MIT",
+      "description": "Codex 原生、以可测指标驱动的自动实验与回退工作流。",
+      "discovery": { "kind": "skills", "packages": [{ "name": "codex-autoresearch", "roots": ["."] }] },
+      "resources": ["scripts", "references", "agents", "docs", "LICENSE"],
+      "requirements": ["Codex CLI、干净的 Git 分支与上游要求的运行能力"],
+      "cloud": "unsupported",
+      "restrictedAgents": { "claude-code": "依赖 Codex Goal 或 codex exec 控制器", "cursor": "依赖 Codex Goal 或 codex exec 控制器", "dsh": "依赖 Codex Goal 或 codex exec 控制器", "universal": "依赖 Codex 原生运行时" }
+    },
+    {
+      "id": "academic-toolkit",
+      "repository": "zLanqing/codex-claude-academic-skills",
+      "license": "MIT",
+      "description": "中文学术写作、Office 文档与科研计算技能。",
+      "discovery": { "kind": "skills", "packages": [{ "name": "research-writing-skill", "roots": ["research-writing-skill"] }, { "name": "office-academic-skill", "roots": ["office-academic-skill"] }, { "name": "scientific-toolkit-skill", "roots": ["scientific-toolkit-skill"] }] },
+      "resources": ["LICENSE"],
+      "requirements": ["文档或科学计算功能需要相应本地工具、Python 包或 MATLAB/Octave"],
+      "cloud": "conditional"
+    },
+    {
+      "id": "ars-codex",
+      "repository": "Imbad0202/academic-research-skills-codex",
+      "family": "academic-research-skills",
+      "license": "CC-BY-NC-4.0",
+      "description": "ARS 的独立 Codex 原生发行版，保留自己的版本与运行适配。",
+      "discovery": { "kind": "marketplace", "manifest": ".agents/plugins/marketplace.json" },
+      "resources": ["LICENSE", "VERSION", "CODEX_FULL_RUNTIME_ADAPTER.md"],
+      "requirements": ["完整运行依赖 Codex 原生代理、脚本与上游配置"],
+      "cloud": "conditional",
+      "restrictedAgents": { "claude-code": "请安装同家族的 Claude Code 原生 ARS", "cursor": "此发行版依赖 Codex 运行适配", "dsh": "此发行版依赖 Codex 运行适配", "universal": "此发行版依赖 Codex 运行适配" }
+    },
+    {
+      "id": "live-session-fetcher",
+      "repository": "Given-Dream/sciencedirect-live-session-fetcher",
+      "license": "MIT",
+      "description": "复用已获授权的本地浏览器会话，串行获取学术全文。",
+      "discovery": { "kind": "skills", "packages": [{ "name": "sciencedirect-live-session-fetcher", "roots": ["codex-skill"] }, { "name": "literature-live-session-pipeline", "roots": ["literature-live-session-pipeline"] }] },
+      "resources": ["scripts", "docs", "requirements.txt", "LICENSE"],
+      "requirements": ["本机 Chrome、Edge 或 Firefox 的已授权登录会话", "Python 与浏览器自动化依赖"],
+      "cloud": "unsupported",
+      "operatingSystems": ["windows", "macos", "linux"]
+    },
+    {
+      "id": "literature-downloader",
+      "repository": "Lucaswangzcx/literature-downloader-skill",
+      "license": "MIT",
+      "description": "中文文献检索、候选筛选、合法全文获取与下载报告。",
+      "discovery": { "kind": "skills", "packages": [{ "name": "literature-downloader", "roots": ["."] }] },
+      "resources": ["scripts", "references", "agents", "LICENSE"],
+      "requirements": ["Python 与可访问的文献服务；机构登录资源需要另行授权"],
+      "cloud": "conditional"
+    },
+    {
+      "id": "aris",
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "license": "MIT",
+      "description": "ARIS 文献、实验、论文写作与跨模型评审套件。",
+      "discovery": { "kind": "plugin", "root": "." },
+      "resources": ["skills", "tools", "templates", "mcp-servers", "commands", "agents", "docs", "LICENSE", "SETUP_GUIDE.md", "SETUP_GUIDE_CN.md"],
+      "requirements": ["完整工作流需执行上游 setup 并配置评审器或跨模型集成", "Codex 与 Claude Code 使用各自原生技能目录"],
+      "cloud": "conditional"
+    },
+    {
+      "id": "ai-research-skills",
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "license": "MIT",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。",
+      "resourceExceptions": [
+        { "path": "01-model-architecture/mamba/references/selective-ssm.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选数学扩展文档未提供。" },
+        { "path": "01-model-architecture/mamba/references/mamba2-details.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选架构扩展文档未提供。" },
+        { "path": "01-model-architecture/mamba/references/performance.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选性能扩展文档未提供。" },
+        { "path": "06-post-training/verl/references/multi-turn.md", "reason": "初始收录审查：上游 Advanced Topics 引用的可选多轮扩展文档未提供。" },
+        { "path": "07-safety-alignment/constitutional-ai/references/constitution-design.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选扩展文档未提供。" },
+        { "path": "07-safety-alignment/constitutional-ai/references/rlaif-comparison.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选扩展文档未提供。" },
+        { "path": "07-safety-alignment/constitutional-ai/references/cot-critique.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选扩展文档未提供。" },
+        { "path": "07-safety-alignment/llamaguard/references/custom-categories.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选扩展文档未提供。" },
+        { "path": "07-safety-alignment/llamaguard/references/benchmarks.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选扩展文档未提供。" },
+        { "path": "07-safety-alignment/llamaguard/references/deployment.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选部署扩展文档未提供。" },
+        { "path": "07-safety-alignment/nemo-guardrails/references/colang-guide.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选 DSL 扩展文档未提供。" },
+        { "path": "07-safety-alignment/nemo-guardrails/references/integrations.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选集成扩展文档未提供。" },
+        { "path": "07-safety-alignment/nemo-guardrails/references/performance.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选性能扩展文档未提供。" },
+        { "path": "08-distributed-training/ray-train/references/hyperparameter-tuning.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选调参扩展文档未提供。" },
+        { "path": "08-distributed-training/ray-train/references/custom-loops.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选训练扩展文档未提供。" },
+        { "path": "10-optimization/flash-attention/references/algorithm.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选算法扩展文档未提供。" },
+        { "path": "10-optimization/flash-attention/references/advanced-features.md", "reason": "初始收录审查：上游 Advanced topics 引用的可选高级功能文档未提供。" }
+      ],
+      "discovery": { "kind": "marketplace", "manifest": ".claude-plugin/marketplace.json" },
+      "resources": ["LICENSE", "CITATION.cff"],
+      "requirements": ["具体训练、推理或实验技能需要各自框架及计算资源"],
+      "cloud": "conditional"
+    },
+    {
+      "id": "research-paper-writing",
+      "repository": "Master-cai/Research-Paper-Writing-Skills",
+      "license": "MIT",
+      "description": "论文各章节写作、论证检查和投稿前自查。",
+      "discovery": { "kind": "skills", "packages": [{ "name": "research-paper-writing", "roots": ["research-paper-writing"] }] },
+      "resources": ["LICENSE"],
+      "requirements": [],
+      "cloud": "supported"
+    },
+    {
+      "id": "latex-arxiv",
+      "repository": "appautomaton/latex-arxiv-SKILL",
+      "license": "MIT",
+      "description": "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。",
+      "discovery": { "kind": "skills", "packages": [{ "name": "latex-arxiv", "containers": [".codex/skills"] }] },
+      "resources": ["LICENSE", "agent-skills-standard.md"],
+      "requirements": ["Python、pdflatex、BibTeX", "协作功能还需要对应 agent CLI"],
+      "cloud": "conditional"
+    }
+  ]
+}

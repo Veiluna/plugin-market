@@ -1,0 +1,885 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Scientific Agent Market",
+    "zh": "科研精选插件市场"
+  },
+  "description": "Commit-pinned scientific Skills bundles. Native hooks, MCP, commands and agents are not installed by these bundles.",
+  "plugins": [
+    {
+      "name": "dsh-sam-academic-toolkit-office-academic-skill",
+      "title": "office-academic-skill",
+      "description": "中文学术写作、Office 文档与科研计算技能。",
+      "author": "zLanqing",
+      "homepage": "https://github.com/zLanqing/codex-claude-academic-skills/tree/7ed6377f0efb6a38951b48ef03b19d996e454b1f",
+      "repository": {
+        "url": "https://github.com/zLanqing/codex-claude-academic-skills"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/academic-toolkit/academic-toolkit-office-academic-skill"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-academic-toolkit-research-writing-skill",
+      "title": "research-writing-skill",
+      "description": "中文学术写作、Office 文档与科研计算技能。",
+      "author": "zLanqing",
+      "homepage": "https://github.com/zLanqing/codex-claude-academic-skills/tree/7ed6377f0efb6a38951b48ef03b19d996e454b1f",
+      "repository": {
+        "url": "https://github.com/zLanqing/codex-claude-academic-skills"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/academic-toolkit/academic-toolkit-research-writing-skill"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-academic-toolkit-scientific-toolkit-skill",
+      "title": "scientific-toolkit-skill",
+      "description": "中文学术写作、Office 文档与科研计算技能。",
+      "author": "zLanqing",
+      "homepage": "https://github.com/zLanqing/codex-claude-academic-skills/tree/7ed6377f0efb6a38951b48ef03b19d996e454b1f",
+      "repository": {
+        "url": "https://github.com/zLanqing/codex-claude-academic-skills"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/academic-toolkit/academic-toolkit-scientific-toolkit-skill"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-agent-native-research-artifact",
+      "title": "agent-native-research-artifact",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / agent-native-research-artifact",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-agent-native-research-artifact"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-agents",
+      "title": "agents",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / agents",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-agents"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-autoresearch",
+      "title": "autoresearch",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / autoresearch",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-autoresearch"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-data-processing",
+      "title": "data-processing",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / data-processing",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-data-processing"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-distributed-training",
+      "title": "distributed-training",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / distributed-training（上游有 2 项可选参考缺失，详见目录）",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-distributed-training"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-emerging-techniques",
+      "title": "emerging-techniques",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / emerging-techniques",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-emerging-techniques"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-evaluation",
+      "title": "evaluation",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / evaluation",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-evaluation"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-fine-tuning",
+      "title": "fine-tuning",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / fine-tuning",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-fine-tuning"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-ideation",
+      "title": "ideation",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / ideation",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-ideation"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-inference-serving",
+      "title": "inference-serving",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / inference-serving",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-inference-serving"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-infrastructure",
+      "title": "infrastructure",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / infrastructure",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-infrastructure"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-mechanistic-interpretability",
+      "title": "mechanistic-interpretability",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / mechanistic-interpretability",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-mechanistic-interpretability"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-ml-paper-writing",
+      "title": "ml-paper-writing",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / ml-paper-writing",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-ml-paper-writing"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-mlops",
+      "title": "mlops",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / mlops",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-mlops"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-model-architecture",
+      "title": "model-architecture",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / model-architecture（上游有 3 项可选参考缺失，详见目录）",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-model-architecture"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-multimodal",
+      "title": "multimodal",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / multimodal",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-multimodal"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-observability",
+      "title": "observability",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / observability",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-observability"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-optimization",
+      "title": "optimization",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / optimization（上游有 2 项可选参考缺失，详见目录）",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-optimization"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-post-training",
+      "title": "post-training",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / post-training（上游有 1 项可选参考缺失，详见目录）",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-post-training"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-prompt-engineering",
+      "title": "prompt-engineering",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / prompt-engineering",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-prompt-engineering"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-rag",
+      "title": "rag",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / rag",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-rag"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-safety-alignment",
+      "title": "safety-alignment",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / safety-alignment（上游有 9 项可选参考缺失，详见目录）",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-safety-alignment"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ai-research-skills-tokenization",
+      "title": "tokenization",
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / tokenization",
+      "author": "Orchestra-Research",
+      "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "repository": {
+        "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ai-research-skills/ai-research-skills-tokenization"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-aris",
+      "title": "aris",
+      "description": "ARIS 文献、实验、论文写作与跨模型评审套件。",
+      "author": "wanshuiyin",
+      "homepage": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
+      "repository": {
+        "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/aris/aris"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-ars-claude",
+      "title": "academic-research-skills",
+      "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
+      "author": "Imbad0202",
+      "homepage": "https://github.com/Imbad0202/academic-research-skills/tree/530659d983c2f4aa584ba3f2df224df08d90b264",
+      "repository": {
+        "url": "https://github.com/Imbad0202/academic-research-skills"
+      },
+      "versions": [
+        {
+          "version": "0.1.5",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/ars-claude/ars-claude"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-latex-arxiv",
+      "title": "latex-arxiv",
+      "description": "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。",
+      "author": "appautomaton",
+      "homepage": "https://github.com/appautomaton/latex-arxiv-SKILL/tree/b5b058350796bd6c9df7725a5d2e1607a9d45b2a",
+      "repository": {
+        "url": "https://github.com/appautomaton/latex-arxiv-SKILL"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/latex-arxiv/latex-arxiv"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-literature-downloader",
+      "title": "literature-downloader",
+      "description": "中文文献检索、候选筛选、合法全文获取与下载报告。",
+      "author": "Lucaswangzcx",
+      "homepage": "https://github.com/Lucaswangzcx/literature-downloader-skill/tree/0e8f306fc5205fc90657fbd916a952fa9c9d773a",
+      "repository": {
+        "url": "https://github.com/Lucaswangzcx/literature-downloader-skill"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/literature-downloader/literature-downloader"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-live-session-fetcher-literature-live-session-pipeline",
+      "title": "literature-live-session-pipeline",
+      "description": "复用已获授权的本地浏览器会话，串行获取学术全文。",
+      "author": "Given-Dream",
+      "homepage": "https://github.com/Given-Dream/sciencedirect-live-session-fetcher/tree/0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
+      "repository": {
+        "url": "https://github.com/Given-Dream/sciencedirect-live-session-fetcher"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/live-session-fetcher/live-session-fetcher-literature-live-session-pipeline"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-live-session-fetcher-sciencedirect-live-session-fetcher",
+      "title": "sciencedirect-live-session-fetcher",
+      "description": "复用已获授权的本地浏览器会话，串行获取学术全文。",
+      "author": "Given-Dream",
+      "homepage": "https://github.com/Given-Dream/sciencedirect-live-session-fetcher/tree/0a24d96b0044e0be03efa2f1daafa84f81a9ebb9",
+      "repository": {
+        "url": "https://github.com/Given-Dream/sciencedirect-live-session-fetcher"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/live-session-fetcher/live-session-fetcher-sciencedirect-live-session-fetcher"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-nature-skills",
+      "title": "nature-skills",
+      "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
+      "author": "Yuan1z0825",
+      "homepage": "https://github.com/Yuan1z0825/nature-skills/tree/d774add241c65e89ed17a4da573b472b0972fd42",
+      "repository": {
+        "url": "https://github.com/Yuan1z0825/nature-skills"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/nature-skills/nature-skills"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-research-paper-writing",
+      "title": "research-paper-writing",
+      "description": "论文各章节写作、论证检查和投稿前自查。",
+      "author": "Master-cai",
+      "homepage": "https://github.com/Master-cai/Research-Paper-Writing-Skills/tree/77e7c2c1ba06f7d71844873147665437a03aac1b",
+      "repository": {
+        "url": "https://github.com/Master-cai/Research-Paper-Writing-Skills"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/research-paper-writing/research-paper-writing"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sam-scientific-agent-skills",
+      "title": "scientific-agent-skills",
+      "description": "生物、化学、医学、数据分析与科学写作技能库。",
+      "author": "K-Dense-AI",
+      "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+      "repository": {
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793877902,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "aaaf79a89b30e803f310942fab8e907e74db6c84",
+            "path": "packages/scientific-agent-skills/scientific-agent-skills"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ]
+    }
+  ]
+}

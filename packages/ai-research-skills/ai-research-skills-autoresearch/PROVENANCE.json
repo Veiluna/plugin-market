@@ -1,0 +1,11 @@
+{
+  "sourceId": "ai-research-skills",
+  "packageId": "ai-research-skills-autoresearch",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.4",
+  "digest": "ab20a3baa72d6caf2030368a16bc8292d4b3de18438949d24a7efdbcd1a59f99",
+  "adapterVersion": "4"
+}

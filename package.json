@@ -1,0 +1,37 @@
+{
+  "name": "scientific-agent-market",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A curated, commit-pinned scientific plugin marketplace for multiple coding agents.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "market": "node src/cli.ts",
+    "sync": "node src/cli.ts sync",
+    "validate": "node src/cli.ts validate",
+    "typecheck": "tsc --noEmit",
+    "test": "node test/market.test.ts",
+    "check": "npm run typecheck && npm test && npm run validate",
+    "verify:codex": "node scripts/verify-codex.mjs",
+    "verify:claude": "node scripts/verify-claude.mjs",
+    "verify:adapters": "node scripts/verify-adapters.mjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-skill-filesystem": "0.2.1-rc.5",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-plugin-market-index": "0.2.1-rc.5",
+    "@types/node": "24.10.0",
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "typescript": "5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Veiluna/plugin-market.git"
+  },
+  "license": "MIT"
+}

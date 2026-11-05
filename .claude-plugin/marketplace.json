@@ -1,0 +1,486 @@
+{
+  "name": "scientific-agent-market",
+  "owner": {
+    "name": "Veiluna"
+  },
+  "metadata": {
+    "description": "科研精选插件市场"
+  },
+  "plugins": [
+    {
+      "name": "academic-toolkit-office-academic-skill",
+      "source": "./packages/academic-toolkit/academic-toolkit-office-academic-skill",
+      "description": "中文学术写作、Office 文档与科研计算技能。",
+      "license": "MIT"
+    },
+    {
+      "name": "academic-toolkit-research-writing-skill",
+      "source": "./packages/academic-toolkit/academic-toolkit-research-writing-skill",
+      "description": "中文学术写作、Office 文档与科研计算技能。",
+      "license": "MIT"
+    },
+    {
+      "name": "academic-toolkit-scientific-toolkit-skill",
+      "source": "./packages/academic-toolkit/academic-toolkit-scientific-toolkit-skill",
+      "description": "中文学术写作、Office 文档与科研计算技能。",
+      "license": "MIT"
+    },
+    {
+      "name": "agent-native-research-artifact",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / agent-native-research-artifact",
+      "license": "MIT",
+      "skills": [
+        "./22-agent-native-research-artifact/compiler",
+        "./22-agent-native-research-artifact/research-manager",
+        "./22-agent-native-research-artifact/rigor-reviewer"
+      ],
+      "strict": false
+    },
+    {
+      "name": "agents",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / agents",
+      "license": "MIT",
+      "skills": [
+        "./14-agents/autogpt",
+        "./14-agents/crewai",
+        "./14-agents/langchain",
+        "./14-agents/llamaindex"
+      ],
+      "strict": false
+    },
+    {
+      "name": "autoresearch",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / autoresearch",
+      "license": "MIT",
+      "skills": [
+        "./0-autoresearch-skill"
+      ],
+      "strict": false
+    },
+    {
+      "name": "data-processing",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / data-processing",
+      "license": "MIT",
+      "skills": [
+        "./05-data-processing/nemo-curator",
+        "./05-data-processing/ray-data"
+      ],
+      "strict": false
+    },
+    {
+      "name": "distributed-training",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / distributed-training（上游有 2 项可选参考缺失，详见目录）",
+      "license": "MIT",
+      "skills": [
+        "./08-distributed-training/accelerate",
+        "./08-distributed-training/deepspeed",
+        "./08-distributed-training/megatron-core",
+        "./08-distributed-training/pytorch-fsdp2",
+        "./08-distributed-training/pytorch-lightning",
+        "./08-distributed-training/ray-train"
+      ],
+      "strict": false
+    },
+    {
+      "name": "emerging-techniques",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / emerging-techniques",
+      "license": "MIT",
+      "skills": [
+        "./19-emerging-techniques/knowledge-distillation",
+        "./19-emerging-techniques/long-context",
+        "./19-emerging-techniques/model-merging",
+        "./19-emerging-techniques/model-pruning",
+        "./19-emerging-techniques/moe-training",
+        "./19-emerging-techniques/speculative-decoding"
+      ],
+      "strict": false
+    },
+    {
+      "name": "evaluation",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / evaluation",
+      "license": "MIT",
+      "skills": [
+        "./11-evaluation/bigcode-evaluation-harness",
+        "./11-evaluation/lm-evaluation-harness",
+        "./11-evaluation/nemo-evaluator"
+      ],
+      "strict": false
+    },
+    {
+      "name": "fine-tuning",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / fine-tuning",
+      "license": "MIT",
+      "skills": [
+        "./03-fine-tuning/axolotl",
+        "./03-fine-tuning/llama-factory",
+        "./03-fine-tuning/peft",
+        "./03-fine-tuning/unsloth"
+      ],
+      "strict": false
+    },
+    {
+      "name": "ideation",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / ideation",
+      "license": "MIT",
+      "skills": [
+        "./21-research-ideation/brainstorming-research-ideas",
+        "./21-research-ideation/creative-thinking-for-research"
+      ],
+      "strict": false
+    },
+    {
+      "name": "inference-serving",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / inference-serving",
+      "license": "MIT",
+      "skills": [
+        "./12-inference-serving/llama-cpp",
+        "./12-inference-serving/sglang",
+        "./12-inference-serving/tensorrt-llm",
+        "./12-inference-serving/vllm"
+      ],
+      "strict": false
+    },
+    {
+      "name": "infrastructure",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / infrastructure",
+      "license": "MIT",
+      "skills": [
+        "./09-infrastructure/lambda-labs",
+        "./09-infrastructure/modal",
+        "./09-infrastructure/skypilot"
+      ],
+      "strict": false
+    },
+    {
+      "name": "mechanistic-interpretability",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / mechanistic-interpretability",
+      "license": "MIT",
+      "skills": [
+        "./04-mechanistic-interpretability/nnsight",
+        "./04-mechanistic-interpretability/pyvene",
+        "./04-mechanistic-interpretability/saelens",
+        "./04-mechanistic-interpretability/transformer-lens"
+      ],
+      "strict": false
+    },
+    {
+      "name": "ml-paper-writing",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / ml-paper-writing",
+      "license": "MIT",
+      "skills": [
+        "./20-ml-paper-writing/ml-paper-writing",
+        "./20-ml-paper-writing/academic-plotting",
+        "./20-ml-paper-writing/systems-paper-writing",
+        "./20-ml-paper-writing/presenting-conference-talks"
+      ],
+      "strict": false
+    },
+    {
+      "name": "mlops",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / mlops",
+      "license": "MIT",
+      "skills": [
+        "./13-mlops/mlflow",
+        "./13-mlops/tensorboard",
+        "./13-mlops/weights-and-biases"
+      ],
+      "strict": false
+    },
+    {
+      "name": "model-architecture",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / model-architecture（上游有 3 项可选参考缺失，详见目录）",
+      "license": "MIT",
+      "skills": [
+        "./01-model-architecture/litgpt",
+        "./01-model-architecture/mamba",
+        "./01-model-architecture/nanogpt",
+        "./01-model-architecture/rwkv",
+        "./01-model-architecture/torchtitan"
+      ],
+      "strict": false
+    },
+    {
+      "name": "multimodal",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / multimodal",
+      "license": "MIT",
+      "skills": [
+        "./18-multimodal/audiocraft",
+        "./18-multimodal/blip-2",
+        "./18-multimodal/clip",
+        "./18-multimodal/cosmos-policy",
+        "./18-multimodal/llava",
+        "./18-multimodal/openpi",
+        "./18-multimodal/openvla-oft",
+        "./18-multimodal/segment-anything",
+        "./18-multimodal/stable-diffusion",
+        "./18-multimodal/whisper"
+      ],
+      "strict": false
+    },
+    {
+      "name": "observability",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / observability",
+      "license": "MIT",
+      "skills": [
+        "./17-observability/langsmith",
+        "./17-observability/phoenix"
+      ],
+      "strict": false
+    },
+    {
+      "name": "optimization",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / optimization（上游有 2 项可选参考缺失，详见目录）",
+      "license": "MIT",
+      "skills": [
+        "./10-optimization/awq",
+        "./10-optimization/bitsandbytes",
+        "./10-optimization/flash-attention",
+        "./10-optimization/gguf",
+        "./10-optimization/gptq",
+        "./10-optimization/hqq",
+        "./10-optimization/ml-training-recipes"
+      ],
+      "strict": false
+    },
+    {
+      "name": "post-training",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / post-training（上游有 1 项可选参考缺失，详见目录）",
+      "license": "MIT",
+      "skills": [
+        "./06-post-training/grpo-rl-training",
+        "./06-post-training/miles",
+        "./06-post-training/openrlhf",
+        "./06-post-training/simpo",
+        "./06-post-training/slime",
+        "./06-post-training/torchforge",
+        "./06-post-training/trl-fine-tuning",
+        "./06-post-training/verl"
+      ],
+      "strict": false
+    },
+    {
+      "name": "prompt-engineering",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / prompt-engineering",
+      "license": "MIT",
+      "skills": [
+        "./16-prompt-engineering/dspy",
+        "./16-prompt-engineering/guidance",
+        "./16-prompt-engineering/instructor",
+        "./16-prompt-engineering/outlines"
+      ],
+      "strict": false
+    },
+    {
+      "name": "rag",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / rag",
+      "license": "MIT",
+      "skills": [
+        "./15-rag/chroma",
+        "./15-rag/faiss",
+        "./15-rag/pinecone",
+        "./15-rag/qdrant",
+        "./15-rag/sentence-transformers"
+      ],
+      "strict": false
+    },
+    {
+      "name": "safety-alignment",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / safety-alignment（上游有 9 项可选参考缺失，详见目录）",
+      "license": "MIT",
+      "skills": [
+        "./07-safety-alignment/constitutional-ai",
+        "./07-safety-alignment/llamaguard",
+        "./07-safety-alignment/nemo-guardrails",
+        "./07-safety-alignment/prompt-guard"
+      ],
+      "strict": false
+    },
+    {
+      "name": "tokenization",
+      "source": {
+        "source": "github",
+        "repo": "Orchestra-Research/AI-Research-SKILLs",
+        "sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc"
+      },
+      "description": "按上游分类插件组织的 AI 研究与工程技能。 / tokenization",
+      "license": "MIT",
+      "skills": [
+        "./02-tokenization/huggingface-tokenizers",
+        "./02-tokenization/sentencepiece"
+      ],
+      "strict": false
+    },
+    {
+      "name": "aris",
+      "source": {
+        "source": "github",
+        "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "sha": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19"
+      },
+      "description": "ARIS 文献、实验、论文写作与跨模型评审套件。",
+      "license": "MIT"
+    },
+    {
+      "name": "academic-research-skills",
+      "source": {
+        "source": "github",
+        "repo": "Imbad0202/academic-research-skills",
+        "sha": "530659d983c2f4aa584ba3f2df224df08d90b264"
+      },
+      "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "name": "latex-arxiv",
+      "source": "./packages/latex-arxiv/latex-arxiv",
+      "description": "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。",
+      "license": "MIT"
+    },
+    {
+      "name": "literature-downloader",
+      "source": "./packages/literature-downloader/literature-downloader",
+      "description": "中文文献检索、候选筛选、合法全文获取与下载报告。",
+      "license": "MIT"
+    },
+    {
+      "name": "live-session-fetcher-literature-live-session-pipeline",
+      "source": "./packages/live-session-fetcher/live-session-fetcher-literature-live-session-pipeline",
+      "description": "复用已获授权的本地浏览器会话，串行获取学术全文。",
+      "license": "MIT"
+    },
+    {
+      "name": "live-session-fetcher-sciencedirect-live-session-fetcher",
+      "source": "./packages/live-session-fetcher/live-session-fetcher-sciencedirect-live-session-fetcher",
+      "description": "复用已获授权的本地浏览器会话，串行获取学术全文。",
+      "license": "MIT"
+    },
+    {
+      "name": "nature-skills",
+      "source": "./packages/nature-skills/nature-skills",
+      "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "research-paper-writing",
+      "source": "./packages/research-paper-writing/research-paper-writing",
+      "description": "论文各章节写作、论证检查和投稿前自查。",
+      "license": "MIT"
+    },
+    {
+      "name": "scientific-agent-skills",
+      "source": "./packages/scientific-agent-skills/scientific-agent-skills",
+      "description": "生物、化学、医学、数据分析与科学写作技能库。",
+      "license": "MIT"
+    }
+  ]
+}

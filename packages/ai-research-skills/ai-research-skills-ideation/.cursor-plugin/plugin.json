@@ -1,0 +1,15 @@
+{
+  "name": "ai-research-skills-ideation",
+  "version": "0.1.4",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / ideation",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./skills/ai-research-skills-ideation-suite/upstream/21-research-ideation/brainstorming-research-ideas",
+    "./skills/ai-research-skills-ideation-suite/upstream/21-research-ideation/creative-thinking-for-research"
+  ]
+}

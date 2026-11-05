@@ -1,0 +1,445 @@
+{
+  "name": "scientific-agent-market",
+  "interface": {
+    "displayName": "科研精选插件市场"
+  },
+  "plugins": [
+    {
+      "name": "academic-toolkit-office-academic-skill",
+      "source": {
+        "source": "local",
+        "path": "./packages/academic-toolkit/academic-toolkit-office-academic-skill"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "academic-toolkit-research-writing-skill",
+      "source": {
+        "source": "local",
+        "path": "./packages/academic-toolkit/academic-toolkit-research-writing-skill"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "academic-toolkit-scientific-toolkit-skill",
+      "source": {
+        "source": "local",
+        "path": "./packages/academic-toolkit/academic-toolkit-scientific-toolkit-skill"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-agent-native-research-artifact",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-agent-native-research-artifact"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-agents",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-agents"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-autoresearch",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-autoresearch"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-data-processing",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-data-processing"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-distributed-training",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-distributed-training"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-emerging-techniques",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-emerging-techniques"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-evaluation",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-evaluation"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-fine-tuning",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-fine-tuning"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-ideation",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-ideation"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-inference-serving",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-inference-serving"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-infrastructure",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-infrastructure"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-mechanistic-interpretability",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-mechanistic-interpretability"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-ml-paper-writing",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-ml-paper-writing"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-mlops",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-mlops"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-model-architecture",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-model-architecture"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-multimodal",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-multimodal"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-observability",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-observability"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-optimization",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-optimization"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-post-training",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-post-training"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-prompt-engineering",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-prompt-engineering"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-rag",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-rag"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-safety-alignment",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-safety-alignment"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ai-research-skills-tokenization",
+      "source": {
+        "source": "local",
+        "path": "./packages/ai-research-skills/ai-research-skills-tokenization"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "aris",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git",
+        "sha": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "ars-codex",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Imbad0202/academic-research-skills-codex.git",
+        "path": "./plugins/ars-codex",
+        "sha": "a1556557887f345aac99bdc6027e008e91fef236"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "codex-autoresearch",
+      "source": {
+        "source": "local",
+        "path": "./packages/codex-autoresearch/codex-autoresearch"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "latex-arxiv",
+      "source": {
+        "source": "local",
+        "path": "./packages/latex-arxiv/latex-arxiv"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "literature-downloader",
+      "source": {
+        "source": "local",
+        "path": "./packages/literature-downloader/literature-downloader"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "live-session-fetcher-literature-live-session-pipeline",
+      "source": {
+        "source": "local",
+        "path": "./packages/live-session-fetcher/live-session-fetcher-literature-live-session-pipeline"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "live-session-fetcher-sciencedirect-live-session-fetcher",
+      "source": {
+        "source": "local",
+        "path": "./packages/live-session-fetcher/live-session-fetcher-sciencedirect-live-session-fetcher"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "nature-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Yuan1z0825/nature-skills.git",
+        "sha": "d774add241c65e89ed17a4da573b472b0972fd42"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "research-paper-writing",
+      "source": {
+        "source": "local",
+        "path": "./packages/research-paper-writing/research-paper-writing"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "scientific-agent-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills.git",
+        "sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

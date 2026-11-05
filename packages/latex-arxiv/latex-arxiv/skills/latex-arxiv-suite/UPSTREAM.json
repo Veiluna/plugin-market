@@ -1,0 +1,11 @@
+{
+  "sourceId": "latex-arxiv",
+  "packageId": "latex-arxiv",
+  "repository": "appautomaton/latex-arxiv-SKILL",
+  "commit": "b5b058350796bd6c9df7725a5d2e1607a9d45b2a",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.4",
+  "digest": "22bf118595627b8485441a98857153e39a05743f072369f9184b3536c677ff88",
+  "adapterVersion": "4"
+}

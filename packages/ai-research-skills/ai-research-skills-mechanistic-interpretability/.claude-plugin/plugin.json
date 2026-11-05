@@ -1,0 +1,17 @@
+{
+  "name": "ai-research-skills-mechanistic-interpretability",
+  "version": "0.1.4",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / mechanistic-interpretability",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./skills/ai-research-skills-mechanistic-interpretability-suite/upstream/04-mechanistic-interpretability/nnsight",
+    "./skills/ai-research-skills-mechanistic-interpretability-suite/upstream/04-mechanistic-interpretability/pyvene",
+    "./skills/ai-research-skills-mechanistic-interpretability-suite/upstream/04-mechanistic-interpretability/saelens",
+    "./skills/ai-research-skills-mechanistic-interpretability-suite/upstream/04-mechanistic-interpretability/transformer-lens"
+  ]
+}

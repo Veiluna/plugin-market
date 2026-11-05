@@ -1,0 +1,11 @@
+{
+  "sourceId": "academic-toolkit",
+  "packageId": "academic-toolkit-scientific-toolkit-skill",
+  "repository": "zLanqing/codex-claude-academic-skills",
+  "commit": "7ed6377f0efb6a38951b48ef03b19d996e454b1f",
+  "license": "MIT",
+  "upstreamVersion": null,
+  "distributionVersion": "0.1.4",
+  "digest": "6760e27f0921afd82a0a17787253aaf843e96f5189710720d56016aca82a6e0f",
+  "adapterVersion": "4"
+}

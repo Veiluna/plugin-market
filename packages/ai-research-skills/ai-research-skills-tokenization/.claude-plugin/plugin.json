@@ -1,0 +1,15 @@
+{
+  "name": "ai-research-skills-tokenization",
+  "version": "0.1.4",
+  "description": "按上游分类插件组织的 AI 研究与工程技能。 / tokenization",
+  "author": {
+    "name": "Veiluna"
+  },
+  "homepage": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "repository": "https://github.com/Veiluna/plugin-market",
+  "license": "MIT",
+  "skills": [
+    "./skills/ai-research-skills-tokenization-suite/upstream/02-tokenization/huggingface-tokenizers",
+    "./skills/ai-research-skills-tokenization-suite/upstream/02-tokenization/sentencepiece"
+  ]
+}

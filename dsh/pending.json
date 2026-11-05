@@ -1,0 +1,4 @@
+{
+  "description": "Build queue, not an installable DSH index. Publish these bundles before updating index.json.",
+  "packages": []
+}
