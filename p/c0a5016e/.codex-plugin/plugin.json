@@ -1,6 +1,6 @@
 {
   "name": "ars-claude",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
   "author": {
     "name": "Veiluna"

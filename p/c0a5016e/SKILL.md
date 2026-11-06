@@ -12,7 +12,7 @@ Resolve resources relative to that original skill file. The upstream directory l
 Host-specific hooks, commands, MCP servers, subagents, and local browser sessions are prerequisites, not capabilities installed by this router.
 Use absolute paths to packaged helper scripts. Do not confuse the upstream resource directory with the user project or output directory.
 
-Source: https://github.com/Imbad0202/academic-research-skills/tree/a1687d54d35f30953c2dd06065d46a89ec7e9a49
+Source: https://github.com/Imbad0202/academic-research-skills/tree/6d9388674de1ad0437ad95db3d52f92b92204d84
 License: CC-BY-NC-4.0
 
 ## Skills
