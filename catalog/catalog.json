@@ -22,7 +22,7 @@
       "repository": "Imbad0202/academic-research-skills",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "530659d983c2f4aa584ba3f2df224df08d90b264",
+      "sha": "a1687d54d35f30953c2dd06065d46a89ec7e9a49",
       "status": "ready"
     },
     {
@@ -44,7 +44,7 @@
       "repository": "Imbad0202/academic-research-skills-codex",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "a1556557887f345aac99bdc6027e008e91fef236",
+      "sha": "82725acb393c4410ac6f47634a7f51b40a162fa4",
       "status": "ready"
     },
     {
@@ -65,7 +65,7 @@
       "id": "aris",
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "license": "MIT",
-      "sha": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
+      "sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
       "status": "ready"
     },
     {
@@ -5594,7 +5594,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/8d81cc53"
       }
     },
@@ -6246,7 +6246,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/801a4087"
       }
     },
@@ -6288,7 +6288,7 @@
           "root": ".",
           "manifest": {
             "name": "academic-research-skills",
-            "version": "3.24.1",
+            "version": "3.24.2",
             "description": "Contract-audited academic research pipeline for Claude Code: research → write → review → revise → finalize. 5 skills, 35 modes, 43 prompt roles (4 plugin-exposed agents; the rest run inline by default), v3.7.3 + v3.8 L3 claim-faithfulness gate, v3.9.0 cross-index triangulation, v3.10 triangulation policy layer, v3.11 deterministic citation verification gate (#182). Capability ceilings: docs/STAGE_CAPABILITY_MATRIX.md.",
             "author": {
               "name": "Cheng-I Wu",
@@ -6347,7 +6347,7 @@
           }
         ]
       },
-      "upstreamVersion": "3.24.1",
+      "upstreamVersion": "3.24.2",
       "upstreamPackages": [
         {
           "id": "ars-claude",
@@ -6387,7 +6387,7 @@
               "root": ".",
               "manifest": {
                 "name": "academic-research-skills",
-                "version": "3.24.1",
+                "version": "3.24.2",
                 "description": "Contract-audited academic research pipeline for Claude Code: research → write → review → revise → finalize. 5 skills, 35 modes, 43 prompt roles (4 plugin-exposed agents; the rest run inline by default), v3.7.3 + v3.8 L3 claim-faithfulness gate, v3.9.0 cross-index triangulation, v3.10 triangulation policy layer, v3.11 deterministic citation verification gate (#182). Capability ceilings: docs/STAGE_CAPABILITY_MATRIX.md.",
                 "author": {
                   "name": "Cheng-I Wu",
@@ -6446,16 +6446,16 @@
               }
             ]
           },
-          "upstreamVersion": "3.24.1"
+          "upstreamVersion": "3.24.2"
         }
       ],
       "repository": "Imbad0202/academic-research-skills",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "530659d983c2f4aa584ba3f2df224df08d90b264",
-      "digest": "b32301f0590f7751c007e455cc13d4f49d2c64c2b67d1f8d352511c26ea6cf44",
-      "artifactHash": "8aa692b6b9b59dc3b6247ff6ccf074d9dccbf8d7e423568f05d18fa688fa1359",
-      "distributionVersion": "0.1.8",
+      "sha": "a1687d54d35f30953c2dd06065d46a89ec7e9a49",
+      "digest": "3bb705b86bca3d0f026b1e7f2d2bd528f84c277893cff3fda62ae49ba41b8861",
+      "artifactHash": "ec8b71b83a18f60870621bbc8644397029a327963ef21c74617dd1f83b66c13c",
+      "distributionVersion": "0.1.9",
       "packagePath": "p/c0a5016e",
       "genericSkillName": "ars-claude-suite",
       "genericSkillPath": "p/c0a5016e",
@@ -6520,7 +6520,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/c0a5016e"
       }
     },
@@ -6617,7 +6617,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/8eb5d130"
       }
     },
@@ -6834,7 +6834,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/cb0ad27a"
       }
     },
@@ -6856,7 +6856,7 @@
           "root": "plugins/ars-codex",
           "manifest": {
             "name": "ars-codex",
-            "version": "3.24.0",
+            "version": "3.24.2",
             "description": "ARS-Codex is the Codex-native sibling of Academic Research Skills for deep research, academic writing, manuscript review, protocol-driven study screening, research pipelines, and experiment planning.",
             "author": {
               "name": "Imbad0202",
@@ -6924,7 +6924,7 @@
           }
         ]
       },
-      "upstreamVersion": "3.24.0",
+      "upstreamVersion": "3.24.2",
       "upstreamPackages": [
         {
           "id": "ars-codex-ars-codex",
@@ -6944,7 +6944,7 @@
               "root": "plugins/ars-codex",
               "manifest": {
                 "name": "ars-codex",
-                "version": "3.24.0",
+                "version": "3.24.2",
                 "description": "ARS-Codex is the Codex-native sibling of Academic Research Skills for deep research, academic writing, manuscript review, protocol-driven study screening, research pipelines, and experiment planning.",
                 "author": {
                   "name": "Imbad0202",
@@ -7012,16 +7012,16 @@
               }
             ]
           },
-          "upstreamVersion": "3.24.0"
+          "upstreamVersion": "3.24.2"
         }
       ],
       "repository": "Imbad0202/academic-research-skills-codex",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "a1556557887f345aac99bdc6027e008e91fef236",
-      "digest": "abbc714392cc9f8a3e8bded53cd665f236ba941f455cc9e7c38a6b6f0ca1a7b1",
-      "artifactHash": "524f0150a9e351317e039bca408efe7b1ac30252e14457bdc1cff05bb88293d4",
-      "distributionVersion": "0.1.0",
+      "sha": "82725acb393c4410ac6f47634a7f51b40a162fa4",
+      "digest": "3edc327daafebdabfb85b0f4d41d3f8da1b4ca89b2b5fbe9b3e74e27dcb79eb3",
+      "artifactHash": "55123b133e3db842bfe7caec5425222167bed3f0afa89e04a1167d762fe979a1",
+      "distributionVersion": "0.1.1",
       "packagePath": "p/446dd741",
       "genericSkillName": "ars-codex-suite",
       "genericSkillPath": "p/446dd741",
@@ -7076,7 +7076,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/446dd741"
       }
     },
@@ -7250,7 +7250,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/cdf7f8f8"
       }
     },
@@ -7339,7 +7339,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/adc452eb"
       }
     },
@@ -10090,10 +10090,10 @@
       ],
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "license": "MIT",
-      "sha": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
-      "digest": "08cf96d76a29005bd6c93bf71e5ba5ed7b6c97a82a692388fe7e5eca82dd5911",
-      "artifactHash": "d124417c799fedb58a790a8913450fedee501d0cf46eb22c80437b72da757fb0",
-      "distributionVersion": "0.1.7",
+      "sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+      "digest": "15bbc0aa1048bc5112e4c17e29056dc15d2e22a3e59e91455fa78f6a475738e8",
+      "artifactHash": "c4333e3315e18f5dd75356404190cd1168f03b774eba56e71266df9c72458dd9",
+      "distributionVersion": "0.1.8",
       "packagePath": "p/984b00ea",
       "genericSkillName": "aris-suite",
       "genericSkillPath": "p/984b00ea",
@@ -10153,7 +10153,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/984b00ea"
       }
     },
@@ -14794,7 +14794,7 @@
       ],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/33cb358c"
       }
     },
@@ -14881,7 +14881,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/bd3aad02"
       }
     },
@@ -15001,7 +15001,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "f49bca36c12d7b9a72100547e18bee2e5f7f55c5",
+        "commit": "87686ca6d401813766b589480e4240b36a5225be",
         "path": "p/506547a8"
       }
     }
