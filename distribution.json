@@ -19,9 +19,9 @@
     {
       "id": "ars-claude",
       "path": "p/c0a5016e",
-      "version": "0.1.8",
-      "upstreamCommit": "530659d983c2f4aa584ba3f2df224df08d90b264",
-      "artifactHash": "8aa692b6b9b59dc3b6247ff6ccf074d9dccbf8d7e423568f05d18fa688fa1359"
+      "version": "0.1.9",
+      "upstreamCommit": "a1687d54d35f30953c2dd06065d46a89ec7e9a49",
+      "artifactHash": "ec8b71b83a18f60870621bbc8644397029a327963ef21c74617dd1f83b66c13c"
     },
     {
       "id": "codex-autoresearch",
@@ -40,9 +40,9 @@
     {
       "id": "ars-codex",
       "path": "p/446dd741",
-      "version": "0.1.0",
-      "upstreamCommit": "a1556557887f345aac99bdc6027e008e91fef236",
-      "artifactHash": "524f0150a9e351317e039bca408efe7b1ac30252e14457bdc1cff05bb88293d4"
+      "version": "0.1.1",
+      "upstreamCommit": "82725acb393c4410ac6f47634a7f51b40a162fa4",
+      "artifactHash": "55123b133e3db842bfe7caec5425222167bed3f0afa89e04a1167d762fe979a1"
     },
     {
       "id": "live-session-fetcher",
@@ -61,9 +61,9 @@
     {
       "id": "aris",
       "path": "p/984b00ea",
-      "version": "0.1.7",
-      "upstreamCommit": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
-      "artifactHash": "d124417c799fedb58a790a8913450fedee501d0cf46eb22c80437b72da757fb0"
+      "version": "0.1.8",
+      "upstreamCommit": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+      "artifactHash": "c4333e3315e18f5dd75356404190cd1168f03b774eba56e71266df9c72458dd9"
     },
     {
       "id": "ai-research-skills",

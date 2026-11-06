@@ -2,10 +2,10 @@
   "sourceId": "ars-codex",
   "packageId": "ars-codex",
   "repository": "Imbad0202/academic-research-skills-codex",
-  "commit": "a1556557887f345aac99bdc6027e008e91fef236",
+  "commit": "82725acb393c4410ac6f47634a7f51b40a162fa4",
   "license": "CC-BY-NC-4.0",
-  "upstreamVersion": "3.24.0",
-  "distributionVersion": "0.1.0",
-  "digest": "abbc714392cc9f8a3e8bded53cd665f236ba941f455cc9e7c38a6b6f0ca1a7b1",
+  "upstreamVersion": "3.24.2",
+  "distributionVersion": "0.1.1",
+  "digest": "3edc327daafebdabfb85b0f4d41d3f8da1b4ca89b2b5fbe9b3e74e27dcb79eb3",
   "adapterVersion": "7"
 }
