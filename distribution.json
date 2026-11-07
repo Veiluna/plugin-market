@@ -12,9 +12,9 @@
     {
       "id": "nature-skills",
       "path": "p/801a4087",
-      "version": "0.1.7",
-      "upstreamCommit": "d774add241c65e89ed17a4da573b472b0972fd42",
-      "artifactHash": "7d37ec171c800a92c8fdf8de473d435903059eed0e22e634e3fa4bb0ad5ff38f"
+      "version": "0.1.8",
+      "upstreamCommit": "b6ae2cac022f4aac094d50f2938a3474ba315fbc",
+      "artifactHash": "49265e2051ab30b90f4445c3ce7816c394087cb6e259b2794b01a9f7029f613c"
     },
     {
       "id": "ars-claude",
