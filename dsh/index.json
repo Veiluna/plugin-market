@@ -356,7 +356,7 @@
       "title": "Auto-claude-code-research-in-sleep",
       "description": "ARIS 文献、实验、论文写作与跨模型评审套件。",
       "author": "wanshuiyin",
-      "homepage": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/2901234ad2954cd2388ced8d3aed2ed9de42803a",
+      "homepage": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/8f3110718259d9b804e2a71e8edc0e7887ddeac4",
       "repository": {
         "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
       },
@@ -420,6 +420,19 @@
             "type": "git",
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "87686ca6d401813766b589480e4240b36a5225be",
+            "path": "p/984b00ea"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.9",
+          "publishTimestamp": 1794144316,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
             "path": "p/984b00ea"
           },
           "engines": {

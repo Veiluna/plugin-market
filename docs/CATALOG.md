@@ -12,7 +12,7 @@
 | ars-codex | [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex/tree/82725acb393c4410ac6f47634a7f51b40a162fa4) | 1 | native | unsupported | unsupported | unsupported | conditional | CC-BY-NC-4.0 |
 | live-session-fetcher | [Given-Dream/sciencedirect-live-session-fetcher](https://github.com/Given-Dream/sciencedirect-live-session-fetcher/tree/0a24d96b0044e0be03efa2f1daafa84f81a9ebb9) | 2 | skills-only | skills-only | skills-only | skills-only | unsupported | MIT |
 | literature-downloader | [Lucaswangzcx/literature-downloader-skill](https://github.com/Lucaswangzcx/literature-downloader-skill/tree/0e8f306fc5205fc90657fbd916a952fa9c9d773a) | 1 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
-| aris | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/2901234ad2954cd2388ced8d3aed2ed9de42803a) | 87 | native | native | skills-only | skills-only | conditional | MIT |
+| aris | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/8f3110718259d9b804e2a71e8edc0e7887ddeac4) | 87 | native | native | skills-only | skills-only | conditional | MIT |
 | ai-research-skills | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc) | 96 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
 | research-paper-writing | [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills/tree/77e7c2c1ba06f7d71844873147665437a03aac1b) | 1 | skills-only | skills-only | skills-only | skills-only | supported | MIT |
 | latex-arxiv | [appautomaton/latex-arxiv-SKILL](https://github.com/appautomaton/latex-arxiv-SKILL/tree/b5b058350796bd6c9df7725a5d2e1607a9d45b2a) | 4 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
@@ -152,9 +152,9 @@ ARS 的独立 Codex 原生发行版，保留自己的版本与运行适配。
 
 ARIS 文献、实验、论文写作与跨模型评审套件。
 
-- 上游版本：未声明；分发版本：0.1.8
+- 上游版本：未声明；分发版本：0.1.9
 - 原始技能数：87；通用安装提供一个保持原资源布局的套件入口。
-- 提交：2901234ad2954cd2388ced8d3aed2ed9de42803a
+- 提交：8f3110718259d9b804e2a71e8edc0e7887ddeac4
 - 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）
 - 通用入口名：aris-suite；递归发现技能的客户端也可能列出原始子技能。
 - 完整工作流需执行上游 setup 并配置评审器或跨模型集成
