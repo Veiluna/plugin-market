@@ -61,9 +61,9 @@
     {
       "id": "aris",
       "path": "p/984b00ea",
-      "version": "0.1.8",
-      "upstreamCommit": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
-      "artifactHash": "c4333e3315e18f5dd75356404190cd1168f03b774eba56e71266df9c72458dd9"
+      "version": "0.1.9",
+      "upstreamCommit": "8f3110718259d9b804e2a71e8edc0e7887ddeac4",
+      "artifactHash": "d4e1e7524628191b0b5313e48257e3d6d1e0fc8a5038b094d7b99fbcdf13e068"
     },
     {
       "id": "ai-research-skills",

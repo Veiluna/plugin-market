@@ -2,10 +2,10 @@
   "sourceId": "aris",
   "packageId": "aris",
   "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
-  "commit": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+  "commit": "8f3110718259d9b804e2a71e8edc0e7887ddeac4",
   "license": "MIT",
   "upstreamVersion": null,
-  "distributionVersion": "0.1.8",
-  "digest": "15bbc0aa1048bc5112e4c17e29056dc15d2e22a3e59e91455fa78f6a475738e8",
+  "distributionVersion": "0.1.9",
+  "digest": "bb8e1bc70e12e0481e25b15d92d6944e20bf5ce75c1a23812f52aa0cc55bcce7",
   "adapterVersion": "7"
 }
