@@ -5,9 +5,9 @@
     {
       "id": "scientific-agent-skills",
       "path": "p/8d81cc53",
-      "version": "0.1.7",
-      "upstreamCommit": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-      "artifactHash": "b7ab6c73a2e5aab9c348dd1feec5ff0c576d33878854e92ae72dbe4168b82f6c"
+      "version": "0.1.8",
+      "upstreamCommit": "2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5",
+      "artifactHash": "f89d8a5487c907f1435cb221fbb657b1488e335a689a28c0532d9e2ca4dcfa17"
     },
     {
       "id": "nature-skills",
