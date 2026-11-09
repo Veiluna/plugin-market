@@ -4,7 +4,7 @@
     "scientific-agent-skills": {
       "repository": "K-Dense-AI/scientific-agent-skills",
       "branch": "main",
-      "sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+      "sha": "2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5",
       "definitionDigest": "7c05ae32e460e1e4176080ced8c76fab526245b06971e27e950a8f25b2736903",
       "packages": [
         {
@@ -5460,10 +5460,10 @@
           ],
           "repository": "K-Dense-AI/scientific-agent-skills",
           "license": "MIT",
-          "sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
-          "digest": "b34c5f41c226c40c67bd9053a0b8e65768c1e4acc306db82c1cface448a1964c",
-          "artifactHash": "b7ab6c73a2e5aab9c348dd1feec5ff0c576d33878854e92ae72dbe4168b82f6c",
-          "distributionVersion": "0.1.7",
+          "sha": "2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5",
+          "digest": "8918482aa2dbf0467ac6cf593ed2ff563d5aa8fca14e963ef5b9f24eb16efdac",
+          "artifactHash": "f89d8a5487c907f1435cb221fbb657b1488e335a689a28c0532d9e2ca4dcfa17",
+          "distributionVersion": "0.1.8",
           "packagePath": "p/8d81cc53",
           "genericSkillName": "scientific-agent-skills-suite",
           "genericSkillPath": "p/8d81cc53",
@@ -5510,7 +5510,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/8d81cc53"
           }
         }
@@ -6170,7 +6170,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/801a4087"
           }
         }
@@ -6452,7 +6452,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/c0a5016e"
           }
         }
@@ -6557,7 +6557,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/8eb5d130"
           }
         }
@@ -6782,7 +6782,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/cb0ad27a"
           }
         }
@@ -7032,7 +7032,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/446dd741"
           }
         }
@@ -7214,7 +7214,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/cdf7f8f8"
           }
         }
@@ -7311,7 +7311,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/adc452eb"
           }
         }
@@ -10133,7 +10133,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/984b00ea"
           }
         }
@@ -14782,7 +14782,7 @@
           ],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/33cb358c"
           }
         }
@@ -14877,7 +14877,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/bd3aad02"
           }
         }
@@ -15005,7 +15005,7 @@
           "knownIssues": [],
           "distribution": {
             "repository": "Veiluna/plugin-market",
-            "commit": "45d963590ac6cac97032f3f04e75421d7750aa00",
+            "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
             "path": "p/506547a8"
           }
         }

@@ -4,7 +4,7 @@
 
 | 仓库入口 ID | 上游仓库 | Skills | Codex | Claude Code | Cursor | DSH | 云端 | 授权 |
 | --- | --- | ---: | --- | --- | --- | --- | --- | --- |
-| scientific-agent-skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/a25cf9ec00e2745d03f8704acf6f6919694ccd9a) | 177 | native | skills-only | skills-only | skills-only | conditional | MIT |
+| scientific-agent-skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5) | 177 | native | skills-only | skills-only | skills-only | conditional | MIT |
 | nature-skills | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills/tree/b6ae2cac022f4aac094d50f2938a3474ba315fbc) | 24 | native | skills-only | skills-only | skills-only | conditional | Apache-2.0 |
 | ars-claude | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills/tree/6d9388674de1ad0437ad95db3d52f92b92204d84) | 5 | unsupported | native | skills-only | skills-only | conditional | CC-BY-NC-4.0 |
 | codex-autoresearch | [leo-lilinxiao/codex-autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch/tree/0f54c571707487f59486ba7c50d405edfc746c19) | 1 | skills-only | unsupported | unsupported | unsupported | unsupported | MIT |
@@ -23,9 +23,9 @@
 
 生物、化学、医学、数据分析与科学写作技能库。
 
-- 上游版本：2.72.0；分发版本：0.1.7
+- 上游版本：2.72.0；分发版本：0.1.8
 - 原始技能数：177；通用安装提供一个保持原资源布局的套件入口。
-- 提交：a25cf9ec00e2745d03f8704acf6f6919694ccd9a
+- 提交：2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5
 - 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）
 - 通用入口名：scientific-agent-skills-suite；递归发现技能的客户端也可能列出原始子技能。
 - 按具体技能安装 Python 依赖或配置外部服务
