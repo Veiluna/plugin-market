@@ -1,6 +1,6 @@
 {
   "name": "dsh-sam-nature-skills",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
   "type": "module",
   "license": "Apache-2.0",
