@@ -19,9 +19,9 @@
     {
       "id": "ars-claude",
       "path": "p/c0a5016e",
-      "version": "0.1.12",
-      "upstreamCommit": "a5d3198b98bdac7efd7bc58029c102e2418bce45",
-      "artifactHash": "73e22a85a9f9a2b8a698d01862b1f3f3ea1e58ff8844fadd2585c63ad01d8ee7"
+      "version": "0.1.13",
+      "upstreamCommit": "c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9",
+      "artifactHash": "ba3f6441cf1b32857b72b9e0685c57b68bd1464a73f6d7f63c9ac9f640217f88"
     },
     {
       "id": "codex-autoresearch",
