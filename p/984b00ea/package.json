@@ -1,6 +1,6 @@
 {
   "name": "dsh-sam-aris",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "ARIS 文献、实验、论文写作与跨模型评审套件。",
   "type": "module",
   "license": "MIT",

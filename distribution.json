@@ -19,9 +19,9 @@
     {
       "id": "ars-claude",
       "path": "p/c0a5016e",
-      "version": "0.1.11",
-      "upstreamCommit": "06a2e6bd9743b68bb0ef2c5d161cf70abc00323e",
-      "artifactHash": "39f05267f42be7eda40ffe1c8d5f22358df5b2148dcee7e166af684cc3dac867"
+      "version": "0.1.12",
+      "upstreamCommit": "a5d3198b98bdac7efd7bc58029c102e2418bce45",
+      "artifactHash": "73e22a85a9f9a2b8a698d01862b1f3f3ea1e58ff8844fadd2585c63ad01d8ee7"
     },
     {
       "id": "codex-autoresearch",
@@ -61,9 +61,9 @@
     {
       "id": "aris",
       "path": "p/984b00ea",
-      "version": "0.1.9",
-      "upstreamCommit": "8f3110718259d9b804e2a71e8edc0e7887ddeac4",
-      "artifactHash": "d4e1e7524628191b0b5313e48257e3d6d1e0fc8a5038b094d7b99fbcdf13e068"
+      "version": "0.1.10",
+      "upstreamCommit": "8f493923f28c3f991dcca1287db97aa780d0969b",
+      "artifactHash": "dd4be8e8d397850f37d38454a830c54def290e5df56191d04abf30cbee06fa33"
     },
     {
       "id": "ai-research-skills",
