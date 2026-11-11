@@ -13,7 +13,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/8d81cc53",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "生物、化学、医学、数据分析与科学写作技能库。",
       "license": "MIT"
@@ -24,7 +24,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/801a4087",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
       "license": "Apache-2.0"
@@ -34,7 +34,7 @@
       "source": {
         "source": "github",
         "repo": "Imbad0202/academic-research-skills",
-        "sha": "a5d3198b98bdac7efd7bc58029c102e2418bce45"
+        "sha": "c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9"
       },
       "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
       "license": "CC-BY-NC-4.0"
@@ -45,7 +45,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/cb0ad27a",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "中文学术写作、Office 文档与科研计算技能。",
       "license": "MIT"
@@ -56,7 +56,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/cdf7f8f8",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "复用已获授权的本地浏览器会话，串行获取学术全文。",
       "license": "MIT"
@@ -67,7 +67,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/adc452eb",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "中文文献检索、候选筛选、合法全文获取与下载报告。",
       "license": "MIT"
@@ -88,7 +88,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/33cb358c",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "按上游分类插件组织的 AI 研究与工程技能。（上游有 17 项可选参考缺失，详见目录）",
       "license": "MIT"
@@ -99,7 +99,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/bd3aad02",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "论文各章节写作、论证检查和投稿前自查。",
       "license": "MIT"
@@ -110,7 +110,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/506547a8",
-        "sha": "b6e33667daa43979e0ebcb4a5bbe21649d94dd3b"
+        "sha": "bad6e20449e8132034beaec7d3830667c721cd38"
       },
       "description": "保留写作器与协作辅助技能的 arXiv LaTeX 综述工作流。",
       "license": "MIT"
