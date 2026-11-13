@@ -88,7 +88,7 @@
       "title": "nature-skills",
       "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
       "author": "Yuan1z0825",
-      "homepage": "https://github.com/Yuan1z0825/nature-skills/tree/a1a8220366e82ecd8584ea3d7f46cb3969f4b018",
+      "homepage": "https://github.com/Yuan1z0825/nature-skills/tree/7bff1d0539c0dfad6c30178bb93ce6dd8a5cebf8",
       "repository": {
         "url": "https://github.com/Yuan1z0825/nature-skills"
       },
@@ -165,6 +165,19 @@
             "type": "git",
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "121f9c9551a99fe08b862dc75ddd16338b427db1",
+            "path": "p/801a4087"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.10",
+          "publishTimestamp": 1794562262,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "8954647ec59b36d6cae81e221a9cfc22b1fc6197",
             "path": "p/801a4087"
           },
           "engines": {
