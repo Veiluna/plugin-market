@@ -2,10 +2,10 @@
   "sourceId": "ars-claude",
   "packageId": "ars-claude",
   "repository": "Imbad0202/academic-research-skills",
-  "commit": "b482d129904175db2b252eb87915f80816a437a7",
+  "commit": "74547d63a192a92d3f3500a7286cb83733c3e331",
   "license": "CC-BY-NC-4.0",
   "upstreamVersion": "3.24.2",
-  "distributionVersion": "0.1.14",
-  "digest": "85e91b0059dfc580cb1419cc1916295c618c69950f510487a1b7929321bfa186",
+  "distributionVersion": "0.1.15",
+  "digest": "f8db6344f92ccbde4e7a8489485d2427e0f500d149dee21c2b8291dc0b99ee7a",
   "adapterVersion": "7"
 }

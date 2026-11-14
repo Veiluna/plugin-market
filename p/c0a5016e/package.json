@@ -1,6 +1,6 @@
 {
   "name": "dsh-sam-ars-claude",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
   "type": "module",
   "license": "CC-BY-NC-4.0",
