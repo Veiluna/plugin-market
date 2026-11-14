@@ -52,7 +52,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/c0a5016e",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "Imbad0202/academic-research-skills",
@@ -74,7 +74,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/8eb5d130",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "leo-lilinxiao/codex-autoresearch",
@@ -96,7 +96,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/cb0ad27a",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "zLanqing/codex-claude-academic-skills",
@@ -140,7 +140,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/cdf7f8f8",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "Given-Dream/sciencedirect-live-session-fetcher",
@@ -162,7 +162,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/adc452eb",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "Lucaswangzcx/literature-downloader-skill",
@@ -183,7 +183,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git",
-        "sha": "8f493923f28c3f991dcca1287db97aa780d0969b"
+        "sha": "9f30e834d24a337dbdd06fb20a1150d4376dfa59"
       },
       "interface": {
         "displayName": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -205,7 +205,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/33cb358c",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "Orchestra-Research/AI-Research-SKILLs",
@@ -227,7 +227,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/bd3aad02",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "Master-cai/Research-Paper-Writing-Skills",
@@ -249,7 +249,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/506547a8",
-        "sha": "63592e03a5fe0c7a083bc920445ea1f709072f3f"
+        "sha": "15611c05039fa25c06f2de31a4208d72cc79e28c"
       },
       "interface": {
         "displayName": "appautomaton/latex-arxiv-SKILL",
