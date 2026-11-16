@@ -11,7 +11,7 @@
       "title": "scientific-agent-skills",
       "description": "生物、化学、医学、数据分析与科学写作技能库。",
       "author": "K-Dense-AI",
-      "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5",
+      "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/ec59a29a03d5c40f73ab40878df04860bc00e876",
       "repository": {
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
       },
@@ -75,6 +75,19 @@
             "type": "git",
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "ceaa39932b76a76a63444193c8ed454b313bd909",
+            "path": "p/8d81cc53"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.9",
+          "publishTimestamp": 1794827836,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "231183fbd72e0fef7117bcc937cfcea256665d49",
             "path": "p/8d81cc53"
           },
           "engines": {
