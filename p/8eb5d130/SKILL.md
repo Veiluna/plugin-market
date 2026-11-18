@@ -12,12 +12,12 @@ Resolve resources relative to that original skill file. The upstream directory l
 Host-specific hooks, commands, MCP servers, subagents, and local browser sessions are prerequisites, not capabilities installed by this router.
 Use absolute paths to packaged helper scripts. Do not confuse the upstream resource directory with the user project or output directory.
 
-Source: https://github.com/leo-lilinxiao/codex-autoresearch/tree/0f54c571707487f59486ba7c50d405edfc746c19
+Source: https://github.com/leo-lilinxiao/codex-autoresearch/tree/0089369d803a2f3fa2a804aaf854c194cbc00241
 License: MIT
 
 ## Skills
 
-- codex-autoresearch: [original instructions](upstream/SKILL.md) — Run repeated, measured Git experiments toward a numeric target; keep improvements and revert failures. Use for autonomous optimization or managing an autoresearch run, not one-shot edits.
+- codex-autoresearch: [original instructions](upstream/SKILL.md) — Run repeated, measured Git experiments toward a numeric target. Keep improvements and revert failures. Use for autonomous optimization or managing an autoresearch run, not one-shot edits.
 
 
 ## Requirements

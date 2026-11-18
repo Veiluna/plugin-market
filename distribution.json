@@ -19,16 +19,16 @@
     {
       "id": "ars-claude",
       "path": "p/c0a5016e",
-      "version": "0.1.22",
-      "upstreamCommit": "0e44f63490a662685e008fbe0b6d8b852f58438f",
-      "artifactHash": "cf5cfac6f22f1ad95155fff9a2dd82af68526443235086be5737eab93a7d7fe4"
+      "version": "0.1.23",
+      "upstreamCommit": "016e65f311b55747499fb18ab4a19acb0e8e0a2c",
+      "artifactHash": "4d1c59b0122fc90a43782a0040c917e804190f855e4a7485b8a93013920e1e87"
     },
     {
       "id": "codex-autoresearch",
       "path": "p/8eb5d130",
-      "version": "0.1.7",
-      "upstreamCommit": "0f54c571707487f59486ba7c50d405edfc746c19",
-      "artifactHash": "f4d4b564660b74677cd96dc6d2bdb982b750a594aaa24ae9b8c31c9cf786aaf4"
+      "version": "0.1.8",
+      "upstreamCommit": "0089369d803a2f3fa2a804aaf854c194cbc00241",
+      "artifactHash": "69f3f4a3ebdc32b1156654fb3bb35d7ec401b6a8b7cce29c3bf800c096b2fce0"
     },
     {
       "id": "academic-toolkit",

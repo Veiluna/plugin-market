@@ -163,7 +163,7 @@ export ARS_CROSS_MODEL="gpt-6.2-astra"
 # export ARS_CROSS_MODEL="gpt-5.6-sol"
 
 python3 scripts/cross_model_codex_transport.py detect
-# The producer sends one closed codex_citation_request/1.0 object on stdin:
+# The producer sends one closed ars-codex-citation-request/1.0 object on stdin:
 printf '%s' "$CITATION_REQUEST_JSON" | scripts/cross_model_codex_verify.sh
 ```
 
@@ -234,7 +234,7 @@ When the integrity_verification_agent detects `ARS_CROSS_MODEL` in the environme
    - **RANDOM (Stage 2.5 only) — the non-high-impact remainder**, sampled at 10%, rounded up (minimum 3, maximum 10; if the remainder has fewer than 3 references, sample all of it).
    - **NEW-CHANGED (Stage 4.5 only) — verify 100%, no cap:** every reference supporting a claim that is **new or changed** since Stage 2.5, whatever its impact class.
    - **CONTROL (Stage 4.5 only) — the unchanged, non-high-impact remainder**, sampled at 10%, rounded up (minimum 3, maximum 10; fewer than 3 → all of it) to catch silent drift. At Stage 4.5, CONTROL replaces RANDOM — there is no separate RANDOM tier at the final gate.
-   - Cost scales with the count of high-impact (and, at Stage 4.5, new/changed) citations instead of total reference count — a results-dense paper approaches 100% coverage, which is the point: verification budget concentrates where the paper's weight rests. The old flat cap (max 15) is retired; only the sampled tiers (RANDOM/CONTROL) carry a cap (max 10 each).
+   - Cost scales mainly with the count of high-impact (and, at Stage 4.5, new/changed) citations; for a fixed high-impact count, the total reference count can still change the sampled tier (the RANDOM/CONTROL rule above) — as the high-impact share of the references approaches 100%, coverage does too, which is the point: verification budget concentrates where the paper's weight rests. The old flat cap (max 15) is retired; only the sampled tiers (RANDOM/CONTROL) carry a cap (max 10 each).
 3. Issue **one API call per reference** — not a batch. (Batching hides which reference the model actually grounded: a single grounding-metadata trace on a 5-reference response proves *something* was searched, not that *each* reference was. One reference per call makes the grounding evidence 1:1 with the verdict.) For each reference, construct a verification prompt:
    ```
    Verify this academic reference. Check: Does it exist? Are the author
@@ -427,8 +427,8 @@ Four patterns are documented below. The first is the citation-only Codex subscri
 ### Codex app-server (ChatGPT subscription; citation integrity only)
 
 When and only when `ARS_CROSS_MODEL_TRANSPORT=codex`, the Stage 2.5 / 4.5
-integrity producer constructs one `ars-codex-citation-request/1.0` JSON object per
-selected reference (`request_id`, exact `reference_text`, exact
+integrity producer constructs one `ars-codex-citation-request/1.0` JSON object
+(`codex_citation_request.schema.json`) per selected reference (`request_id`, exact `reference_text`, exact
 `citation_context`) and invokes `scripts/cross_model_codex_verify.sh` on stdin.
 It validates the one-line response against
 `codex_citation_receipt.schema.json` before reading `verdict`, `searched`,
@@ -470,16 +470,16 @@ resp="$(curl -sS -w '\n%{http_code}' https://api.openai.com/v1/responses \
 http="${resp##*$'\n'}"; body="${resp%$'\n'*}"
 # The grounding guard and source extraction are kept as canonical jq filters under
 # scripts/cross_model_verification/ so they are behavior-tested in CI (a from-memory verdict, a
-# malformed grounding index, etc.) and cannot silently stop failing closed. Reference them via
+# malformed grounding index, etc.), and a regression in the cases they test fails CI. Reference them via
 # `jq -f` rather than inlining, so the doc and the test share one definition ($GUARD above).
 if [ "$http" -lt 200 ] || [ "$http" -ge 300 ]; then
   # Transport/API failure (401/429/5xx, or curl's 000 on a network error) — NOT the same as
   # "searched but found nothing". Surface as a transport error so the consumer falls back to
   # single-model (see § Graceful Degradation); never relabel it NOT_SEARCHED, which would
-  # imply a completed-but-ungrounded lookup.
+  # hide the HTTP or network error.
   echo "CROSS-MODEL-ERROR: openai_http_$http"
 elif ! jq -e -f "$GUARD/openai_has_completed_web_search.jq" <<<"$body" >/dev/null; then
-  echo "NOT_SEARCHED: no_web_search_call"           # no search happened at all — discard the text
+  echo "NOT_SEARCHED: no_web_search_call"           # no completed search the guard can read — discard the text
 else
   # A completed web_search_call proves *a* search ran, not that THIS reference's verdict
   # is supported by it. Emit the verdict text together with the url_citation annotations the
@@ -492,7 +492,7 @@ fi
 
 ### Google Gemini (Gemini 4 Argon / Gemini 3.1 Pro)
 
-The hosted grounding tool is `google_search` (REST uses snake_case; the JS SDK's `googleSearch` is the same tool). A grounded response carries `candidates[].groundingMetadata`; its absence means the model did not search.
+The hosted grounding tool is `google_search` (REST uses snake_case; the JS SDK's `googleSearch` is the same tool). A grounded response carries `candidates[].groundingMetadata`. A 2xx response without it gives no evidence that a search ran, and the guard below treats it as `NOT_SEARCHED`.
 
 ```bash
 # PROMPT holds the single-reference verification prompt (step 3). One reference per call.
@@ -520,7 +520,7 @@ if [ "$http" -lt 200 ] || [ "$http" -ge 300 ]; then
   # consumer falls back to single-model (see § Graceful Degradation), not NOT_SEARCHED.
   echo "CROSS-MODEL-ERROR: gemini_http_$http"
 elif ! jq -e -f "$GUARD/gemini_is_grounded.jq" <<<"$body" >/dev/null; then
-  echo "NOT_SEARCHED: no_grounding_support"           # no search, or text not supported by it — discard
+  echo "NOT_SEARCHED: no_grounding_support"           # guard could not verify both a search and a linked source — discard
 else
   text="$(jq -r '.candidates[0].content.parts[]?.text // empty' <<<"$body")"
   cites="$(jq -r -f "$GUARD/gemini_sources.jq" <<<"$body")"
@@ -607,9 +607,11 @@ Agents should check at the start of a verification/review session:
 
 ```bash
 # Check which cross-model APIs are available
-# Requires: jq (for JSON parsing). Fallback: python3 -c "import sys,json; ..."
-if ! command -v jq &>/dev/null; then
-  echo "WARNING: jq not installed. Cross-model API calls will use python3 fallback."
+# The api transport requires jq: its request builders and grounding guards call
+# jq and have no fallback. The codex transport parses JSON in python3 and does
+# not need jq.
+if [ "${ARS_CROSS_MODEL_TRANSPORT:-api}" = "api" ] && ! command -v jq &>/dev/null; then
+  echo "WARNING: jq not installed. Cross-model API calls will fail until jq is installed."
 fi
 
 case "${ARS_CROSS_MODEL_TRANSPORT:-api}" in
@@ -719,7 +721,7 @@ The run that flips a provisional id (today: `gpt-6.2-astra` and `gpt-6-astra` on
 
 > **Recorded run (2026-08-19/20, #787 — codex-transport variant).** The procedure below was executed over the #630 ChatGPT-subscription citation transport (entry gate: `scripts/cross_model_smoke_test_codex.sh` PASS for baseline and candidate; measure analogues: grounding evidence = receipt `searched`, measure 4 = zero fail-closed receipt-guard misfires). All five measures passed in the counterbalanced gate fleet, with superiority on measures 2 (fabrication recall) and 5 (latency) and a tie on measure 1 — see `audits/bakeoff-gpt-5-6-sol-codex-2026-08-19.md` (probe set `evals/bakeoff/2026-08-19-gpt-5-6-sol-codex/`, sha256 in the report). The result is **transport-qualified**: `gpt-5.6-sol` is validated for the subscription citation transport; it remains provisional on the first-party API route, whose jq grounding guards that run did not exercise. A scored fleet is bound to its preregistered frozen instrument; later instrument hardening that validates only surfaces outside every consumed path applies from the next fleet and does not retroactively invalidate a recorded gate result (boundary rationale in the run report's Instrument-freeze decision record). An API-route run requires a FRESH probe set under the #789 sealed-preregistration protocol below — the 2026-08-19 set's labels are public, so reusing it would expose a live-search run to answer-key retrieval.
 
-- **Entry gate:** `scripts/cross_model_smoke_test.sh` passes against the candidate id. That script accepts `gpt-*` ids only, so the entry gate for a `gemini-*` candidate is pending: no Gemini smoke script ships, and a Gemini id cannot be promoted until one does.
+- **Entry gate:** the smoke script for the transport the bakeoff runs over passes against the candidate id: `scripts/cross_model_smoke_test.sh` on the first-party API route, `scripts/cross_model_smoke_test_codex.sh` on the ChatGPT-subscription citation transport (the #787 run above used the latter). The API-route script accepts `gpt-*` ids only, so the entry gate for a `gemini-*` candidate is pending: no Gemini smoke script ships, and a Gemini id cannot be promoted until one does.
 - **Probe-set precondition — sealed preregistration (#789; both API and codex transports):** every future gate run uses `scripts/check_promotion_bakeoff_preregistration.py` and the closed `shared/contracts/cross_model/promotion_bakeoff_sealed_commitment.schema.json` + `shared/contracts/cross_model/promotion_bakeoff_sealed_reveal.schema.json` contracts. A bakeoff against an ad-hoc/unsealed set, or one revealed before its fleet completed, is not a gate result.
   1. **Prepare privately.** Build one `ars-bakeoff-probe-set/1.0` fixture with 30 references — 20 real (10 easy DOI-keyed + 10 hard preprint/DOI-less/non-English) and 10 synthetic plausible fabrications. Real rows carry resolver-confirmed DOI/arXiv/URL ground truth; fabricated rows carry a fresh negative-check witness. Keep the labeled file outside Git (an untracked canonical path is permitted, but a private path is safer). `python3 scripts/check_promotion_bakeoff_preregistration.py prepare --campaign-id <id> --probe-set <private-file>` validates the shape and historical non-reuse, then prints a closed commitment containing only the campaign id, LF-normalized file sha256, fixed row count, and aggregate composition — never a row, label, ground-truth identifier, fixture path, or free-text escape hatch.
   2. **Commit and publish the seal before any call.** Save that output as `evals/bakeoff/<id>/sealed_commitment.json` in a dedicated commit whose only changed path is that file; do not stage the fixture or reveal carrier. Push it, wait until the commit and its passing CI result are publicly reachable, record the immutable commit permalink, then run `python3 scripts/check_promotion_bakeoff_preregistration.py preflight --commitment evals/bakeoff/<id>/sealed_commitment.json --probe-set <private-file>`. A local commit, timestamp, or later ancestry proof is not a substitute for this public-before-fleet witness.
@@ -746,14 +748,14 @@ A further caveat that no threshold absorbs: a candidate with high verbalized eva
 
 ## Cost Considerations
 
-Cross-model verification adds API costs from the second provider:
+Cross-model verification can add API costs from the second provider. The dollar figures below assume that citation calls also use the first-party API (`ARS_CROSS_MODEL_TRANSPORT=api`). With `ARS_CROSS_MODEL_TRANSPORT=codex`, citation calls draw on the ChatGPT subscription and are not billed per API token; the DA and checkpoint calls still use the API.
 
 | Scenario | Additional Calls | Estimated Additional Cost |
 |----------|-----------------|--------------------------|
-| Integrity verification (risk-stratified: HIGH-IMPACT — and at Stage 4.5 NEW-CHANGED — 100% uncapped + sampled remainder, min 3 / max 10; **one call per reference**) | worked example: 60 refs, 12 high-impact → 12 + 5 = 17 calls. No fixed upper bound — a results-dense paper approaches all references | ~$1.35-2.95 (the example; scales linearly with calls) |
+| Integrity verification (risk-stratified: HIGH-IMPACT — and at Stage 4.5 NEW-CHANGED — 100% uncapped + sampled remainder, 10% rounded up, min 3 / max 10, all of it when fewer than 3; **one call per reference**) | worked example: 60 refs, 12 high-impact → 12 + 5 = 17 calls per gate; Stage 2.5 and Stage 4.5 each run the selection → 34 calls when no non-high-impact reference supports a new or changed claim. Each such reference is a Stage 4.5 NEW-CHANGED call and leaves the CONTROL remainder, so recompute that sample (e.g. 8 of them → 12 + 8 + 4 = 24 calls at Stage 4.5, 41 for both gates). No fixed upper bound — coverage at each gate approaches all references as the high-impact share approaches 100% | ~$2.70-5.90 (the example, both gates; scales linearly with calls) |
 | DA cross-check (1 per checkpoint, 3 checkpoints) | 3 calls | ~$0.30-0.55 |
 | Blind disagreement checkpoints (design freeze + final editorial decision, 1 structured-decision call each; editorial repeats on re-review) | 2-3 calls | ~$0.20-0.55 |
-| **Full pipeline (the worked example)** | **~22-23 calls** | **~$1.85-4.05 — no fixed ceiling; grows with the high-impact / new-changed count** |
+| **Full pipeline (the worked example)** | **~39-40 calls** | **~$3.20-7.00 — no fixed ceiling; grows with the high-impact / new-changed count** |
 
 These are rough estimates based on GPT-5.5 pricing ($5/1M input, $30/1M output) and typical prompt sizes; GPT-5.5 Pro runs ~6× higher ($30/1M input, $180/1M output). GPT-5.6 Sol bills at the same standard rates as GPT-5.5 ($5/1M input, $0.50/1M cached input, $30/1M output); its pro mode keeps those rates but performs more model work per request, so total tokens (and latency) rise instead of the unit price. GPT-6 Astra's list pricing is not recorded in this document; re-derive the table from the provider's price list before budgeting a run on it. One-call-per-reference (rather than batching) is a deliberate cost-for-provenance trade: it is the only way the grounding-evidence check maps 1:1 to each verdict. Web-search-tool calls also cost more than plain completions.
 

@@ -2,10 +2,10 @@
   "sourceId": "codex-autoresearch",
   "packageId": "codex-autoresearch",
   "repository": "leo-lilinxiao/codex-autoresearch",
-  "commit": "0f54c571707487f59486ba7c50d405edfc746c19",
+  "commit": "0089369d803a2f3fa2a804aaf854c194cbc00241",
   "license": "MIT",
   "upstreamVersion": null,
-  "distributionVersion": "0.1.7",
-  "digest": "05ceffc9e4a9e64a59d6da90da4ada8ba2c1e51e99c5f6c11da0a7eea8fc5768",
+  "distributionVersion": "0.1.8",
+  "digest": "9e108cd1ab479cd9cca208f2d35ad6b9390f9e115c4de0e384087479cb1bb342",
   "adapterVersion": "7"
 }

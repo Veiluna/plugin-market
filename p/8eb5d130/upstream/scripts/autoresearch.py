@@ -14,15 +14,19 @@ import time
 import traceback
 import uuid
 from pathlib import Path
-from typing import Any, NoReturn
+from typing import Any, Callable, NoReturn
 
 from autoresearch_core import (
+    MAX_CONSECUTIVE_CRASHES,
     AutoresearchError,
+    CommandResult,
+    CommandTimeout,
     Paths,
     RunState,
     SCHEMA_VERSION,
     append_event,
-    append_json_line,
+    append_events,
+    append_json_lines,
     commit_trial,
     decimal_json,
     git_branch,
@@ -77,14 +81,14 @@ def add_run_arguments(parser: argparse.ArgumentParser, *, background: bool) -> N
         "--scope",
         action="append",
         required=True,
-        help="Repository-relative file or directory. Repeat for multiple paths; globs are rejected.",
+        help="Repository-relative file or directory. Repeat for multiple paths. Globs are rejected.",
     )
     parser.add_argument("--metric-name", required=True)
     parser.add_argument("--direction", choices=["lower", "higher"], required=True)
     parser.add_argument("--verify", required=True, help="Command whose final stdout line is the metric.")
     parser.add_argument("--metric-key", help="Read the metric from this key in a final-line JSON object.")
     parser.add_argument("--target", required=True)
-    parser.add_argument("--guard", help="Regression command; exit code 0 means pass.")
+    parser.add_argument("--guard", help="Regression command. Exit code 0 means pass.")
     parser.add_argument("--max-iterations", type=int)
     parser.add_argument("--timeout-seconds", type=int, default=1800)
     if background:
@@ -254,7 +258,7 @@ def require_command_preserved_repository(
             problems.append(f"switched branch from {expected_branch} to {current_branch}")
     if problems:
         raise AutoresearchError(
-            f"{command_name} modified the repository: {'; '.join(problems)}. "
+            f"{command_name} modified the repository: {', '.join(problems)}. "
             f"Full output: {log_path}"
         )
 
@@ -263,6 +267,11 @@ def initialize_run(args: argparse.Namespace) -> dict[str, Any]:
     repo = Path(args.repo).expanduser().resolve()
     require_git_repo(repo)
     require_git_identity(repo)
+    if os.name != "nt" and shutil.which("ps") is None:
+        raise AutoresearchError(
+            "The ps command is required to stop timed-out commands and their child processes. "
+            "Install it (procps on Debian or Ubuntu) and retry"
+        )
     require_artifacts_untracked(repo)
     require_clean_repo(repo)
     require_no_staged_artifacts(repo)
@@ -306,47 +315,30 @@ def initialize_run(args: argparse.Namespace) -> dict[str, Any]:
     ensure_new_results_root(repo)
     paths = paths_for(repo)
 
-    try:
-        verify_result = run_command(
-            command=verify,
+    def run_baseline(command: str, kind: str, name: str) -> CommandResult:
+        result = run_command(
+            command=command,
             cwd=repo,
             timeout_seconds=args.timeout_seconds,
-            log_path=next_command_log(paths, 0, "baseline-verify"),
+            log_path=next_command_log(paths, 0, f"baseline-{kind}"),
         )
-        require_no_initialized_state(
-            paths,
-            command_name="Baseline metric command",
-            log_path=verify_result.log_path,
-        )
+        require_no_initialized_state(paths, command_name=name, log_path=result.log_path)
         require_command_preserved_repository(
             repo,
             expected_head=head,
             expected_branch=branch,
-            command_name="Baseline metric command",
-            log_path=verify_result.log_path,
+            command_name=name,
+            log_path=result.log_path,
         )
+        return result
+
+    try:
+        verify_result = run_baseline(verify, "verify", "Baseline metric command")
         baseline = parse_metric_output(verify_result, json_key=metric_key)
         guard_log = None
         if guard:
-            guard_result = run_command(
-                command=guard,
-                cwd=repo,
-                timeout_seconds=args.timeout_seconds,
-                log_path=next_command_log(paths, 0, "baseline-guard"),
-            )
+            guard_result = run_baseline(guard, "guard", "Baseline guard command")
             guard_log = guard_result.log_path
-            require_no_initialized_state(
-                paths,
-                command_name="Baseline guard command",
-                log_path=guard_result.log_path,
-            )
-            require_command_preserved_repository(
-                repo,
-                expected_head=head,
-                expected_branch=branch,
-                command_name="Baseline guard command",
-                log_path=guard_result.log_path,
-            )
             if guard_result.returncode != 0:
                 raise AutoresearchError(
                     f"Baseline guard exited {guard_result.returncode}: {guard}. "
@@ -384,31 +376,27 @@ def initialize_run(args: argparse.Namespace) -> dict[str, Any]:
         }
         validate_run(run, source="new run")
         write_json_atomic(paths.run, run)
-        events: list[dict[str, Any]] = []
-        baseline_event = append_event(
-            paths,
-            run,
-            events,
-            event="baseline",
-            head=head,
-            metric=decimal_json(baseline),
-            verify_log=relative_log_path(paths, verify_result.log_path),
-            guard_log=relative_log_path(paths, guard_log),
-        )
-        events.append(baseline_event)
+        new_events = [
+            {
+                "event": "baseline",
+                "head": head,
+                "metric": decimal_json(baseline),
+                "verify_log": relative_log_path(paths, verify_result.log_path),
+                "guard_log": relative_log_path(paths, guard_log),
+            }
+        ]
         status = "active"
         if target_reached(baseline, target, args.direction):
-            complete_event = append_event(
-                paths,
-                run,
-                events,
-                event="complete",
-                reason="baseline already satisfies the target",
-                head=head,
-                metric=decimal_json(baseline),
+            new_events.append(
+                {
+                    "event": "complete",
+                    "reason": "baseline already satisfies the target",
+                    "head": head,
+                    "metric": decimal_json(baseline),
+                }
             )
-            events.append(complete_event)
             status = "complete"
+        append_events(paths, run, [], *new_events)
         return {
             "run_id": run_id,
             "mode": args.mode,
@@ -422,7 +410,7 @@ def initialize_run(args: argparse.Namespace) -> dict[str, Any]:
             write_init_error(repo, exc)
         except Exception as log_error:
             raise AutoresearchError(
-                f"Initialization failed: {exc}; writing init-error.json also failed: {log_error}"
+                f"Initialization failed: {exc}. Writing init-error.json also failed: {log_error}"
             ) from exc
         if isinstance(exc, AutoresearchError):
             diagnostic = paths_for(repo).root / "init-error.json"
@@ -475,7 +463,7 @@ def safely_revert_after_error(
         current_branch = git_branch(repo)
     except AutoresearchError as branch_error:
         current_branch = None
-        reason += f"; {branch_error}"
+        reason += f". {branch_error}"
     if current_head != trial_commit or current_branch != run["branch"]:
         append_error(
             paths=paths,
@@ -484,7 +472,7 @@ def safely_revert_after_error(
             state=state,
             reason=(
                 reason
-                + "; automatic rollback was not attempted because Git moved away from "
+                + ". Automatic rollback was not attempted because Git moved away from "
                 + f"trial {trial_commit} on branch {run['branch']} "
                 + f"(current HEAD {current_head}, branch {current_branch or 'detached'})"
             ),
@@ -500,7 +488,7 @@ def safely_revert_after_error(
             run=run,
             events=events,
             state=state,
-            reason=reason + "; automatic rollback was not attempted because commands left changes: " + ", ".join(dirty),
+            reason=reason + ". Automatic rollback was not attempted because commands left changes: " + ", ".join(dirty),
             head=trial_commit,
             trial_commit=trial_commit,
             log=log,
@@ -516,8 +504,8 @@ def safely_revert_after_error(
             events=events,
             state=state,
             reason=(
-                f"{reason}; rollback failed: {revert_error}; "
-                f"current HEAD is {current_head}"
+                f"{reason}. Rollback failed: {revert_error}. "
+                f"Current HEAD is {current_head}"
             ),
             head=trial_commit,
             trial_commit=trial_commit,
@@ -537,6 +525,60 @@ def safely_revert_after_error(
     )
 
 
+def run_trial_command(
+    *,
+    repo: Path,
+    paths: Paths,
+    run: dict[str, Any],
+    events: list[dict[str, Any]],
+    state: RunState,
+    trial_commit: str,
+    command: str,
+    name: str,
+    log_path: Path,
+) -> tuple[CommandResult | None, str | None]:
+    """Run verify or guard on a trial. On timeout, return no result and the timeout reason.
+
+    A command that changes run state or the repository stops the run, after reverting the
+    trial when that is safe.
+    """
+    snapshot = control_state_snapshot(paths)
+    try:
+        try:
+            result = run_command(
+                command=command,
+                cwd=repo,
+                timeout_seconds=run["timeout_seconds"],
+                log_path=log_path,
+            )
+            timeout = None
+        except CommandTimeout as exc:
+            result = None
+            timeout = str(exc)
+        require_control_state_unchanged(paths, snapshot, command_name=name, log_path=log_path)
+        require_command_preserved_repository(
+            repo,
+            expected_head=trial_commit,
+            expected_branch=run["branch"],
+            command_name=name,
+            log_path=log_path,
+        )
+    except AutoresearchError as exc:
+        require_control_state_unchanged(paths, snapshot, command_name=name, log_path=log_path)
+        safely_revert_after_error(
+            repo=repo,
+            paths=paths,
+            run=run,
+            events=events,
+            state=state,
+            trial_commit=trial_commit,
+            reason=str(exc),
+            log=log_path,
+        )
+        raise
+    return result, timeout
+
+
 def finish_iteration(args: argparse.Namespace) -> dict[str, Any]:
     repo = Path(args.repo).expanduser().resolve()
     paths, run, events, state = load_context(repo)
@@ -553,113 +595,56 @@ def finish_iteration(args: argparse.Namespace) -> dict[str, Any]:
     require_no_staged_artifacts(repo)
     changed = working_paths(repo)
     if not changed:
-        raise AutoresearchError("No experiment changes found; make one focused change before finish")
+        raise AutoresearchError("No experiment changes found. Make one focused change before finish")
     require_paths_in_scope(changed, run["scope"])
 
     trial_commit = commit_trial(repo, paths=changed, description=args.description)
+    trial: dict[str, Any] = {
+        "repo": repo,
+        "paths": paths,
+        "run": run,
+        "events": events,
+        "state": state,
+        "trial_commit": trial_commit,
+    }
     iteration = state.iterations + 1
     verify_log = next_command_log(paths, iteration, "verify")
     guard_log: Path | None = None
-    control_snapshot = control_state_snapshot(paths)
-    try:
-        verify_result = run_command(
-            command=run["metric"]["command"],
-            cwd=repo,
-            timeout_seconds=run["timeout_seconds"],
-            log_path=verify_log,
+    verify_result, crash = run_trial_command(
+        **trial, command=run["metric"]["command"], name="Metric command", log_path=verify_log
+    )
+    trial_metric = None
+    if verify_result is not None and verify_result.returncode != 0:
+        crash = (
+            f"Metric command exited {verify_result.returncode}: {verify_result.command}. "
+            f"Full output: {verify_log}"
         )
-        require_control_state_unchanged(
-            paths,
-            control_snapshot,
-            command_name="Metric command",
-            log_path=verify_log,
-        )
-        require_command_preserved_repository(
-            repo,
-            expected_head=trial_commit,
-            expected_branch=run["branch"],
-            command_name="Metric command",
-            log_path=verify_log,
-        )
-        trial_metric = parse_metric_output(
-            verify_result,
-            json_key=run["metric"]["json_key"],
-        )
-    except AutoresearchError as exc:
-        require_control_state_unchanged(
-            paths,
-            control_snapshot,
-            command_name="Metric command",
-            log_path=verify_log,
-        )
-        safely_revert_after_error(
-            repo=repo,
-            paths=paths,
-            run=run,
-            events=events,
-            state=state,
-            trial_commit=trial_commit,
-            reason=str(exc),
-            log=verify_log,
-        )
-        raise
+    elif verify_result is not None:
+        try:
+            trial_metric = parse_metric_output(verify_result, json_key=run["metric"]["json_key"])
+        except AutoresearchError as exc:
+            safely_revert_after_error(**trial, reason=str(exc), log=verify_log)
+            raise
 
-    outcome = "discard"
+    outcome = "discard" if crash is None else "crash"
     guard_status = "not_run"
     retained_metric = state.metric
     revert_commit: str | None = None
     head = trial_commit
-    if improved(trial_metric, state.metric, run["metric"]["direction"]):
+    if trial_metric is not None and improved(trial_metric, state.metric, run["metric"]["direction"]):
+        guard_status = "pass"
         if run["guard"]:
             guard_log = next_command_log(paths, iteration, "guard")
-            try:
-                control_snapshot = control_state_snapshot(paths)
-                guard_result = run_command(
-                    command=run["guard"],
-                    cwd=repo,
-                    timeout_seconds=run["timeout_seconds"],
-                    log_path=guard_log,
-                )
-                require_control_state_unchanged(
-                    paths,
-                    control_snapshot,
-                    command_name="Guard command",
-                    log_path=guard_log,
-                )
-                require_command_preserved_repository(
-                    repo,
-                    expected_head=trial_commit,
-                    expected_branch=run["branch"],
-                    command_name="Guard command",
-                    log_path=guard_log,
-                )
-            except AutoresearchError as exc:
-                require_control_state_unchanged(
-                    paths,
-                    control_snapshot,
-                    command_name="Guard command",
-                    log_path=guard_log,
-                )
-                safely_revert_after_error(
-                    repo=repo,
-                    paths=paths,
-                    run=run,
-                    events=events,
-                    state=state,
-                    trial_commit=trial_commit,
-                    reason=str(exc),
-                    log=guard_log,
-                )
-                raise
-            guard_status = "pass" if guard_result.returncode == 0 else "fail"
-        else:
-            guard_status = "pass"
-
+            guard_result, _ = run_trial_command(
+                **trial, command=run["guard"], name="Guard command", log_path=guard_log
+            )
+            if guard_result is None or guard_result.returncode != 0:
+                guard_status = "fail"
         if guard_status == "pass":
             outcome = "keep"
             retained_metric = trial_metric
 
-    if outcome == "discard":
+    if outcome != "keep":
         try:
             revert_commit = revert_trial(repo, trial_commit)
         except AutoresearchError as exc:
@@ -670,8 +655,8 @@ def finish_iteration(args: argparse.Namespace) -> dict[str, Any]:
                 events=events,
                 state=state,
                 reason=(
-                    f"Experiment should be discarded but rollback failed: {exc}; "
-                    f"current HEAD is {current_head}"
+                    f"Experiment should be reverted but rollback failed: {exc}. "
+                    f"Current HEAD is {current_head}"
                 ),
                 head=trial_commit,
                 trial_commit=trial_commit,
@@ -680,52 +665,48 @@ def finish_iteration(args: argparse.Namespace) -> dict[str, Any]:
             raise
         head = revert_commit
 
-    event = append_event(
-        paths,
-        run,
-        events,
-        event="iteration",
-        iteration=iteration,
-        outcome=outcome,
-        description=" ".join(args.description.split()),
-        previous_metric=decimal_json(state.metric),
-        trial_metric=decimal_json(trial_metric),
-        retained_metric=decimal_json(retained_metric),
-        trial_commit=trial_commit,
-        head=head,
-        revert_commit=revert_commit,
-        guard=guard_status,
-        verify_log=relative_log_path(paths, verify_log),
-        guard_log=relative_log_path(paths, guard_log),
-    )
-    events.append(event)
-
+    new_events: list[dict[str, Any]] = [
+        {
+            "event": "iteration",
+            "iteration": iteration,
+            "outcome": outcome,
+            "description": " ".join(args.description.split()),
+            "previous_metric": decimal_json(state.metric),
+            "trial_metric": None if trial_metric is None else decimal_json(trial_metric),
+            "retained_metric": decimal_json(retained_metric),
+            "trial_commit": trial_commit,
+            "head": head,
+            "revert_commit": revert_commit,
+            "guard": guard_status,
+            "verify_log": relative_log_path(paths, verify_log),
+            "guard_log": relative_log_path(paths, guard_log),
+        }
+    ]
+    retained = {"head": head, "metric": decimal_json(retained_metric)}
     status = "active"
     target = parse_decimal(run["target"], field="run.target")
     if target_reached(retained_metric, target, run["metric"]["direction"]):
-        complete = append_event(
-            paths,
-            run,
-            events,
-            event="complete",
-            reason="retained metric satisfies the target",
-            head=head,
-            metric=decimal_json(retained_metric),
-        )
-        events.append(complete)
         status = "complete"
-    elif run["max_iterations"] is not None and iteration >= run["max_iterations"]:
-        stopped = append_event(
-            paths,
-            run,
-            events,
-            event="stopped",
-            reason="configured iteration limit reached",
-            head=head,
-            metric=decimal_json(retained_metric),
+        new_events.append({"event": "complete", "reason": "retained metric satisfies the target", **retained})
+    elif outcome == "crash" and state.consecutive_crashes + 1 >= MAX_CONSECUTIVE_CRASHES:
+        status = "error"
+        new_events.append(
+            {
+                "event": "error",
+                "reason": (
+                    f"{MAX_CONSECUTIVE_CRASHES} consecutive trials crashed. Inspect the failed "
+                    f"trials and command logs before resuming. Last crash: {crash}"
+                ),
+                "trial_commit": None,
+                "revert_commit": None,
+                "log": relative_log_path(paths, verify_log),
+                **retained,
+            }
         )
-        events.append(stopped)
+    elif run["max_iterations"] is not None and iteration >= run["max_iterations"]:
         status = "stopped"
+        new_events.append({"event": "stopped", "reason": "configured iteration limit reached", **retained})
+    append_events(paths, run, events, *new_events)
 
     if run["mode"] == "background":
         instruction = "Iteration recorded. Exit this worker now."
@@ -733,16 +714,19 @@ def finish_iteration(args: argparse.Namespace) -> dict[str, Any]:
         instruction = "Continue with the next experiment using the recorded evidence."
     else:
         instruction = f"Run is {status}. Stop experimenting and report the result."
-    return {
+    result = {
         "status": status,
         "iteration": iteration,
         "outcome": outcome,
-        "trial_metric": decimal_json(trial_metric),
+        "trial_metric": None if trial_metric is None else decimal_json(trial_metric),
         "retained_metric": decimal_json(retained_metric),
         "target": run["target"],
         "head": head,
         "instruction": instruction,
     }
+    if crash is not None:
+        result["crash"] = crash
+    return result
 
 
 def block_run(args: argparse.Namespace) -> dict[str, Any]:
@@ -863,9 +847,9 @@ def generate_report(args: argparse.Namespace) -> dict[str, Any]:
 
 
 def runtime_event(paths: Paths, event: str, **fields: Any) -> None:
-    append_json_line(
+    append_json_lines(
         paths.runtime_log,
-        {"time": utc_now(), "source": "controller", "event": event, **fields},
+        [{"time": utc_now(), "source": "controller", "event": event, **fields}],
     )
 
 
@@ -926,12 +910,13 @@ Guard command: {guard}
 Allowed paths: {', '.join(run['scope'])}
 
 Rules:
-1. Run `{python_command} {script_command} status --repo {repo_argument}` and inspect the repository and prior events.
+1. Run `{python_command} {script_command} history --repo {repo_argument}` first to review prior experiments and resume notes. Inspect the repository and relevant logs. Do not repeat a discarded idea without new evidence or a crashed one without addressing its cause.
 2. Choose one coherent hypothesis from the code and prior results. Keep the evaluation method fixed.
-3. Modify only allowed paths. Do not commit, revert, or edit autoresearch-results yourself.
-4. Finalize exactly once with `{python_command} {script_command} finish --repo {repo_argument} --description <short-description>`.
-5. If and only if no experiment is possible without external input or an environment change, leave the repo clean and run `{python_command} {script_command} block --repo {repo_argument} --reason <precise-reason>`.
-6. Do not ask the user questions and do not create or update a Codex Goal. Exit immediately after finish or block.
+3. Modify only allowed paths. Do not commit, revert, or edit autoresearch-results yourself. Subagents may investigate but must not edit files.
+4. Before finishing, stop processes you or your subagents started for this experiment and remove its scratch files. Finish commits every changed path in scope.
+5. Finalize exactly once with `{python_command} {script_command} finish --repo {repo_argument} --description <change-and-hypothesis>`. This description helps later workers learn from the result.
+6. If and only if no experiment is possible without external input or an environment change, leave the repo clean and run `{python_command} {script_command} block --repo {repo_argument} --reason <precise-reason>`.
+7. Do not ask the user questions and do not create or update a Codex Goal. Exit immediately after finish or block.
 """
 
 
@@ -962,7 +947,7 @@ def record_controller_error(repo: Path, reason: str, log: Path | None = None) ->
         return
     current_head = git_head(repo)
     if current_head != state.head:
-        reason += f"; Git HEAD drifted to {current_head}, retained HEAD is {state.head}"
+        reason += f". Git HEAD drifted to {current_head}, retained HEAD is {state.head}"
     append_error(
         paths=paths,
         run=run,
@@ -1079,48 +1064,33 @@ def run_controller(repo: Path) -> int:
                     state="running",
                     started_at=started_at,
                 )
-                if child.stdin is None:
-                    raise AutoresearchError("Worker stdin pipe was not created")
                 child.stdin.write(prompt)
                 child.stdin.close()
+                # A stop request lets the current experiment finish and record its result.
                 while child.poll() is None:
                     if consume_stop_request(paths, run):
                         stopping = True
-                    if stopping:
-                        runtime_event(paths, "worker_stop_requested", pid=child.pid)
-                        terminate_process_tree(child)
-                        runtime_event(
+                        runtime_event(paths, "stop_requested", worker=iteration)
+                        write_runtime(
                             paths,
-                            "worker_terminated",
-                            pid=child.pid,
-                            returncode=child.returncode,
+                            run,
+                            controller_pid=controller_pid,
+                            child_pid=child.pid,
+                            state="stopping",
+                            started_at=started_at,
                         )
                     time.sleep(0.1)
                 returncode = child.returncode
-                if returncode is None:
-                    raise AutoresearchError("Worker exited without a return code")
             except Exception as worker_error:
-                cleanup_errors: list[str] = []
-                try:
-                    terminate_process_tree(child)
-                except Exception as cleanup_error:
-                    cleanup_errors.append(f"process cleanup failed: {cleanup_error}")
-                try:
-                    runtime_event(
-                        paths,
-                        "worker_cleanup_after_controller_error",
-                        pid=child.pid,
-                        returncode=child.returncode,
-                        error_type=type(worker_error).__name__,
-                        message=str(worker_error),
-                        cleanup_errors=cleanup_errors,
-                    )
-                except Exception as log_error:
-                    cleanup_errors.append(f"cleanup logging failed: {log_error}")
-                if cleanup_errors:
-                    raise AutoresearchError(
-                        f"Worker control failed: {worker_error}; " + "; ".join(cleanup_errors)
-                    ) from worker_error
+                terminate_process_tree(child)
+                runtime_event(
+                    paths,
+                    "worker_cleanup_after_controller_error",
+                    pid=child.pid,
+                    returncode=child.returncode,
+                    error_type=type(worker_error).__name__,
+                    message=str(worker_error),
+                )
                 raise
         child = None
         write_runtime(
@@ -1141,19 +1111,6 @@ def run_controller(repo: Path) -> int:
         )
 
         paths, run, after_events, after_state = load_context(repo)
-        if stopping:
-            if after_state.status == "active":
-                require_clean_repo(repo, expected_head=after_state.head, expected_branch=run["branch"])
-                append_event(
-                    paths,
-                    run,
-                    after_events,
-                    event="stopped",
-                    reason="stopped by user",
-                    head=after_state.head,
-                    metric=decimal_json(after_state.metric),
-                )
-            continue
         if returncode != 0:
             record_controller_error(
                 repo,
@@ -1164,11 +1121,18 @@ def run_controller(repo: Path) -> int:
 
         new_events = after_events[before_count:]
         event_types = [event["event"] for event in new_events]
-        allowed = ["iteration"]
-        if event_types not in (allowed, ["iteration", "complete"], ["iteration", "stopped"], ["blocked"], ["error"]):
+        allowed = (
+            ["iteration"],
+            ["iteration", "complete"],
+            ["iteration", "error"],
+            ["iteration", "stopped"],
+            ["blocked"],
+            ["error"],
+        )
+        if event_types not in allowed:
             reason = (
-                f"worker {iteration} violated the one-iteration contract; "
-                f"new events: {event_types}"
+                f"Worker {iteration} violated the one-iteration contract. "
+                f"New events: {event_types}"
             )
             runtime_event(
                 paths,
@@ -1180,6 +1144,17 @@ def run_controller(repo: Path) -> int:
             if after_state.status != "active":
                 raise AutoresearchError(reason)
             record_controller_error(repo, reason, worker_log)
+
+
+def best_effort(*steps: tuple[str, Callable[[], object]]) -> list[str]:
+    """Run every cleanup step after a failure and report the ones that failed."""
+    failures = []
+    for label, step in steps:
+        try:
+            step()
+        except Exception as exc:
+            failures.append(f"{label} failed: {exc}")
+    return failures
 
 
 def controller_entry(repo: Path) -> int:
@@ -1194,36 +1169,25 @@ def controller_entry(repo: Path) -> int:
             message=str(exc),
             traceback=traceback.format_exc(),
         )
-        try:
-            record_controller_error(repo, f"controller failed: {exc}", paths.runtime_log)
-        except Exception as record_error:
-            runtime_event(
-                paths,
-                "controller_error_record_failed",
-                error_type=type(record_error).__name__,
-                message=str(record_error),
-                traceback=traceback.format_exc(),
-            )
-        try:
-            paths_loaded, run = load_run(repo)
-            runtime = load_runtime(paths_loaded, run_id=run["run_id"])
-            started_at = utc_now() if runtime is None else runtime["started_at"]
+
+        def mark_runtime_error() -> None:
+            loaded_paths, run = load_run(repo)
+            runtime = load_runtime(loaded_paths, run_id=run["run_id"])
             write_runtime(
-                paths_loaded,
+                loaded_paths,
                 run,
                 controller_pid=os.getpid(),
                 child_pid=None,
                 state="error",
-                started_at=started_at,
+                started_at=utc_now() if runtime is None else runtime["started_at"],
             )
-        except Exception as runtime_error:
-            runtime_event(
-                paths,
-                "runtime_error_record_failed",
-                error_type=type(runtime_error).__name__,
-                message=str(runtime_error),
-                traceback=traceback.format_exc(),
-            )
+
+        failures = best_effort(
+            ("Error event record", lambda: record_controller_error(repo, f"Controller failed: {exc}", paths.runtime_log)),
+            ("Runtime state write", mark_runtime_error),
+        )
+        if failures:
+            runtime_event(paths, "controller_error_cleanup_failed", failures=failures)
         return 1
 
 
@@ -1234,60 +1198,43 @@ def fail_controller_start(
     started_at: str,
     reason: str,
 ) -> NoReturn:
-    failures: list[str] = []
+    failures = []
     if process.poll() is None:
-        try:
-            terminate_process_tree(process)
-        except Exception as exc:
-            failures.append(f"controller process cleanup failed: {exc}")
-    failure_reason = reason
-    if failures:
-        failure_reason += "; " + "; ".join(failures)
-
-    try:
-        runtime_event(
-            paths,
-            "controller_start_failed",
-            pid=process.pid,
-            returncode=process.returncode,
-            reason=failure_reason,
-            cleanup_failed=bool(failures),
-        )
-    except Exception as exc:
-        failures.append(f"runtime log write failed: {exc}")
-    try:
-        record_controller_error(paths.repo, failure_reason, paths.runtime_log)
-    except Exception as exc:
-        failures.append(f"event error record failed: {exc}")
-    try:
-        write_runtime(
-            paths,
-            run,
-            controller_pid=process.pid,
-            child_pid=None,
-            state="error",
-            started_at=started_at,
-        )
-    except Exception as exc:
-        failures.append(f"runtime state write failed: {exc}")
-    if failures:
-        failure_reason = reason + "; " + "; ".join(failures)
-    raise AutoresearchError(f"{failure_reason}. Inspect {paths.runtime_log}")
+        failures = best_effort(("Controller process cleanup", lambda: terminate_process_tree(process)))
+    detail = ". ".join([reason, *failures])
+    failures += best_effort(
+        (
+            "Runtime log write",
+            lambda: runtime_event(
+                paths,
+                "controller_start_failed",
+                pid=process.pid,
+                returncode=process.returncode,
+                reason=detail,
+            ),
+        ),
+        ("Event error record", lambda: record_controller_error(paths.repo, detail, paths.runtime_log)),
+        (
+            "Runtime state write",
+            lambda: write_runtime(
+                paths,
+                run,
+                controller_pid=process.pid,
+                child_pid=None,
+                state="error",
+                started_at=started_at,
+            ),
+        ),
+    )
+    raise AutoresearchError(". ".join([reason, *failures]) + f". Inspect {paths.runtime_log}")
 
 
 def fail_controller_spawn(paths: Paths, reason: str) -> NoReturn:
-    failures: list[str] = []
-    try:
-        runtime_event(paths, "controller_spawn_failed", reason=reason)
-    except Exception as exc:
-        failures.append(f"runtime log write failed: {exc}")
-    try:
-        record_controller_error(paths.repo, reason, paths.runtime_log)
-    except Exception as exc:
-        failures.append(f"event error record failed: {exc}")
-    if failures:
-        reason += "; " + "; ".join(failures)
-    raise AutoresearchError(f"{reason}. Inspect {paths.runtime_log}")
+    failures = best_effort(
+        ("Runtime log write", lambda: runtime_event(paths, "controller_spawn_failed", reason=reason)),
+        ("Event error record", lambda: record_controller_error(paths.repo, reason, paths.runtime_log)),
+    )
+    raise AutoresearchError(". ".join([reason, *failures]) + f". Inspect {paths.runtime_log}")
 
 
 def spawn_controller(repo: Path) -> dict[str, Any]:
@@ -1298,7 +1245,7 @@ def spawn_controller(repo: Path) -> dict[str, Any]:
         return {"status": state.status, "controller_pid": None}
     if paths.stop_request.exists():
         raise AutoresearchError(
-            f"Stale stop request exists at {paths.stop_request}; resolve or archive it before launch"
+            f"Stale stop request exists at {paths.stop_request}. Resolve or archive it before launch"
         )
     runtime = load_runtime(paths, run_id=run["run_id"])
     if runtime is not None and runtime["controller_pid"] and process_alive(runtime["controller_pid"]):
@@ -1451,20 +1398,12 @@ def stop_background(args: argparse.Namespace) -> dict[str, Any]:
         )
         return {"status": "stopped", "controller_pid": None}
 
-    pid = controller_pid
     write_stop_request(paths, run)
-    deadline = time.monotonic() + 15
-    while time.monotonic() < deadline:
-        if not process_alive(pid):
-            _, _, _, final_state = load_context(repo)
-            if final_state.status == "active":
-                raise AutoresearchError(
-                    f"Controller {pid} exited without recording a terminal event. "
-                    f"Inspect {paths.runtime_log}"
-                )
-            return {"status": final_state.status, "controller_pid": pid}
-        time.sleep(0.1)
-    raise AutoresearchError(f"Controller {pid} did not stop within 15 seconds")
+    return {
+        "status": "stopping",
+        "controller_pid": controller_pid,
+        "message": "The current experiment will finish and be recorded, then the run stops.",
+    }
 
 
 def resume_run(args: argparse.Namespace) -> dict[str, Any]:
@@ -1474,10 +1413,10 @@ def resume_run(args: argparse.Namespace) -> dict[str, Any]:
     if not note:
         raise AutoresearchError("--note cannot be empty")
     if state.status == "complete":
-        raise AutoresearchError("A completed run cannot be resumed; archive it and start a new goal")
+        raise AutoresearchError("A completed run cannot be resumed. Archive it and start a new goal")
     if run["max_iterations"] is not None and state.iterations >= run["max_iterations"]:
         raise AutoresearchError(
-            "The configured iteration limit has been reached; archive this run and confirm a new limit"
+            "The configured iteration limit has been reached. Archive this run and confirm a new limit"
         )
     if (
         state.status == "error"
@@ -1486,7 +1425,7 @@ def resume_run(args: argparse.Namespace) -> dict[str, Any]:
     ):
         raise AutoresearchError(
             "The failed trial commit was not rolled back. Inspect the recorded command log and Git state, "
-            "then archive this run after manual recovery; it cannot be resumed from an unverified commit."
+            "then archive this run after manual recovery. It cannot be resumed from an unverified commit."
         )
     if state.status == "active":
         if run["mode"] == "background":
