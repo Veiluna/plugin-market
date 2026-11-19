@@ -101,7 +101,7 @@
       "title": "nature-skills",
       "description": "文献阅读、学术写作、审稿、引用与科研绘图工作流。",
       "author": "Yuan1z0825",
-      "homepage": "https://github.com/Yuan1z0825/nature-skills/tree/14ca69710cae192325395a380e9cdd4ae5d9d0c8",
+      "homepage": "https://github.com/Yuan1z0825/nature-skills/tree/1d1b9dd00a9e5fde1fdc0e15b03919d9c256cfc4",
       "repository": {
         "url": "https://github.com/Yuan1z0825/nature-skills"
       },
@@ -209,6 +209,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.12",
+          "publishTimestamp": 1795058881,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+            "path": "p/801a4087"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -217,7 +230,7 @@
       "title": "academic-research-skills",
       "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
       "author": "Imbad0202",
-      "homepage": "https://github.com/Imbad0202/academic-research-skills/tree/016e65f311b55747499fb18ab4a19acb0e8e0a2c",
+      "homepage": "https://github.com/Imbad0202/academic-research-skills/tree/74fe22717ac7b9ea740861f4a120aa476b40dc08",
       "repository": {
         "url": "https://github.com/Imbad0202/academic-research-skills"
       },
@@ -463,6 +476,19 @@
             "type": "git",
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "49e0c4e835ce38d1d12de2118e36135f541595e1",
+            "path": "p/c0a5016e"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.24",
+          "publishTimestamp": 1795058881,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
             "path": "p/c0a5016e"
           },
           "engines": {
