@@ -12,7 +12,7 @@ Resolve resources relative to that original skill file. The upstream directory l
 Host-specific hooks, commands, MCP servers, subagents, and local browser sessions are prerequisites, not capabilities installed by this router.
 Use absolute paths to packaged helper scripts. Do not confuse the upstream resource directory with the user project or output directory.
 
-Source: https://github.com/Yuan1z0825/nature-skills/tree/1d1b9dd00a9e5fde1fdc0e15b03919d9c256cfc4
+Source: https://github.com/Yuan1z0825/nature-skills/tree/9bd1d0823f564752f0dcc701f9bd3a0001fffdc5
 License: Apache-2.0
 
 ## Skills
