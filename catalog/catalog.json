@@ -14,7 +14,7 @@
       "id": "nature-skills",
       "repository": "Yuan1z0825/nature-skills",
       "license": "Apache-2.0",
-      "sha": "1d1b9dd00a9e5fde1fdc0e15b03919d9c256cfc4",
+      "sha": "9bd1d0823f564752f0dcc701f9bd3a0001fffdc5",
       "status": "ready"
     },
     {
@@ -22,7 +22,7 @@
       "repository": "Imbad0202/academic-research-skills",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "74fe22717ac7b9ea740861f4a120aa476b40dc08",
+      "sha": "23807f987024f2e038d12fd9e4e5d2a7cc228674",
       "status": "ready"
     },
     {
@@ -65,7 +65,7 @@
       "id": "aris",
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "license": "MIT",
-      "sha": "ca70fe2c2f87e8c8e70729acad4f472ef19472d1",
+      "sha": "4ba94ae2a1c1fbbb14858750dd8764cabf6c28bd",
       "status": "ready"
     },
     {
@@ -5594,7 +5594,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/8d81cc53"
       }
     },
@@ -6195,10 +6195,10 @@
       ],
       "repository": "Yuan1z0825/nature-skills",
       "license": "Apache-2.0",
-      "sha": "1d1b9dd00a9e5fde1fdc0e15b03919d9c256cfc4",
-      "digest": "b9146895e8501d35fd01af9097554a55d48d12dcd97494dff96ac59fc014cac2",
-      "artifactHash": "9e75c8e09d0ae5b8e5aece48673c6587ebe2124af0fd0803709c6eb3911e8e16",
-      "distributionVersion": "0.1.12",
+      "sha": "9bd1d0823f564752f0dcc701f9bd3a0001fffdc5",
+      "digest": "e3ac7d8a45d6ab5cbdca56b6a6862e7e994cbeaf956e5fc0dedb30f43fbecf51",
+      "artifactHash": "72e273987468432e1d5b3ae0813200c8c76bb3a1c1bab0da727e35494a04b059",
+      "distributionVersion": "0.1.13",
       "packagePath": "p/801a4087",
       "genericSkillName": "nature-skills-suite",
       "genericSkillPath": "p/801a4087",
@@ -6246,7 +6246,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/801a4087"
       }
     },
@@ -6288,7 +6288,7 @@
           "root": ".",
           "manifest": {
             "name": "academic-research-skills",
-            "version": "3.24.3",
+            "version": "3.24.4",
             "description": "Contract-audited academic research pipeline for Claude Code: research → write → review → revise → finalize. 5 skills, 35 modes, 43 prompt roles (4 plugin-exposed agents; the rest run inline by default), v3.7.3 + v3.8 L3 claim-faithfulness gate, v3.9.0 cross-index triangulation, v3.10 triangulation policy layer, v3.11 deterministic citation verification gate (#182). Capability ceilings: docs/STAGE_CAPABILITY_MATRIX.md.",
             "author": {
               "name": "Cheng-I Wu",
@@ -6347,7 +6347,7 @@
           }
         ]
       },
-      "upstreamVersion": "3.24.3",
+      "upstreamVersion": "3.24.4",
       "upstreamPackages": [
         {
           "id": "ars-claude",
@@ -6387,7 +6387,7 @@
               "root": ".",
               "manifest": {
                 "name": "academic-research-skills",
-                "version": "3.24.3",
+                "version": "3.24.4",
                 "description": "Contract-audited academic research pipeline for Claude Code: research → write → review → revise → finalize. 5 skills, 35 modes, 43 prompt roles (4 plugin-exposed agents; the rest run inline by default), v3.7.3 + v3.8 L3 claim-faithfulness gate, v3.9.0 cross-index triangulation, v3.10 triangulation policy layer, v3.11 deterministic citation verification gate (#182). Capability ceilings: docs/STAGE_CAPABILITY_MATRIX.md.",
                 "author": {
                   "name": "Cheng-I Wu",
@@ -6446,16 +6446,16 @@
               }
             ]
           },
-          "upstreamVersion": "3.24.3"
+          "upstreamVersion": "3.24.4"
         }
       ],
       "repository": "Imbad0202/academic-research-skills",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "74fe22717ac7b9ea740861f4a120aa476b40dc08",
-      "digest": "13c3079dd41dfc5e4d5afacc18690b3bf2529ffe4ef7db062b88d5b26f3ee7fe",
-      "artifactHash": "4363b6d852940f07a2315c1b8b95a507c3ee8b7309a29310d69e3bb859a4a78c",
-      "distributionVersion": "0.1.24",
+      "sha": "23807f987024f2e038d12fd9e4e5d2a7cc228674",
+      "digest": "2467b8a8f830ded4caba7641ec80d48d66b503ee7bb5fd70750cef785dbcbcff",
+      "artifactHash": "d3fa159a72fe5ca80b2a4f92518624e1aa2625e312830ee66b96327e473e39f9",
+      "distributionVersion": "0.1.25",
       "packagePath": "p/c0a5016e",
       "genericSkillName": "ars-claude-suite",
       "genericSkillPath": "p/c0a5016e",
@@ -6520,7 +6520,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/c0a5016e"
       }
     },
@@ -6617,7 +6617,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/8eb5d130"
       }
     },
@@ -6834,7 +6834,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/cb0ad27a"
       }
     },
@@ -7076,7 +7076,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/446dd741"
       }
     },
@@ -7250,7 +7250,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/cdf7f8f8"
       }
     },
@@ -7339,7 +7339,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/adc452eb"
       }
     },
@@ -10090,10 +10090,10 @@
       ],
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "license": "MIT",
-      "sha": "ca70fe2c2f87e8c8e70729acad4f472ef19472d1",
-      "digest": "1316a6dcc30f6df0425caa6f3241d199a810089394f08a60de7e1020a6b98fd3",
-      "artifactHash": "0b9b18dcf549a94fa9d8b49284655badf78d5ccbc02ca26cee33ff944551e859",
-      "distributionVersion": "0.1.12",
+      "sha": "4ba94ae2a1c1fbbb14858750dd8764cabf6c28bd",
+      "digest": "1c27cd9c08c3e8052bf77174da3d8a3d34b81defbeb326b9ea79144a71ae1165",
+      "artifactHash": "4e5a36abee5c4eee06e4359a7c093191100b7f24551e1b46342fa05a4ed3d94e",
+      "distributionVersion": "0.1.13",
       "packagePath": "p/984b00ea",
       "genericSkillName": "aris-suite",
       "genericSkillPath": "p/984b00ea",
@@ -10153,7 +10153,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/984b00ea"
       }
     },
@@ -14794,7 +14794,7 @@
       ],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/33cb358c"
       }
     },
@@ -14881,7 +14881,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/bd3aad02"
       }
     },
@@ -15001,7 +15001,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "c848cd5a52f77dabdd07c62af3a3141bf11f5f5c",
+        "commit": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4",
         "path": "p/506547a8"
       }
     }
