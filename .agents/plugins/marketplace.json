@@ -30,7 +30,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Yuan1z0825/nature-skills.git",
-        "sha": "9bd1d0823f564752f0dcc701f9bd3a0001fffdc5"
+        "sha": "a65a8364b419e05f7d8d5d96842a1ff7e544b1bb"
       },
       "interface": {
         "displayName": "Yuan1z0825/nature-skills",
@@ -52,7 +52,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/c0a5016e",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "Imbad0202/academic-research-skills",
@@ -74,7 +74,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/8eb5d130",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "leo-lilinxiao/codex-autoresearch",
@@ -96,7 +96,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/cb0ad27a",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "zLanqing/codex-claude-academic-skills",
@@ -140,7 +140,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/cdf7f8f8",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "Given-Dream/sciencedirect-live-session-fetcher",
@@ -162,7 +162,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/adc452eb",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "Lucaswangzcx/literature-downloader-skill",
@@ -205,7 +205,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/33cb358c",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "Orchestra-Research/AI-Research-SKILLs",
@@ -227,7 +227,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/bd3aad02",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "Master-cai/Research-Paper-Writing-Skills",
@@ -249,7 +249,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Veiluna/plugin-market.git",
         "path": "p/506547a8",
-        "sha": "b73af095aef2d7d61e14efe20a5ae9a8b05c55c4"
+        "sha": "6efe7290cf36486f073e66b99250d6802ab13ec9"
       },
       "interface": {
         "displayName": "appautomaton/latex-arxiv-SKILL",
