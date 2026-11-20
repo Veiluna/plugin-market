@@ -12,16 +12,16 @@
     {
       "id": "nature-skills",
       "path": "p/801a4087",
-      "version": "0.1.13",
-      "upstreamCommit": "9bd1d0823f564752f0dcc701f9bd3a0001fffdc5",
-      "artifactHash": "72e273987468432e1d5b3ae0813200c8c76bb3a1c1bab0da727e35494a04b059"
+      "version": "0.1.14",
+      "upstreamCommit": "a65a8364b419e05f7d8d5d96842a1ff7e544b1bb",
+      "artifactHash": "2ed27e29b4e73910f89ee0b266eec3816d689c25069b234a778899bf6942cda6"
     },
     {
       "id": "ars-claude",
       "path": "p/c0a5016e",
-      "version": "0.1.25",
-      "upstreamCommit": "23807f987024f2e038d12fd9e4e5d2a7cc228674",
-      "artifactHash": "d3fa159a72fe5ca80b2a4f92518624e1aa2625e312830ee66b96327e473e39f9"
+      "version": "0.1.26",
+      "upstreamCommit": "bd57330f63f4b089dde8fdef9bf5f009ecc89f0c",
+      "artifactHash": "c037551df3b9dd21a2abe3123b669e5ebc2519e1e4d57d527e9c3861d273f8f5"
     },
     {
       "id": "codex-autoresearch",
