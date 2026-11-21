@@ -256,7 +256,7 @@
       "title": "academic-research-skills",
       "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
       "author": "Imbad0202",
-      "homepage": "https://github.com/Imbad0202/academic-research-skills/tree/bd57330f63f4b089dde8fdef9bf5f009ecc89f0c",
+      "homepage": "https://github.com/Imbad0202/academic-research-skills/tree/00315dfea67cba974583debae32b77bdce659301",
       "repository": {
         "url": "https://github.com/Imbad0202/academic-research-skills"
       },
@@ -541,6 +541,19 @@
             "type": "git",
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "6efe7290cf36486f073e66b99250d6802ab13ec9",
+            "path": "p/c0a5016e"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.27",
+          "publishTimestamp": 1795254779,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "a71b19f551ae23659c063faeb04e90443cce411a",
             "path": "p/c0a5016e"
           },
           "engines": {
