@@ -5,8 +5,8 @@
 | 仓库入口 ID | 上游仓库 | Skills | Codex | Claude Code | Cursor | DSH | 云端 | 授权 |
 | --- | --- | ---: | --- | --- | --- | --- | --- | --- |
 | scientific-agent-skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/ec59a29a03d5c40f73ab40878df04860bc00e876) | 177 | native | skills-only | skills-only | skills-only | conditional | MIT |
-| nature-skills | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills/tree/a65a8364b419e05f7d8d5d96842a1ff7e544b1bb) | 24 | native | skills-only | skills-only | skills-only | conditional | Apache-2.0 |
-| ars-claude | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills/tree/00315dfea67cba974583debae32b77bdce659301) | 5 | unsupported | native | skills-only | skills-only | conditional | CC-BY-NC-4.0 |
+| nature-skills | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills/tree/8a7713697d4567b3337cb20cddc55613d88f518e) | 24 | native | skills-only | skills-only | skills-only | conditional | Apache-2.0 |
+| ars-claude | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills/tree/5fd230a44a0ee089674d96517cb65ea52694c8d8) | 5 | unsupported | native | skills-only | skills-only | conditional | CC-BY-NC-4.0 |
 | codex-autoresearch | [leo-lilinxiao/codex-autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch/tree/0089369d803a2f3fa2a804aaf854c194cbc00241) | 1 | skills-only | unsupported | unsupported | unsupported | unsupported | MIT |
 | academic-toolkit | [zLanqing/codex-claude-academic-skills](https://github.com/zLanqing/codex-claude-academic-skills/tree/7ed6377f0efb6a38951b48ef03b19d996e454b1f) | 3 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
 | ars-codex | [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex/tree/82725acb393c4410ac6f47634a7f51b40a162fa4) | 1 | native | unsupported | unsupported | unsupported | conditional | CC-BY-NC-4.0 |
@@ -36,9 +36,9 @@
 
 文献阅读、学术写作、审稿、引用与科研绘图工作流。
 
-- 上游版本：0.1.0；分发版本：0.1.14
+- 上游版本：0.1.0；分发版本：0.1.15
 - 原始技能数：24；通用安装提供一个保持原资源布局的套件入口。
-- 提交：a65a8364b419e05f7d8d5d96842a1ff7e544b1bb
+- 提交：8a7713697d4567b3337cb20cddc55613d88f518e
 - 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）
 - 通用入口名：nature-skills-suite；递归发现技能的客户端也可能列出原始子技能。
 - 共享 nature-shared 资源随套件分发
@@ -50,9 +50,9 @@
 
 ARS 的 Claude Code 原生科研、写作、评审与修订流水线。
 
-- 上游版本：3.24.4；分发版本：0.1.27
+- 上游版本：3.24.4；分发版本：0.1.28
 - 原始技能数：5；通用安装提供一个保持原资源布局的套件入口。
-- 提交：00315dfea67cba974583debae32b77bdce659301
+- 提交：5fd230a44a0ee089674d96517cb65ea52694c8d8
 - 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）
 - 通用入口名：ars-claude-suite；递归发现技能的客户端也可能列出原始子技能。
 - 发行家族：academic-research-skills，各发行版独立同步。
