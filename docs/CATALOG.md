@@ -6,7 +6,7 @@
 | --- | --- | ---: | --- | --- | --- | --- | --- | --- |
 | scientific-agent-skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/ec59a29a03d5c40f73ab40878df04860bc00e876) | 177 | native | skills-only | skills-only | skills-only | conditional | MIT |
 | nature-skills | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills/tree/c6701dbea29afa7c596d029b957b7edc92130ea5) | 24 | native | skills-only | skills-only | skills-only | conditional | Apache-2.0 |
-| ars-claude | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills/tree/ae243ac2ad6ef2deeb46e35b636e6a2d137e50ec) | 5 | unsupported | native | skills-only | skills-only | conditional | CC-BY-NC-4.0 |
+| ars-claude | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills/tree/d169ec5c4bebd4b5ad5e8b8a0559d1d9879a21d7) | 5 | unsupported | native | skills-only | skills-only | conditional | CC-BY-NC-4.0 |
 | codex-autoresearch | [leo-lilinxiao/codex-autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch/tree/0089369d803a2f3fa2a804aaf854c194cbc00241) | 1 | skills-only | unsupported | unsupported | unsupported | unsupported | MIT |
 | academic-toolkit | [zLanqing/codex-claude-academic-skills](https://github.com/zLanqing/codex-claude-academic-skills/tree/7ed6377f0efb6a38951b48ef03b19d996e454b1f) | 3 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
 | ars-codex | [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex/tree/82725acb393c4410ac6f47634a7f51b40a162fa4) | 1 | native | unsupported | unsupported | unsupported | conditional | CC-BY-NC-4.0 |
@@ -50,9 +50,9 @@
 
 ARS 的 Claude Code 原生科研、写作、评审与修订流水线。
 
-- 上游版本：3.24.4；分发版本：0.1.29
+- 上游版本：3.24.4；分发版本：0.1.30
 - 原始技能数：5；通用安装提供一个保持原资源布局的套件入口。
-- 提交：ae243ac2ad6ef2deeb46e35b636e6a2d137e50ec
+- 提交：d169ec5c4bebd4b5ad5e8b8a0559d1d9879a21d7
 - 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）
 - 通用入口名：ars-claude-suite；递归发现技能的客户端也可能列出原始子技能。
 - 发行家族：academic-research-skills，各发行版独立同步。
