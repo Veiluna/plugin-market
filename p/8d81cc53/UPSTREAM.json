@@ -2,10 +2,10 @@
   "sourceId": "scientific-agent-skills",
   "packageId": "scientific-agent-skills",
   "repository": "K-Dense-AI/scientific-agent-skills",
-  "commit": "ec59a29a03d5c40f73ab40878df04860bc00e876",
+  "commit": "c21d13b3cc2894680229ba9959a53281acb9200e",
   "license": "MIT",
   "upstreamVersion": "2.72.0",
-  "distributionVersion": "0.1.9",
-  "digest": "a26296e776771ca2f82fa312196b99f09404b7b7b80bce7c1eb00a3a0f5756b6",
+  "distributionVersion": "0.1.10",
+  "digest": "f614ec40526785d1fef6028eca0095b6d763ff56fa8771312fa33b6d2579e95f",
   "adapterVersion": "7"
 }

@@ -5,9 +5,9 @@
     {
       "id": "scientific-agent-skills",
       "path": "p/8d81cc53",
-      "version": "0.1.9",
-      "upstreamCommit": "ec59a29a03d5c40f73ab40878df04860bc00e876",
-      "artifactHash": "4ccc2db0ced86bfd418bbbe5882760e6bb7c2c9f8b23aff658fd0e487fc339dd"
+      "version": "0.1.10",
+      "upstreamCommit": "c21d13b3cc2894680229ba9959a53281acb9200e",
+      "artifactHash": "d4c4c832b0773c9223e5ffaf1847cdef8fd2151c4c8b37121765d781986d6dca"
     },
     {
       "id": "nature-skills",
@@ -19,9 +19,9 @@
     {
       "id": "ars-claude",
       "path": "p/c0a5016e",
-      "version": "0.1.30",
-      "upstreamCommit": "d169ec5c4bebd4b5ad5e8b8a0559d1d9879a21d7",
-      "artifactHash": "3d7692fd955db332e89d1952cf9e6e9aa9c76229e3e2c00154f2e4c9f0afe061"
+      "version": "0.1.31",
+      "upstreamCommit": "83c23082f3613b1b105f5a93642efda2cca628b2",
+      "artifactHash": "891750eae0a71d146189b0f90d3aa27e57c164f0322abf579e6cb2580f3f9959"
     },
     {
       "id": "codex-autoresearch",
