@@ -6,13 +6,13 @@
 | --- | --- | ---: | --- | --- | --- | --- | --- | --- |
 | scientific-agent-skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/c21d13b3cc2894680229ba9959a53281acb9200e) | 177 | native | skills-only | skills-only | skills-only | conditional | MIT |
 | nature-skills | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills/tree/c6701dbea29afa7c596d029b957b7edc92130ea5) | 24 | native | skills-only | skills-only | skills-only | conditional | Apache-2.0 |
-| ars-claude | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills/tree/1d42587c373890394edf0d0f9976069e13804b34) | 5 | unsupported | native | skills-only | skills-only | conditional | CC-BY-NC-4.0 |
+| ars-claude | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills/tree/df5b4ca2f16fbda18cdecc5927fca384f2b6c002) | 5 | unsupported | native | skills-only | skills-only | conditional | CC-BY-NC-4.0 |
 | codex-autoresearch | [leo-lilinxiao/codex-autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch/tree/0089369d803a2f3fa2a804aaf854c194cbc00241) | 1 | skills-only | unsupported | unsupported | unsupported | unsupported | MIT |
 | academic-toolkit | [zLanqing/codex-claude-academic-skills](https://github.com/zLanqing/codex-claude-academic-skills/tree/7ed6377f0efb6a38951b48ef03b19d996e454b1f) | 3 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
 | ars-codex | [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex/tree/82725acb393c4410ac6f47634a7f51b40a162fa4) | 1 | native | unsupported | unsupported | unsupported | conditional | CC-BY-NC-4.0 |
 | live-session-fetcher | [Given-Dream/sciencedirect-live-session-fetcher](https://github.com/Given-Dream/sciencedirect-live-session-fetcher/tree/0a24d96b0044e0be03efa2f1daafa84f81a9ebb9) | 2 | skills-only | skills-only | skills-only | skills-only | unsupported | MIT |
 | literature-downloader | [Lucaswangzcx/literature-downloader-skill](https://github.com/Lucaswangzcx/literature-downloader-skill/tree/0e8f306fc5205fc90657fbd916a952fa9c9d773a) | 1 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
-| aris | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/4ba94ae2a1c1fbbb14858750dd8764cabf6c28bd) | 87 | native | native | skills-only | skills-only | conditional | MIT |
+| aris | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/b11b2078ec7c7d8b44c27e1da227f73369fa3684) | 87 | native | native | skills-only | skills-only | conditional | MIT |
 | ai-research-skills | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc) | 96 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
 | research-paper-writing | [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills/tree/77e7c2c1ba06f7d71844873147665437a03aac1b) | 1 | skills-only | skills-only | skills-only | skills-only | supported | MIT |
 | latex-arxiv | [appautomaton/latex-arxiv-SKILL](https://github.com/appautomaton/latex-arxiv-SKILL/tree/b5b058350796bd6c9df7725a5d2e1607a9d45b2a) | 4 | skills-only | skills-only | skills-only | skills-only | conditional | MIT |
@@ -50,9 +50,9 @@
 
 ARS 的 Claude Code 原生科研、写作、评审与修订流水线。
 
-- 上游版本：3.24.4；分发版本：0.1.32
+- 上游版本：3.24.4；分发版本：0.1.33
 - 原始技能数：5；通用安装提供一个保持原资源布局的套件入口。
-- 提交：1d42587c373890394edf0d0f9976069e13804b34
+- 提交：df5b4ca2f16fbda18cdecc5927fca384f2b6c002
 - 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）
 - 通用入口名：ars-claude-suite；递归发现技能的客户端也可能列出原始子技能。
 - 发行家族：academic-research-skills，各发行版独立同步。
@@ -152,9 +152,9 @@ ARS 的独立 Codex 原生发行版，保留自己的版本与运行适配。
 
 ARIS 文献、实验、论文写作与跨模型评审套件。
 
-- 上游版本：未声明；分发版本：0.1.13
+- 上游版本：未声明；分发版本：0.1.14
 - 原始技能数：87；通用安装提供一个保持原资源布局的套件入口。
-- 提交：4ba94ae2a1c1fbbb14858750dd8764cabf6c28bd
+- 提交：b11b2078ec7c7d8b44c27e1da227f73369fa3684
 - 验证：structure-validated（实际客户端验证记录见 docs/VERIFICATION.md）
 - 通用入口名：aris-suite；递归发现技能的客户端也可能列出原始子技能。
 - 完整工作流需执行上游 setup 并配置评审器或跨模型集成

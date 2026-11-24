@@ -22,7 +22,7 @@
       "repository": "Imbad0202/academic-research-skills",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "1d42587c373890394edf0d0f9976069e13804b34",
+      "sha": "df5b4ca2f16fbda18cdecc5927fca384f2b6c002",
       "status": "ready"
     },
     {
@@ -65,7 +65,7 @@
       "id": "aris",
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "license": "MIT",
-      "sha": "4ba94ae2a1c1fbbb14858750dd8764cabf6c28bd",
+      "sha": "b11b2078ec7c7d8b44c27e1da227f73369fa3684",
       "status": "ready"
     },
     {
@@ -5594,7 +5594,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/8d81cc53"
       }
     },
@@ -6246,7 +6246,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/801a4087"
       }
     },
@@ -6452,10 +6452,10 @@
       "repository": "Imbad0202/academic-research-skills",
       "family": "academic-research-skills",
       "license": "CC-BY-NC-4.0",
-      "sha": "1d42587c373890394edf0d0f9976069e13804b34",
-      "digest": "4bd510b40ff1e1d562bf799ffb87276e78eeaea76cfbf5e52e488276410b220f",
-      "artifactHash": "54d44aa85a3cd86962779ecd78737935940c7f7aea8d43107dc084c33f8bdfc0",
-      "distributionVersion": "0.1.32",
+      "sha": "df5b4ca2f16fbda18cdecc5927fca384f2b6c002",
+      "digest": "f7016e8da1839ee61f1f00954363a455dd24457260bfe817d68e83b9bea6899f",
+      "artifactHash": "eb7b212751af7ae58509cbad3e3bd343c3459dc0ae4c419255f038ff2b7f3047",
+      "distributionVersion": "0.1.33",
       "packagePath": "p/c0a5016e",
       "genericSkillName": "ars-claude-suite",
       "genericSkillPath": "p/c0a5016e",
@@ -6520,7 +6520,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/c0a5016e"
       }
     },
@@ -6617,7 +6617,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/8eb5d130"
       }
     },
@@ -6834,7 +6834,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/cb0ad27a"
       }
     },
@@ -7076,7 +7076,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/446dd741"
       }
     },
@@ -7250,7 +7250,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/cdf7f8f8"
       }
     },
@@ -7339,7 +7339,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/adc452eb"
       }
     },
@@ -7507,7 +7507,7 @@
         },
         {
           "name": "interview-cheatsheet",
-          "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a 600-1000 line Chinese tutorial on a specific ML topic.",
+          "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a detailed Chinese tutorial on a specific ML topic.",
           "path": "skills/interview-cheatsheet"
         },
         {
@@ -7997,7 +7997,7 @@
           },
           {
             "name": "interview-cheatsheet",
-            "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a 600-1000 line Chinese tutorial on a specific ML topic.",
+            "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a detailed Chinese tutorial on a specific ML topic.",
             "path": "skills/skills-codex/interview-cheatsheet"
           },
           {
@@ -8434,7 +8434,7 @@
           },
           {
             "name": "interview-cheatsheet",
-            "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a 600-1000 line Chinese tutorial on a specific ML topic.",
+            "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a detailed Chinese tutorial on a specific ML topic.",
             "path": "skills/interview-cheatsheet"
           },
           {
@@ -8879,7 +8879,7 @@
             },
             {
               "name": "interview-cheatsheet",
-              "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a 600-1000 line Chinese tutorial on a specific ML topic.",
+              "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a detailed Chinese tutorial on a specific ML topic.",
               "path": "skills/interview-cheatsheet"
             },
             {
@@ -9369,7 +9369,7 @@
               },
               {
                 "name": "interview-cheatsheet",
-                "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a 600-1000 line Chinese tutorial on a specific ML topic.",
+                "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a detailed Chinese tutorial on a specific ML topic.",
                 "path": "skills/skills-codex/interview-cheatsheet"
               },
               {
@@ -9806,7 +9806,7 @@
               },
               {
                 "name": "interview-cheatsheet",
-                "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a 600-1000 line Chinese tutorial on a specific ML topic.",
+                "description": "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a detailed Chinese tutorial on a specific ML topic.",
                 "path": "skills/interview-cheatsheet"
               },
               {
@@ -10090,10 +10090,10 @@
       ],
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
       "license": "MIT",
-      "sha": "4ba94ae2a1c1fbbb14858750dd8764cabf6c28bd",
-      "digest": "1c27cd9c08c3e8052bf77174da3d8a3d34b81defbeb326b9ea79144a71ae1165",
-      "artifactHash": "4e5a36abee5c4eee06e4359a7c093191100b7f24551e1b46342fa05a4ed3d94e",
-      "distributionVersion": "0.1.13",
+      "sha": "b11b2078ec7c7d8b44c27e1da227f73369fa3684",
+      "digest": "79b522f5e825032ff1dd1ce287025ad2c1727312888cf7f70036ce4cfd772db7",
+      "artifactHash": "8be9c6a5cd10f66d5bc5dc540e224e8b01750eaf91033b327ff32611ba06a57b",
+      "distributionVersion": "0.1.14",
       "packagePath": "p/984b00ea",
       "genericSkillName": "aris-suite",
       "genericSkillPath": "p/984b00ea",
@@ -10153,7 +10153,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/984b00ea"
       }
     },
@@ -14794,7 +14794,7 @@
       ],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/33cb358c"
       }
     },
@@ -14881,7 +14881,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/bd3aad02"
       }
     },
@@ -15001,7 +15001,7 @@
       "knownIssues": [],
       "distribution": {
         "repository": "Veiluna/plugin-market",
-        "commit": "2c73bbbb19fb6e7bcc8f7d26ae5e2632ac4bd62d",
+        "commit": "68bc612575e10a709b20f6b997e3d70b71df6cb2",
         "path": "p/506547a8"
       }
     }
