@@ -12,16 +12,16 @@
     {
       "id": "nature-skills",
       "path": "p/801a4087",
-      "version": "0.1.17",
-      "upstreamCommit": "fe5d5d5c06f0eefe8bbb68fc945dc328f93c5fcb",
-      "artifactHash": "eb4cf5afca3ca142979425f766ea6973a4f619d6c7c9bd14e30f467b8d0bc07b"
+      "version": "0.1.18",
+      "upstreamCommit": "c300047218d1015f3edeeea33a72cd298a7e9de5",
+      "artifactHash": "d3da05f86c07104e432a3af8c9fc2bfa7bd68cb477e140b72f65069f1270e373"
     },
     {
       "id": "ars-claude",
       "path": "p/c0a5016e",
-      "version": "0.1.33",
-      "upstreamCommit": "df5b4ca2f16fbda18cdecc5927fca384f2b6c002",
-      "artifactHash": "eb7b212751af7ae58509cbad3e3bd343c3459dc0ae4c419255f038ff2b7f3047"
+      "version": "0.1.34",
+      "upstreamCommit": "18749d8928d9e731eaa30b2125824b86ed626ed1",
+      "artifactHash": "dc9822ee745373826f245d6fc01716f89a5ae94e70bf7d7a92fe2b8297e29a72"
     },
     {
       "id": "codex-autoresearch",
@@ -61,9 +61,9 @@
     {
       "id": "aris",
       "path": "p/984b00ea",
-      "version": "0.1.14",
-      "upstreamCommit": "b11b2078ec7c7d8b44c27e1da227f73369fa3684",
-      "artifactHash": "8be9c6a5cd10f66d5bc5dc540e224e8b01750eaf91033b327ff32611ba06a57b"
+      "version": "0.1.15",
+      "upstreamCommit": "3fefd34146d3317e407aec65a5a29335de87b9ee",
+      "artifactHash": "6d3ad7006514c46070ff77cf19c8477108138aba4e3992f4079472d992ccb6a0"
     },
     {
       "id": "ai-research-skills",

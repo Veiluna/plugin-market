@@ -12,7 +12,7 @@ Resolve resources relative to that original skill file. The upstream directory l
 Host-specific hooks, commands, MCP servers, subagents, and local browser sessions are prerequisites, not capabilities installed by this router.
 Use absolute paths to packaged helper scripts. Do not confuse the upstream resource directory with the user project or output directory.
 
-Source: https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/b11b2078ec7c7d8b44c27e1da227f73369fa3684
+Source: https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/3fefd34146d3317e407aec65a5a29335de87b9ee
 License: MIT
 
 ## Skills
