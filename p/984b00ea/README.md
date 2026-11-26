@@ -2,7 +2,7 @@
 
 ARIS 文献、实验、论文写作与跨模型评审套件。
 
-上游提交：da5ccc2a6bdf560631c0236c4902797a5a30c37a
+上游提交：b0cf7365cf18b2cf0e270a0911f0ff666d24cef6
 原始资源与许可证位于 ./upstream/。
 DSH 封装仅挂载 Skills，不修改模型、授权或运行配置。
 通用套件入口：aris-suite
