@@ -334,7 +334,7 @@
       "title": "academic-research-skills",
       "description": "ARS 的 Claude Code 原生科研、写作、评审与修订流水线。",
       "author": "Imbad0202",
-      "homepage": "https://github.com/Imbad0202/academic-research-skills/tree/7d4c0960bbd863c637b5fa76ca02993b0dfa7d00",
+      "homepage": "https://github.com/Imbad0202/academic-research-skills/tree/62f5c2a0e66d2f38324d9dbc7313f0d006637fec",
       "repository": {
         "url": "https://github.com/Imbad0202/academic-research-skills"
       },
@@ -780,6 +780,19 @@
           "engines": {
             "dsh": "^0.2.1-rc.5"
           }
+        },
+        {
+          "version": "0.1.39",
+          "publishTimestamp": 1795805952,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "9b3998ebdabc896f66c63d6c75f88a83bb7270f5",
+            "path": "p/c0a5016e"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
         }
       ]
     },
@@ -902,7 +915,7 @@
       "title": "Auto-claude-code-research-in-sleep",
       "description": "ARIS 文献、实验、论文写作与跨模型评审套件。",
       "author": "wanshuiyin",
-      "homepage": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/b0cf7365cf18b2cf0e270a0911f0ff666d24cef6",
+      "homepage": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/0a6382cd10d4507d9b5ae60b6884fbd6a15c8ece",
       "repository": {
         "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
       },
@@ -1083,6 +1096,19 @@
             "type": "git",
             "url": "https://github.com/Veiluna/plugin-market",
             "commit": "4fa8b9079f055dcaac808359a7a077047ea1fe4a",
+            "path": "p/984b00ea"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        },
+        {
+          "version": "0.1.18",
+          "publishTimestamp": 1795805952,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Veiluna/plugin-market",
+            "commit": "9b3998ebdabc896f66c63d6c75f88a83bb7270f5",
             "path": "p/984b00ea"
           },
           "engines": {
