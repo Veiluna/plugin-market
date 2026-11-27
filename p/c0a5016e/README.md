@@ -2,7 +2,7 @@
 
 ARS 的 Claude Code 原生科研、写作、评审与修订流水线。
 
-上游提交：7d4c0960bbd863c637b5fa76ca02993b0dfa7d00
+上游提交：62f5c2a0e66d2f38324d9dbc7313f0d006637fec
 原始资源与许可证位于 ./upstream/。
 DSH 封装仅挂载 Skills，不修改模型、授权或运行配置。
 通用套件入口：ars-claude-suite
