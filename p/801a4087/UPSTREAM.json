@@ -2,10 +2,10 @@
   "sourceId": "nature-skills",
   "packageId": "nature-skills",
   "repository": "Yuan1z0825/nature-skills",
-  "commit": "96a89bc7ef78e3bece9a50bb9ad08ddea4dc0e1e",
+  "commit": "efcd39d975ef7db817c9513e91ea83f6556739eb",
   "license": "Apache-2.0",
   "upstreamVersion": "0.1.0",
-  "distributionVersion": "0.1.19",
-  "digest": "eb5ae93c8dcdd274a12b916de97b081d80eb059f71ea8355a48117c86837d724",
+  "distributionVersion": "0.1.20",
+  "digest": "ba9786eb1b3f4aa8ba0790994753673c0860d6f5199c4fc91ae53718bddd70af",
   "adapterVersion": "7"
 }

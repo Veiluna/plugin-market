@@ -2,7 +2,7 @@
 
 文献阅读、学术写作、审稿、引用与科研绘图工作流。
 
-上游提交：96a89bc7ef78e3bece9a50bb9ad08ddea4dc0e1e
+上游提交：efcd39d975ef7db817c9513e91ea83f6556739eb
 原始资源与许可证位于 ./upstream/。
 DSH 封装仅挂载 Skills，不修改模型、授权或运行配置。
 通用套件入口：nature-skills-suite
